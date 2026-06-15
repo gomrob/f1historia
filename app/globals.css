@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --f1-red: #E8001D;
+  --f1-bg: #FAFAFA;
+  --f1-card: #FFFFFF;
+  --f1-card-hover: #F5F5F7;
+  --f1-surface: #F5F5F7;
+  --f1-border: #E8E8EE;
+  --f1-border-hover: #D5D5E2;
+  --f1-muted: #9CA3AF;
+  --f1-text: #0A0A0F;
+  --f1-text-muted: #6B6B80;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--f1-bg);
+  color: var(--f1-text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D5D5E2; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #B8B8C8; }
+
+/* Grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(10,10,15,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,10,15,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Team color glow */
+.team-glow {
+  box-shadow: 0 0 20px -5px var(--team-color, rgba(232,0,29,0.2));
+}
+
+/* Animated underline */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--f1-red);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+.nav-link.active::after,
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* Card styles */
+.f1-card {
+  background: var(--f1-card);
+  border: 1px solid var(--f1-border);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.f1-card:hover {
+  border-color: var(--f1-border-hover);
+}
+.f1-card.interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+
+/* Stat label */
+.stat-label {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--f1-muted);
+}
+
+/* Number display */
+.f1-number {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Section header */
+.section-eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--f1-muted);
+}
+
+/* Divider */
+.f1-divider {
+  border: none;
+  border-top: 1px solid var(--f1-border);
+}
+
+/* Loading skeleton */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--f1-card) 25%,
+    var(--f1-card-hover) 50%,
+    var(--f1-card) 75%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Tab styles */
+.f1-tab {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--f1-text-muted);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.f1-tab:hover { color: var(--f1-text); }
+.f1-tab.active {
+  color: var(--f1-text);
+  border-color: var(--f1-red);
+}
+
+/* Badge */
+.f1-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Points bar */
+.points-bar {
+  height: 3px;
+  border-radius: 2px;
+  background: var(--team-color, var(--f1-red));
+  transition: width 0.6s ease;
+}
+
+/* 3D viewer container */
+.car-viewer {
+  width: 100%;
+  aspect-ratio: 16/7;
+  background: radial-gradient(ellipse at center, #F5F5F7 0%, #EDEDF2 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Circuit map */
+.circuit-map {
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Transition page */
+.page-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .f1-number { font-size: 1.5rem; }
+}

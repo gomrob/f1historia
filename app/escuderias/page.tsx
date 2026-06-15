@@ -130,6 +130,12 @@ function TeamDetail({ team, onClose }: { team: Team; onClose: () => void }) {
   const seasons = team.seasons?.sort((a, b) => b.year - a.year) ?? []
   const currentSeason = seasons[seasonIdx]
 
+  const totalRaces = seasons.reduce((sum, s) => sum + (s.races ?? 0), 0)
+  const totalWins = seasons.reduce((sum, s) => sum + s.wins, 0)
+  const winPercent = totalRaces > 0 ? (totalWins / totalRaces) * 100 : 0
+  const bestSeason = seasons.reduce((best, s) => (!best || s.points > best.points ? s : best), seasons[0])
+  const worstSeason = seasons.reduce((worst, s) => (!worst || s.points < worst.points ? s : worst), seasons[0])
+
   return (
     <div className="animate-fade-in">
       {/* Back button */}
@@ -181,6 +187,70 @@ function TeamDetail({ team, onClose }: { team: Team; onClose: () => void }) {
           ))}
         </div>
       </div>
+
+      {/* Aggregate stats */}
+      {seasons.length > 0 && (
+        <div className="f1-card p-5 mb-4">
+          <h3 className="text-base font-semibold text-[#0A0A0F] mb-4">Estadísticas históricas</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="bg-[#F5F5F7] rounded-lg p-4">
+              <div className="text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-1">Carreras totales</div>
+              <div className="text-2xl font-bold text-[#0A0A0F]">{totalRaces}</div>
+            </div>
+            <div className="bg-[#F5F5F7] rounded-lg p-4">
+              <div className="text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-1">% de victorias</div>
+              <div className="text-2xl font-bold text-[#0A0A0F]">{winPercent.toFixed(1)}%</div>
+            </div>
+            <div className="bg-[#F5F5F7] rounded-lg p-4">
+              <div className="text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-1">Mejor temporada</div>
+              <div className="text-2xl font-bold text-[#0A0A0F]">
+                {bestSeason ? `${bestSeason.year} (P${bestSeason.position})` : '–'}
+              </div>
+            </div>
+            <div className="bg-[#F5F5F7] rounded-lg p-4">
+              <div className="text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-1">Peor temporada</div>
+              <div className="text-2xl font-bold text-[#0A0A0F]">
+                {worstSeason ? `${worstSeason.year} (P${worstSeason.position})` : '–'}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Full season table */}
+      {seasons.length > 0 && (
+        <div className="f1-card p-5 mb-4">
+          <h3 className="text-base font-semibold text-[#0A0A0F] mb-4">Todas las temporadas ({seasons.length})</h3>
+          <div className="overflow-x-auto max-h-96 overflow-y-auto">
+            <table className="w-full text-sm">
+              <thead className="sticky top-0 bg-white">
+                <tr className="text-left text-[10px] text-[#9CA3AF] uppercase tracking-wide border-b border-[#E8E8EE]">
+                  <th className="py-2 pr-3">Año</th>
+                  <th className="py-2 pr-3">Posición</th>
+                  <th className="py-2 pr-3">Puntos</th>
+                  <th className="py-2 pr-3">Victorias</th>
+                  <th className="py-2 pr-3">Carreras</th>
+                  <th className="py-2 pr-3">Pilotos</th>
+                </tr>
+              </thead>
+              <tbody>
+                {seasons.map(s => (
+                  <tr key={s.year} className="border-b border-[#F0F0F3] hover:bg-[#F5F5F7]">
+                    <td className="py-2 pr-3 font-semibold text-[#0A0A0F]">{s.year}</td>
+                    <td className="py-2 pr-3 text-[#6B6B80]">P{s.position}</td>
+                    <td className="py-2 pr-3 text-[#6B6B80]">{s.points}</td>
+                    <td className="py-2 pr-3 text-[#6B6B80]">{s.wins}</td>
+                    <td className="py-2 pr-3 text-[#6B6B80]">{s.races ?? '–'}</td>
+                    <td className="py-2 pr-3 text-[#6B6B80]">
+                      {s.drivers.map(did => DRIVERS.find(d => d.id === did)?.name ?? did).join(', ')}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       {/* Seasons */}
       {seasons.length > 0 && (

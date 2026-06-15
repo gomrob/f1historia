@@ -70,6 +70,7 @@ export interface TeamSeason {
   sponsors: string[]
   liveryColors: string[]
   carModel3d?: string
+  races?: number
 }
 
 export interface Circuit {

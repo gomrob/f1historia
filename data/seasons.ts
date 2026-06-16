@@ -2,6 +2,26 @@ import type { Season } from '@/lib/types'
 
 export const SEASONS: Season[] = [
   {
+    year: 2026,
+    champion: null,
+    constructorChampion: null,
+    totalRaces: 22,
+    entries: [
+      { teamId: 'mclaren',     driverIds: ['lando_norris', 'oscar_piastri'],      chassis: 'Por confirmar', engine: 'Mercedes',  points: 0, position: 1,  wins: 0, color: '#FF8000' },
+      { teamId: 'ferrari',     driverIds: ['lewis_hamilton', 'charles_leclerc'],  chassis: 'Por confirmar', engine: 'Ferrari',   points: 0, position: 2,  wins: 0, color: '#E8002D' },
+      { teamId: 'redbull',     driverIds: ['max_verstappen', 'tsunoda'],          chassis: 'Por confirmar', engine: 'Ford',      points: 0, position: 3,  wins: 0, color: '#3671C6' },
+      { teamId: 'mercedes',    driverIds: ['george_russell', 'antonelli'],        chassis: 'Por confirmar', engine: 'Mercedes',  points: 0, position: 4,  wins: 0, color: '#27F4D2' },
+      { teamId: 'astonmartin', driverIds: ['fernando_alonso', 'lance_stroll'],    chassis: 'Por confirmar', engine: 'Honda',     points: 0, position: 5,  wins: 0, color: '#358C75' },
+      { teamId: 'alpine',      driverIds: ['pierre_gasly', 'franco_colapinto'],   chassis: 'Por confirmar', engine: 'Mercedes',  points: 0, position: 6,  wins: 0, color: '#FF87BC' },
+      { teamId: 'williams',    driverIds: ['carlos_sainz', 'alexander_albon'],    chassis: 'Por confirmar', engine: 'Mercedes',  points: 0, position: 7,  wins: 0, color: '#64C4FF' },
+      { teamId: 'haas',        driverIds: ['esteban_ocon', 'bearman'],            chassis: 'Por confirmar', engine: 'Ferrari',   points: 0, position: 8,  wins: 0, color: '#B6BABD' },
+      { teamId: 'sauber',      driverIds: ['nico_hulkenberg', 'bortoleto'],       chassis: 'Por confirmar', engine: 'Audi',      points: 0, position: 9,  wins: 0, color: '#52E252' },
+      { teamId: 'racingbulls', driverIds: ['hadjar', 'lawson'],                   chassis: 'Por confirmar', engine: 'Ford',      points: 0, position: 10, wins: 0, color: '#6692FF' },
+      { teamId: 'cadillac',    driverIds: ['sergio_perez', 'bottas'],             chassis: 'Por confirmar', engine: 'Ferrari',   points: 0, position: 11, wins: 0, color: '#9C8A5E' },
+    ],
+    races: []
+  },
+  {
     year: 2024,
     champion: 'max_verstappen',
     constructorChampion: 'mclaren',
@@ -14,9 +34,9 @@ export const SEASONS: Season[] = [
       { teamId: 'astonmartin', driverIds: ['fernando_alonso', 'lance_stroll'],     chassis: 'AMR24',  engine: 'Mercedes', points: 94,  position: 5, wins: 0,  color: '#358C75' },
       { teamId: 'alpine',      driverIds: ['pierre_gasly', 'esteban_ocon'],        chassis: 'A524',   engine: 'Renault',  points: 65,  position: 6, wins: 0,  color: '#FF87BC' },
       { teamId: 'haas',        driverIds: ['nico_hulkenberg', 'kevin_magnussen'],  chassis: 'VF-24',  engine: 'Ferrari',  points: 58,  position: 7, wins: 0,  color: '#B6BABD' },
-      { teamId: 'racingbulls', driverIds: ['yuki_tsunoda', 'daniel_ricciardo'],   chassis: 'VCARB01',engine: 'Honda',    points: 46,  position: 8, wins: 0,  color: '#6692FF' },
+      { teamId: 'racingbulls', driverIds: ['tsunoda', 'daniel_ricciardo'],   chassis: 'VCARB01',engine: 'Honda',    points: 46,  position: 8, wins: 0,  color: '#6692FF' },
       { teamId: 'williams',    driverIds: ['alexander_albon', 'franco_colapinto'],chassis: 'FW46',   engine: 'Mercedes', points: 17,  position: 9, wins: 0,  color: '#64C4FF' },
-      { teamId: 'sauber',      driverIds: ['valtteri_bottas', 'zhou_guanyu'],      chassis: 'C44',    engine: 'Ferrari',  points: 4,   position: 10,wins: 0,  color: '#52E252' },
+      { teamId: 'sauber',      driverIds: ['bottas', 'zhou_guanyu'],      chassis: 'C44',    engine: 'Ferrari',  points: 4,   position: 10,wins: 0,  color: '#52E252' },
     ],
     races: []
   },
@@ -33,9 +53,9 @@ export const SEASONS: Season[] = [
       { teamId: 'astonmartin', driverIds: ['fernando_alonso', 'lance_stroll'],     chassis: 'AMR23',  engine: 'Mercedes', points: 280, position: 5, wins: 0,  color: '#358C75' },
       { teamId: 'alpine',      driverIds: ['pierre_gasly', 'esteban_ocon'],        chassis: 'A523',   engine: 'Renault',  points: 120, position: 6, wins: 0,  color: '#FF87BC' },
       { teamId: 'williams',    driverIds: ['alexander_albon', 'logan_sargeant'],   chassis: 'FW45',   engine: 'Mercedes', points: 28,  position: 7, wins: 0,  color: '#64C4FF' },
-      { teamId: 'racingbulls', driverIds: ['yuki_tsunoda', 'nyck_de_vries'],      chassis: 'AT04',   engine: 'Honda',    points: 25,  position: 8, wins: 0,  color: '#6692FF' },
+      { teamId: 'racingbulls', driverIds: ['tsunoda', 'nyck_de_vries'],      chassis: 'AT04',   engine: 'Honda',    points: 25,  position: 8, wins: 0,  color: '#6692FF' },
       { teamId: 'haas',        driverIds: ['nico_hulkenberg', 'kevin_magnussen'],  chassis: 'VF-23',  engine: 'Ferrari',  points: 12,  position: 9, wins: 0,  color: '#B6BABD' },
-      { teamId: 'sauber',      driverIds: ['valtteri_bottas', 'zhou_guanyu'],      chassis: 'C43',    engine: 'Ferrari',  points: 9,   position: 10,wins: 0,  color: '#52E252' },
+      { teamId: 'sauber',      driverIds: ['bottas', 'zhou_guanyu'],      chassis: 'C43',    engine: 'Ferrari',  points: 9,   position: 10,wins: 0,  color: '#52E252' },
     ],
     races: []
   },
@@ -45,7 +65,7 @@ export const SEASONS: Season[] = [
     constructorChampion: 'mercedes',
     totalRaces: 22,
     entries: [
-      { teamId: 'mercedes',    driverIds: ['lewis_hamilton', 'valtteri_bottas'],   chassis: 'W12',    engine: 'Mercedes', points: 613, position: 1, wins: 9,  color: '#27F4D2' },
+      { teamId: 'mercedes',    driverIds: ['lewis_hamilton', 'bottas'],   chassis: 'W12',    engine: 'Mercedes', points: 613, position: 1, wins: 9,  color: '#27F4D2' },
       { teamId: 'redbull',     driverIds: ['max_verstappen', 'sergio_perez'],      chassis: 'RB16B',  engine: 'Honda',    points: 585, position: 2, wins: 11, color: '#3671C6' },
       { teamId: 'ferrari',     driverIds: ['charles_leclerc', 'carlos_sainz'],    chassis: 'SF21',   engine: 'Ferrari',  points: 323, position: 3, wins: 1,  color: '#E8002D' },
       { teamId: 'mclaren',     driverIds: ['lando_norris', 'daniel_ricciardo'],   chassis: 'MCL35M', engine: 'Mercedes', points: 275, position: 4, wins: 1,  color: '#FF8000' },

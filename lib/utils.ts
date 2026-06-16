@@ -39,7 +39,8 @@ const NATIONALITY_FLAGS: Record<string, string> = {
   'Indonesian': '🇮🇩', 'Azerbaijani': '🇦🇿', 'Portuguese': '🇵🇹', 'Hungarian': '🇭🇺',
   'Czech': '🇨🇿', 'Russian': '🇷🇺', 'Uruguayan': '🇺🇾', 'Chilean': '🇨🇱',
   'Rhodesian': '🇿🇼', 'Liechtensteiner': '🇱🇮', 'Indian': '🇮🇳', 'Malaysian': '🇲🇾',
-  'East German': '🇩🇪',
+  'East German': '🇩🇪', 'Hong Kong': '🇭🇰',
+  'Estonian': '🇪🇪',
 }
 
 const COUNTRY_FLAGS: Record<string, string> = {
@@ -54,8 +55,9 @@ const COUNTRY_FLAGS: Record<string, string> = {
   'Portugal': '🇵🇹', 'Hungary': '🇭🇺', 'Czech Republic': '🇨🇿', 'Russia': '🇷🇺',
   'Uruguay': '🇺🇾', 'Chile': '🇨🇱', 'Bahrain': '🇧🇭', 'UAE': '🇦🇪',
   'United Arab Emirates': '🇦🇪', 'Saudi Arabia': '🇸🇦', 'Qatar': '🇶🇦',
-  'Singapore': '🇸🇬', 'South Korea': '🇰🇷', 'India': '🇮🇳', 'Malaysia': '🇲🇾',
+  'Singapore': '🇸🇬', 'South Korea': '🇰🇷', 'Korea': '🇰🇷', 'India': '🇮🇳', 'Malaysia': '🇲🇾',
   'Turkey': '🇹🇷', 'Morocco': '🇲🇦', 'Vietnam': '🇻🇳', 'Azerbaijan ': '🇦🇿',
+  'Estonia': '🇪🇪',
 }
 
 /** Maps an Ergast/F1 nationality (e.g. "British", "Brazilian") to its flag emoji. */

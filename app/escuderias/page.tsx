@@ -1,10 +1,12 @@
 'use client'
 import { useState } from 'react'
-import { Search, Trophy, Zap, Medal, Circle } from 'lucide-react'
+import { Search, Trophy, Zap, Medal, Circle, Wrench } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { TEAMS, searchTeams } from '@/data/teams'
 import { DRIVERS } from '@/data/drivers'
 import { F1CarSVG } from '@/components/ui/F1CarSVG'
+import { IndexedBadge } from '@/components/ui/IndexedBadge'
+import { FlagIcon } from '@/components/ui/FlagIcon'
 import type { Team } from '@/lib/types'
 
 export default function EscuderiasPage() {
@@ -24,7 +26,10 @@ export default function EscuderiasPage() {
     <div className="min-h-screen max-w-[1400px] mx-auto px-4 py-8">
       <div className="mb-8">
         <p className="section-eyebrow mb-1">Enciclopedia</p>
-        <h1 className="text-4xl font-bold text-[#0A0A0F] mb-1">Escuderías</h1>
+        <div className="flex flex-wrap items-center gap-3 mb-1">
+          <h1 className="text-4xl font-bold text-[#0A0A0F]">Escuderías</h1>
+          <IndexedBadge type="escuderias" />
+        </div>
         <p className="text-[#6B6B80]">Historia, estadísticas y evolución técnica de cada equipo</p>
       </div>
 
@@ -74,44 +79,53 @@ function TeamCard({ team, onClick }: { team: Team; onClick: () => void }) {
   return (
     <div
       onClick={onClick}
-      className="f1-card interactive p-5 cursor-pointer overflow-hidden relative"
-      style={{ borderTopColor: team.color, borderTopWidth: 3 }}
+      className="f1-card interactive cursor-pointer overflow-hidden relative"
+      style={{ border: `2px solid ${team.color}`, boxShadow: `0 4px 20px ${team.color}20` }}
     >
-      <div className="flex items-start justify-between mb-3">
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-            <h3 className="text-base font-bold text-[#0A0A0F]">{team.name}</h3>
-            <span className="text-sm">{team.flag}</span>
-          </div>
-          <p className="text-xs text-[#9CA3AF]">{team.basedIn}</p>
-          <p className="text-xs text-[#9CA3AF]">Fundado: {team.founded}{team.dissolved ? ` — ${team.dissolved}` : ''}</p>
-        </div>
-        {team.championships > 0 && (
-          <div className="flex items-center gap-1 px-2 py-1 rounded text-xs font-bold" style={{ background: `${team.color}15`, color: team.color }}>
-            <Trophy size={10} />
-            {team.championships}x WCC
-          </div>
+      <div className="flex items-center justify-center h-32" style={{ background: `${team.color}15` }}>
+        {team.logoUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={team.logoUrl} alt={team.name} className="max-h-20 max-w-[70%] object-contain" />
+        ) : (
+          <Wrench size={48} style={{ color: team.color }} />
         )}
       </div>
 
-      <F1CarSVG teamId={team.id} primaryColor={team.color} className="my-2 opacity-90" />
+      <div className="p-5">
+        <div className="flex items-start justify-between mb-3">
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <h3 className="text-2xl font-semibold text-[#0A0A0F]">{team.name}</h3>
+              <FlagIcon nationality={team.nationality} size={18} />
+            </div>
+            <p className="text-xs text-[#9CA3AF]">{team.basedIn}</p>
+            <p className="text-xs text-[#9CA3AF]">Fundado: {team.founded}{team.dissolved ? ` — ${team.dissolved}` : ''}</p>
+          </div>
+          {team.championships > 0 && (
+            <div className="flex items-center gap-1 px-2 py-1 rounded text-xs font-bold shrink-0" style={{ background: `${team.color}15`, color: team.color }}>
+              <Trophy size={10} />
+              {team.championships}x WCC
+            </div>
+          )}
+        </div>
 
-      <div className="grid grid-cols-3 gap-2 mt-3">
-        <MiniStat label="Victorias" value={team.wins} />
-        <MiniStat label="Poles" value={team.poles} />
-        <MiniStat label="Podiums" value={team.podiums} />
+        <div className="grid grid-cols-3 gap-2 mt-3">
+          <MiniStat label="Victorias" value={team.wins} />
+          <MiniStat label="Poles" value={team.poles} />
+          <MiniStat label="Podiums" value={team.podiums} />
+        </div>
+
+        {!team.active && (
+          <div className="mt-2 text-xs text-[#9CA3AF] flex items-center gap-1">
+            <Circle size={6} className="text-[#9CA3AF]" /> Equipo histórico
+          </div>
+        )}
+        {team.active && (
+          <div className="mt-2 text-xs text-green-400 flex items-center gap-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-400" /> Activo
+          </div>
+        )}
       </div>
-
-      {!team.active && (
-        <div className="mt-2 text-xs text-[#9CA3AF] flex items-center gap-1">
-          <Circle size={6} className="text-[#9CA3AF]" /> Equipo histórico
-        </div>
-      )}
-      {team.active && (
-        <div className="mt-2 text-xs text-green-400 flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-green-400" /> Activo
-        </div>
-      )}
     </div>
   )
 }
@@ -147,44 +161,55 @@ function TeamDetail({ team, onClose }: { team: Team; onClose: () => void }) {
       </button>
 
       {/* Header */}
-      <div className="f1-card p-6 mb-4" style={{ borderTopWidth: 4, borderTopColor: team.color }}>
-        <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-          <div>
-            <div className="flex items-center gap-3 mb-2">
-              <h2 className="text-3xl font-bold text-[#0A0A0F]">{team.name}</h2>
-              <span className="text-2xl">{team.flag}</span>
-              {team.championships > 0 && (
-                <span className="flex items-center gap-1 px-2 py-1 rounded text-sm font-bold" style={{ background: `${team.color}20`, color: team.color }}>
-                  <Trophy size={12} /> {team.championships}x Campeón
-                </span>
-              )}
-            </div>
-            <p className="text-sm text-[#6B6B80]">{team.fullName} · {team.basedIn}</p>
-            <p className="text-xs text-[#9CA3AF]">
-              {team.founded}{team.dissolved ? ` — ${team.dissolved}` : ' — Presente'}
-            </p>
-          </div>
+      <div className="f1-card mb-4 overflow-hidden" style={{ border: `2px solid ${team.color}`, boxShadow: `0 4px 20px ${team.color}20` }}>
+        <div className="flex items-center justify-center h-40" style={{ background: `${team.color}15` }}>
+          {team.logoUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={team.logoUrl} alt={team.name} className="max-h-28 max-w-[60%] object-contain" />
+          ) : (
+            <Wrench size={64} style={{ color: team.color }} />
+          )}
         </div>
 
-        <p className="text-sm text-[#6B6B80] leading-relaxed mb-6 border-l-2 pl-4" style={{ borderColor: team.color }}>
-          {team.bio}
-        </p>
-
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {[
-            { label: 'Victorias', value: team.wins, Icon: Trophy, color: '#F5C518' },
-            { label: 'Poles', value: team.poles, Icon: Zap, color: '#378ADD' },
-            { label: 'Podiums', value: team.podiums, Icon: Medal, color: '#C0C0C0' },
-            { label: 'WCC', value: team.championships, Icon: Trophy, color: team.color },
-          ].map(({ label, value, Icon, color }) => (
-            <div key={label} className="bg-[#F5F5F7] rounded-lg p-4">
-              <div className="flex items-center gap-1.5 mb-1">
-                <Icon size={12} style={{ color }} />
-                <span className="text-[10px] text-[#9CA3AF] uppercase tracking-widest">{label}</span>
+        <div className="p-6">
+          <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <h2 className="text-3xl font-semibold text-[#0A0A0F]">{team.name}</h2>
+                <FlagIcon nationality={team.nationality} size={24} />
+                {team.championships > 0 && (
+                  <span className="flex items-center gap-1 px-2 py-1 rounded text-sm font-bold" style={{ background: `${team.color}20`, color: team.color }}>
+                    <Trophy size={12} /> {team.championships}x Campeón
+                  </span>
+                )}
               </div>
-              <div className="text-2xl font-bold text-[#0A0A0F]">{value}</div>
+              <p className="text-sm text-[#6B6B80]">{team.fullName} · {team.basedIn}</p>
+              <p className="text-xs text-[#9CA3AF]">
+                {team.founded}{team.dissolved ? ` — ${team.dissolved}` : ' — Presente'}
+              </p>
             </div>
-          ))}
+          </div>
+
+          <p className="text-sm text-[#6B6B80] leading-relaxed mb-6 border-l-2 pl-4" style={{ borderColor: team.color }}>
+            {team.bio}
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {[
+              { label: 'Victorias', value: team.wins, Icon: Trophy, color: '#F5C518' },
+              { label: 'Poles', value: team.poles, Icon: Zap, color: '#378ADD' },
+              { label: 'Podiums', value: team.podiums, Icon: Medal, color: '#C0C0C0' },
+              { label: 'WCC', value: team.championships, Icon: Trophy, color: team.color },
+            ].map(({ label, value, Icon, color }) => (
+              <div key={label} className="bg-[#F5F5F7] rounded-lg p-4">
+                <div className="flex items-center gap-1.5 mb-1">
+                  <Icon size={12} style={{ color }} />
+                  <span className="text-[10px] text-[#9CA3AF] uppercase tracking-widest">{label}</span>
+                </div>
+                <div className="text-2xl font-bold text-[#0A0A0F]">{value}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -303,7 +328,7 @@ function TeamDetail({ team, onClose }: { team: Team; onClose: () => void }) {
                             #{ds?.number ?? driver?.number ?? '–'}
                           </span>
                           <span className="text-sm text-[#0A0A0F]">{driver?.name ?? did}</span>
-                          <span>{driver?.flag}</span>
+                          {driver && <FlagIcon nationality={driver.nationality} size={16} />}
                         </div>
                         <span className="text-xs text-[#6B6B80]">{ds?.points ?? '–'} pts</span>
                       </div>

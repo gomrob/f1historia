@@ -1,5 +1,7 @@
 import Link from 'next/link'
-import { Trophy, MapPin, User, Wrench, Star, ArrowRight } from 'lucide-react'
+import { Trophy, MapPin, User, Wrench, Star, RefreshCw } from 'lucide-react'
+import { getLastUpdated } from '@/lib/data-loader'
+import { HomeCarousel } from '@/components/HomeCarousel'
 
 const SECTIONS = [
   {
@@ -8,7 +10,6 @@ const SECTIONS = [
     description: 'Cada campeonato desde 1950. Equipos, pilotos, resultados y clasificaciones.',
     Icon: Trophy,
     color: '#E8001D',
-    bg: 'from-red-950/30 to-transparent',
     stat: '75 temporadas',
   },
   {
@@ -17,7 +18,6 @@ const SECTIONS = [
     description: 'Todos los trazados que han acogido Grandes Premios a lo largo de la historia.',
     Icon: MapPin,
     color: '#378ADD',
-    bg: 'from-blue-950/30 to-transparent',
     stat: '77 circuitos',
   },
   {
@@ -26,7 +26,6 @@ const SECTIONS = [
     description: 'Perfiles completos, estadísticas y trayectorias de todos los pilotos históricos.',
     Icon: User,
     color: '#27F4D2',
-    bg: 'from-teal-950/30 to-transparent',
     stat: '800+ pilotos',
   },
   {
@@ -35,7 +34,6 @@ const SECTIONS = [
     description: 'Historia, evolución técnica, coches y patrocinadores de cada equipo.',
     Icon: Wrench,
     color: '#FF8000',
-    bg: 'from-orange-950/30 to-transparent',
     stat: '210+ escuderías',
   },
   {
@@ -44,85 +42,128 @@ const SECTIONS = [
     description: 'Los rankings históricos: campeones, victorias, poles y récords de la F1.',
     Icon: Star,
     color: '#F5C518',
-    bg: 'from-yellow-950/30 to-transparent',
     stat: 'Todos los récords',
   },
 ]
 
+const STATS = [
+  { label: 'Grandes Premios', value: '1.100+' },
+  { label: 'Campeones', value: '34' },
+  { label: 'Victorias registradas', value: '1.100+' },
+  { label: 'Circuitos históricos', value: '77' },
+]
+
 export default function HomePage() {
+  const lastUpdated = getLastUpdated()
+  const lastUpdatedLabel = lastUpdated
+    ? new Date(lastUpdated).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })
+    : null
+
   return (
-    <div className="min-h-screen bg-grid">
-      {/* Hero */}
-      <section className="relative px-4 pt-16 pb-12 max-w-[1400px] mx-auto">
-        <div className="max-w-3xl">
-          <p className="text-xs tracking-[3px] uppercase text-[#9CA3AF] mb-4">
-            La guía histórica definitiva
-          </p>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-none">
-            <span className="text-[#E8001D]">Fórmula 1</span>
-            <br />
-            <span className="text-[#0A0A0F]">desde 1950</span>
-          </h1>
-          <p className="text-lg text-[#6B6B80] max-w-xl leading-relaxed">
-            75 años de historia del automovilismo más apasionante del mundo. Explora temporadas, pilotos, escuderías y circuitos con datos detallados.
-          </p>
+    <div className="min-h-screen bg-[#FAFAFA]">
+
+      {/* ── HERO: light theme ── */}
+      <section
+        className="relative overflow-hidden"
+        style={{
+          minHeight: '580px',
+          background: 'linear-gradient(110deg, #FAFAFA 42%, #F2F2F5 100%)',
+        }}
+      >
+        {/* Top red accent */}
+        <div className="absolute top-0 left-0 right-0 h-0.5 bg-[#E8001D]" />
+
+        {/* McLaren MP4/5 — right portion, masked edges */}
+        <div
+          className="absolute right-0 top-0 bottom-0 w-full md:w-[60%] pointer-events-none select-none"
+          style={{
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0%, black 22%, black 100%), linear-gradient(to bottom, black 55%, transparent 100%)',
+            WebkitMaskComposite: 'source-in',
+            maskImage:
+              'linear-gradient(to right, transparent 0%, black 22%, black 100%), linear-gradient(to bottom, black 55%, transparent 100%)',
+            maskComposite: 'intersect',
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/hero/mclaren-mp45-senna.png"
+            alt="McLaren MP4/5 — Ayrton Senna 1989"
+            className="h-full w-full object-contain object-right-bottom"
+            draggable={false}
+          />
         </div>
 
-        {/* Decorative stats */}
-        <div className="flex flex-wrap gap-6 mt-10">
-          {[
-            { label: 'Grandes Premios', value: '1.100+' },
-            { label: 'Campeones', value: '34' },
-            { label: 'Victorias registradas', value: '1.100+' },
-            { label: 'Circuitos históricos', value: '77' },
-          ].map(({ label, value }) => (
-            <div key={label} className="flex flex-col">
-              <span className="text-3xl font-bold text-[#0A0A0F]">{value}</span>
-              <span className="text-xs text-[#9CA3AF] mt-1">{label}</span>
-            </div>
-          ))}
+        {/* Text content */}
+        <div className="relative max-w-[1400px] mx-auto px-4 pt-16 pb-32 flex flex-col min-h-[580px] justify-center">
+          <div className="max-w-lg">
+            <p className="text-xs tracking-[3px] uppercase text-[#E8001D] mb-4 font-semibold">
+              La guía histórica definitiva
+            </p>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-none">
+              <span className="text-[#E8001D]">Fórmula 1</span>
+              <br />
+              <span className="text-[#0A0A0F]">desde 1950</span>
+            </h1>
+            <p className="text-lg text-[#6B6B80] max-w-md leading-relaxed">
+              75 años del automovilismo más apasionante del mundo. Explora temporadas, pilotos, escuderías y circuitos con datos detallados.
+            </p>
+          </div>
+
+          {/* Stats — light-themed boxes */}
+          <div className="flex flex-wrap gap-3 mt-10">
+            {STATS.map(({ label, value }) => (
+              <div
+                key={label}
+                className="flex flex-col bg-white rounded-xl px-4 py-3 border border-[#E8E8EE] shadow-sm"
+              >
+                <span className="text-2xl font-bold text-[#0A0A0F]">{value}</span>
+                <span className="text-xs text-[#9CA3AF] mt-0.5">{label}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Section cards */}
-      <section className="px-4 pb-20 max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {SECTIONS.map(({ href, label, description, Icon, color, stat }) => (
+      {/* ── SLIDER / CAROUSEL ── */}
+      <section className="py-12 bg-white border-t border-[#F0F0F3]">
+        <div className="max-w-[1400px] mx-auto px-4 mb-8">
+          <p className="section-eyebrow mb-1">Explora la historia</p>
+          <h2 className="text-2xl font-bold text-[#0A0A0F]">Todo sobre la Fórmula 1</h2>
+        </div>
+        <HomeCarousel sections={SECTIONS} />
+      </section>
+
+      {/* ── QUICK ACCESS LINKS ── */}
+      <section className="py-8 px-4 max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          {SECTIONS.map(({ href, label, Icon, color }) => (
             <Link
               key={href}
               href={href}
-              className="group f1-card interactive p-6 flex flex-col gap-4 relative overflow-hidden"
+              className="group flex items-center gap-3 bg-white rounded-xl px-4 py-3 border border-[#E8E8EE] hover:border-[#D5D5E2] hover:shadow-sm transition-all duration-150"
             >
-              {/* Top accent */}
-              <div className="absolute top-0 left-0 right-0 h-0.5" style={{ background: color }} />
-
-              <div className="flex items-start justify-between">
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style={{ background: `${color}15`, border: `1px solid ${color}30` }}
-                >
-                  <Icon size={18} style={{ color }} />
-                </div>
-                <span className="text-xs text-[#9CA3AF] bg-[#F5F5F7] px-2 py-1 rounded border border-[#E8E8EE]">
-                  {stat}
-                </span>
-              </div>
-
-              <div>
-                <h2 className="text-lg font-semibold text-[#0A0A0F] mb-1">{label}</h2>
-                <p className="text-sm text-[#6B6B80] leading-relaxed">{description}</p>
-              </div>
-
               <div
-                className="flex items-center gap-1 text-sm font-medium mt-auto group-hover:gap-2 transition-all"
-                style={{ color }}
+                className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                style={{ background: `${color}15` }}
               >
-                Explorar <ArrowRight size={14} />
+                <Icon size={15} style={{ color }} />
               </div>
+              <span className="text-sm font-medium text-[#0A0A0F] truncate">{label}</span>
             </Link>
           ))}
         </div>
       </section>
+
+      {/* ── FOOTER ── */}
+      {lastUpdatedLabel && (
+        <footer className="px-4 pb-10 max-w-[1400px] mx-auto">
+          <div className="flex items-center gap-2 text-xs text-[#9CA3AF]">
+            <RefreshCw size={12} />
+            <span>Datos actualizados el {lastUpdatedLabel}</span>
+          </div>
+        </footer>
+      )}
     </div>
   )
 }

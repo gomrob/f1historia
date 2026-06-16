@@ -140,6 +140,7 @@ export interface RaceResultEntry {
   driverId: string
   driverName: string
   driverCode?: string
+  nationality: string
   constructorId: string
   constructorName: string
   points: number
@@ -194,6 +195,93 @@ function getConstructorNameMap(): Map<string, string> {
 }
 
 // ─── Public API ──────────────────────────────────────────────────────────────
+
+export interface DriverSeasonSummary {
+  year: number
+  position: number
+  points: number
+  wins: number
+  constructorNames: string[]
+}
+
+let driverSeasonHistoryCache: Map<string, DriverSeasonSummary[]> | null = null
+
+/** Per-driver season-by-season championship history, built from standings/drivers_{year}.json. */
+export function getDriverSeasonHistory(driverId: string): DriverSeasonSummary[] {
+  if (!driverSeasonHistoryCache) {
+    const cache = new Map<string, DriverSeasonSummary[]>()
+    for (const year of getAllSeasonYears()) {
+      for (const s of getDriverStandings(year)) {
+        const list = cache.get(s.driverId) ?? []
+        list.push({ year, position: s.position, points: s.points, wins: s.wins, constructorNames: s.constructorNames })
+        cache.set(s.driverId, list)
+      }
+    }
+    driverSeasonHistoryCache = cache
+  }
+  return (driverSeasonHistoryCache.get(driverId) ?? []).sort((a, b) => b.year - a.year)
+}
+
+export interface CircuitWinner {
+  year: number
+  driverId: string
+  driverName: string
+  nationality: string
+  constructorId: string
+  constructorName: string
+}
+
+let circuitWinnersCache: Map<string, CircuitWinner[]> | null = null
+
+/** Race winners for every circuit, indexed by circuitId, built from results/results_{year}.json. */
+export function getCircuitWinners(circuitId: string): CircuitWinner[] {
+  if (!circuitWinnersCache) {
+    const cache = new Map<string, CircuitWinner[]>()
+    for (const year of getAllSeasonYears()) {
+      const data = readJson<ErgastRacesResponse>(`results/results_${year}.json`)
+      for (const race of data?.MRData.RaceTable.Races ?? []) {
+        const winner = race.Results?.find(r => r.position === '1')
+        if (!winner) continue
+        const list = cache.get(race.Circuit.circuitId) ?? []
+        list.push({
+          year,
+          driverId: winner.Driver.driverId,
+          driverName: `${winner.Driver.givenName} ${winner.Driver.familyName}`,
+          nationality: winner.Driver.nationality,
+          constructorId: winner.Constructor.constructorId,
+          constructorName: winner.Constructor.name,
+        })
+        cache.set(race.Circuit.circuitId, list)
+      }
+    }
+    circuitWinnersCache = cache
+  }
+  return (circuitWinnersCache.get(circuitId) ?? []).sort((a, b) => b.year - a.year)
+}
+
+let circuitGPCountCache: Map<string, number> | null = null
+
+/** Number of Grands Prix held at each circuit, indexed by circuitId, built from results/results_{year}.json. */
+export function getCircuitGPCount(circuitId: string): number {
+  if (!circuitGPCountCache) {
+    const cache = new Map<string, number>()
+    for (const year of getAllSeasonYears()) {
+      const data = readJson<ErgastRacesResponse>(`results/results_${year}.json`)
+      for (const race of data?.MRData.RaceTable.Races ?? []) {
+        const id = race.Circuit.circuitId
+        cache.set(id, (cache.get(id) ?? 0) + 1)
+      }
+    }
+    circuitGPCountCache = cache
+  }
+  return circuitGPCountCache.get(circuitId) ?? 0
+}
+
+/** ISO timestamp of the last data update, read from data/json/metadata.json. */
+export function getLastUpdated(): string | null {
+  const data = readJson<{ lastUpdated: string }>('metadata.json')
+  return data?.lastUpdated ?? null
+}
 
 /** All seasons with available data, sorted descending (newest first). */
 export function getAllSeasonYears(): number[] {
@@ -259,6 +347,7 @@ export function getRaceResultsByYear(year: number): RaceResults[] {
       driverId: r.Driver.driverId,
       driverName: `${r.Driver.givenName} ${r.Driver.familyName}`,
       driverCode: r.Driver.code,
+      nationality: r.Driver.nationality,
       constructorId: r.Constructor.constructorId,
       constructorName: r.Constructor.name,
       points: Number(r.points),

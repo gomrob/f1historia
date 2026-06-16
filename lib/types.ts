@@ -44,7 +44,7 @@ export interface Team {
   founded: number
   dissolved?: number
   bio: string
-  logo?: string
+  logoUrl?: string
   championships: number
   wins: number
   poles: number
@@ -94,6 +94,8 @@ export interface Circuit {
   lapRecord?: { time: string; driver: string; year: number }
   svgPath?: string
   photo?: string
+  logoUrl?: string
+  trackImageUrl?: string
   active: boolean
   races: CircuitRace[]
 }
@@ -109,8 +111,8 @@ export interface CircuitRace {
 
 export interface Season {
   year: number
-  champion: string
-  constructorChampion: string
+  champion: string | null
+  constructorChampion: string | null
   totalRaces: number
   entries: SeasonEntry[]
   races: Race[]
@@ -193,6 +195,7 @@ export const TEAM_COLORS: Record<string, string> = {
   haas:         '#B6BABD',
   sauber:       '#52E252',
   racingbulls:  '#6692FF',
+  cadillac:     '#9C8A5E',
   lotus:        '#FFD700',
   tyrrell:      '#1E3A5F',
   brabham:      '#1B5E20',

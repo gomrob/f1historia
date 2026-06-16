@@ -1,16 +1,18 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { Search, Trophy, Zap, Medal, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useRouter } from 'next/navigation'
+import { Search, Trophy, ChevronLeft, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { DRIVERS, searchDrivers } from '@/data/drivers'
-import { TEAMS } from '@/data/teams'
+import { IndexedBadge } from '@/components/ui/IndexedBadge'
+import { FlagIcon } from '@/components/ui/FlagIcon'
 import type { Driver } from '@/lib/types'
 
 const PAGE_SIZE = 48
 
 export default function PilotosPage() {
+  const router = useRouter()
   const [query, setQuery] = useState('')
-  const [selected, setSelected] = useState<Driver | null>(null)
   const [filter, setFilter] = useState<'todos' | 'activos' | 'campeones'>('todos')
   const [page, setPage] = useState(1)
 
@@ -35,7 +37,10 @@ export default function PilotosPage() {
     <div className="min-h-screen max-w-[1400px] mx-auto px-4 py-8">
       <div className="mb-8">
         <p className="section-eyebrow mb-1">Enciclopedia</p>
-        <h1 className="text-4xl font-bold text-[#0A0A0F] mb-1">Pilotos</h1>
+        <div className="flex flex-wrap items-center gap-3 mb-1">
+          <h1 className="text-4xl font-bold text-[#0A0A0F]">Pilotos</h1>
+          <IndexedBadge type="pilotos" />
+        </div>
         <p className="text-[#6B6B80]">Historia y estadísticas de todos los pilotos de la Fórmula 1</p>
       </div>
 
@@ -77,8 +82,7 @@ export default function PilotosPage() {
               <DriverCard
                 key={driver.id}
                 driver={driver}
-                isSelected={selected?.id === driver.id}
-                onClick={() => setSelected(selected?.id === driver.id ? null : driver)}
+                onClick={() => router.push(`/pilotos/${driver.id}`)}
               />
             ))}
           </div>
@@ -122,30 +126,20 @@ export default function PilotosPage() {
             </div>
           )}
         </div>
-
-        {/* Detail panel */}
-        {selected && (
-          <div className="w-80 flex-shrink-0 hidden lg:block">
-            <DriverDetail driver={selected} onClose={() => setSelected(null)} />
-          </div>
-        )}
       </div>
     </div>
   )
 }
 
-function DriverCard({ driver, isSelected, onClick }: { driver: Driver; isSelected: boolean; onClick: () => void }) {
+function DriverCard({ driver, onClick }: { driver: Driver; onClick: () => void }) {
   return (
     <div
       onClick={onClick}
-      className={cn(
-        'f1-card interactive p-4 cursor-pointer transition-all',
-        isSelected && 'border-[#E8001D]'
-      )}
+      className="f1-card interactive p-4 cursor-pointer transition-all"
     >
       <div className="flex items-start justify-between mb-3">
         <div className="flex items-center gap-2">
-          <span className="text-xl">{driver.flag}</span>
+          <FlagIcon nationality={driver.nationality} size={22} />
           <div>
             <h3 className="text-sm font-semibold text-[#0A0A0F] leading-tight">{driver.name}</h3>
             <p className="text-xs text-[#9CA3AF]">{driver.nationality}</p>
@@ -184,92 +178,3 @@ function Stat({ label, value }: { label: string; value: number }) {
   )
 }
 
-function DriverDetail({ driver, onClose }: { driver: Driver; onClose: () => void }) {
-  const topTeam = driver.seasons?.[0]?.teamId
-    ? TEAMS.find(t => t.id === driver.seasons[0].teamId)
-    : null
-
-  return (
-    <div className="f1-card p-5 sticky top-20">
-      <div className="flex items-start justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <span className="text-4xl">{driver.flag}</span>
-          <div>
-            <h2 className="text-lg font-bold text-[#0A0A0F]">{driver.name}</h2>
-            <p className="text-sm text-[#6B6B80]">{driver.nationality}</p>
-          </div>
-        </div>
-        <button onClick={onClose} className="text-[#9CA3AF] hover:text-[#0A0A0F] text-lg leading-none">×</button>
-      </div>
-
-      {driver.number && (
-        <div className="text-5xl font-bold text-[#E8001D] mb-4 opacity-80">#{driver.number}</div>
-      )}
-
-      <p className="text-xs text-[#6B6B80] leading-relaxed mb-4 border-l-2 border-[#E8E8EE] pl-3">
-        {driver.bio}
-      </p>
-
-      <div className="grid grid-cols-2 gap-2 mb-4">
-        <StatBig label="Campeonatos" value={driver.championships} Icon={Trophy} color="#F5C518" />
-        <StatBig label="Victorias" value={driver.wins} Icon={Trophy} color="#F5C518" />
-        <StatBig label="Poles" value={driver.poles} Icon={Zap} color="#378ADD" />
-        <StatBig label="Podiums" value={driver.podiums} Icon={Medal} color="#C0C0C0" />
-      </div>
-
-      <div className="space-y-1 text-xs text-[#6B6B80]">
-        <div className="flex justify-between py-1 border-b border-[#F0F0F3]">
-          <span className="text-[#9CA3AF]">Nacimiento</span>
-          <span>{new Date(driver.dateOfBirth).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-        </div>
-        <div className="flex justify-between py-1 border-b border-[#F0F0F3]">
-          <span className="text-[#9CA3AF]">Lugar</span>
-          <span>{driver.placeOfBirth}</span>
-        </div>
-        <div className="flex justify-between py-1 border-b border-[#F0F0F3]">
-          <span className="text-[#9CA3AF]">Carreras</span>
-          <span>{driver.racesEntered}</span>
-        </div>
-        <div className="flex justify-between py-1 border-b border-[#F0F0F3]">
-          <span className="text-[#9CA3AF]">Vueltas rápidas</span>
-          <span>{driver.fastestLaps}</span>
-        </div>
-        <div className="flex justify-between py-1">
-          <span className="text-[#9CA3AF]">Puntos totales</span>
-          <span>{driver.points.toLocaleString()}</span>
-        </div>
-      </div>
-
-      {driver.seasons && driver.seasons.length > 0 && (
-        <div className="mt-4">
-          <p className="section-eyebrow mb-2">Temporadas</p>
-          <div className="space-y-1 max-h-48 overflow-y-auto">
-            {driver.seasons.sort((a, b) => b.year - a.year).map(s => {
-              const team = TEAMS.find(t => t.id === s.teamId)
-              return (
-                <div key={s.year} className="flex items-center justify-between text-xs bg-[#F5F5F7] rounded px-2 py-1.5">
-                  <span className="text-[#0A0A0F] font-medium">{s.year}</span>
-                  <span className="text-[#6B6B80]">{team?.name ?? s.teamId}</span>
-                  <span className="text-[#E8001D] font-bold">P{s.position}</span>
-                  <span className="text-[#6B6B80]">{s.points} pts</span>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      )}
-    </div>
-  )
-}
-
-function StatBig({ label, value, Icon, color }: { label: string; value: number; Icon: any; color: string }) {
-  return (
-    <div className="bg-[#F5F5F7] rounded-lg p-3">
-      <div className="flex items-center gap-1.5 mb-1">
-        <Icon size={12} style={{ color }} />
-        <span className="text-[10px] text-[#9CA3AF] uppercase tracking-wide">{label}</span>
-      </div>
-      <div className="text-xl font-bold text-[#0A0A0F]">{value}</div>
-    </div>
-  )
-}

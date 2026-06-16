@@ -1,11 +1,13 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { ChevronLeft, ChevronRight, Trophy, Flag, Users, BarChart2 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { TEAMS } from '@/data/teams'
 import { DRIVERS } from '@/data/drivers'
 import { F1CarSVG } from '@/components/ui/F1CarSVG'
+import { IndexedBadge } from '@/components/ui/IndexedBadge'
+import { FlagIcon } from '@/components/ui/FlagIcon'
 import { TEAM_COLORS, type Season } from '@/lib/types'
 import type { DriverStandingEntry, ConstructorStandingEntry, RaceResults } from '@/lib/data-loader'
 
@@ -17,6 +19,50 @@ const TABS = [
 
 function teamColor(constructorId: string): string {
   return TEAM_COLORS[constructorId.replace(/_/g, '')] ?? '#9CA3AF'
+}
+
+// Display names for teams not yet present in data/teams.ts (current-era entries)
+const TEAM_NAME_FALLBACKS: Record<string, string> = {
+  astonmartin: 'Aston Martin',
+  haas: 'Haas',
+  sauber: 'Sauber',
+  racingbulls: 'Racing Bulls',
+  cadillac: 'Cadillac',
+}
+
+// Teams that changed official name at some point — returns year-accurate display name
+function getTeamDisplayName(teamId: string, year: number): string {
+  if (teamId === 'racingbulls') {
+    if (year <= 2019) return 'Toro Rosso'
+    if (year <= 2023) return 'AlphaTauri'
+    return 'Racing Bulls'
+  }
+  if (teamId === 'sauber') {
+    if (year <= 2023) return 'Alfa Romeo'
+    if (year === 2024) return 'Kick Sauber'
+    return 'Audi'
+  }
+  if (teamId === 'force_india') {
+    if (year <= 2018) return 'Force India'
+    return 'Racing Point'
+  }
+  if (teamId === 'alpine') {
+    if (year <= 2020) return 'Renault'
+    return 'Alpine'
+  }
+  return TEAMS.find(t => t.id === teamId)?.name ?? TEAM_NAME_FALLBACKS[teamId] ?? teamId
+}
+
+// Logos for teams not yet present in data/teams.ts (current-era entries)
+const TEAM_LOGO_FALLBACKS: Record<string, string> = {
+  astonmartin: 'https://commons.wikimedia.org/wiki/Special:FilePath/Aston_Martin_F1_Team_logo_2024.jpg',
+  haas: 'https://commons.wikimedia.org/wiki/Special:FilePath/TGR_Haas_F1_Team_Logo_(2026).svg',
+  sauber: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sauber_F1_Team_logo.svg',
+  cadillac: 'https://commons.wikimedia.org/wiki/Special:FilePath/Cadillac_Wordmark.svg',
+}
+
+function teamLogo(constructorId: string): string | undefined {
+  return TEAMS.find(t => t.id === constructorId)?.logoUrl ?? TEAM_LOGO_FALLBACKS[constructorId]
 }
 
 interface Props {
@@ -52,7 +98,15 @@ export default function TemporadasClient({ years, year, season, driverStandings,
       <div className="flex items-center justify-between mb-8">
         <div>
           <p className="section-eyebrow mb-1">Campeonato del Mundo</p>
-          <h1 className="text-4xl font-bold text-[#0A0A0F]">Temporada <span className="text-[#E8001D]">{year}</span></h1>
+          <div className="flex flex-wrap items-center gap-3">
+            <h1 className="text-4xl font-bold text-[#0A0A0F]">Temporada <span className="text-[#E8001D]">{year}</span></h1>
+            <IndexedBadge type="temporadas" />
+            {year === 2026 && (
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#E8001D] bg-[#E8001D]/10 border border-[#E8001D]/20 px-2.5 py-1 rounded-full">
+                Temporada actual
+              </span>
+            )}
+          </div>
           {(champion || constructorChampion) && (
             <p className="text-sm text-[#6B6B80] mt-1">
               {totalRaces} carreras
@@ -136,10 +190,57 @@ export default function TemporadasClient({ years, year, season, driverStandings,
       {tab === 'equipos' && (
         <TeamsTab season={season} year={year} activeTeam={activeTeam} setActiveTeam={setActiveTeam} />
       )}
-      {tab === 'resultados' && <ResultsTab raceResults={raceResults} />}
+      {tab === 'resultados' && <ResultsTab raceResults={raceResults} year={year} />}
       {tab === 'clasificacion' && (
-        <StandingsTab driverStandings={driverStandings} constructorStandings={constructorStandings} />
+        <StandingsTab driverStandings={driverStandings} constructorStandings={constructorStandings} year={year} />
       )}
+    </div>
+  )
+}
+
+/** Driver avatar: uses static photo from data/drivers.ts, falls back to Wikipedia, then initials */
+function DriverAvatar({ staticPhoto, driverName, initials, color, size = 56 }: {
+  staticPhoto?: string
+  driverName: string
+  initials: string
+  color: string
+  size?: number
+}) {
+  const [wikiPhoto, setWikiPhoto] = useState<string | null | undefined>(staticPhoto ? null : undefined)
+
+  useEffect(() => {
+    if (staticPhoto) return
+    let cancelled = false
+    fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(driverName)}`)
+      .then(res => res.ok ? res.json() : null)
+      .then((data: { thumbnail?: { source?: string } } | null) => {
+        if (!cancelled) setWikiPhoto(data?.thumbnail?.source ?? null)
+      })
+      .catch(() => { if (!cancelled) setWikiPhoto(null) })
+    return () => { cancelled = true }
+  }, [driverName, staticPhoto])
+
+  const src = staticPhoto ?? wikiPhoto
+  const dim = `${size}px`
+
+  if (src) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={src}
+        alt={driverName}
+        className="rounded-full object-cover object-top flex-shrink-0 border-2"
+        style={{ width: dim, height: dim, borderColor: color }}
+      />
+    )
+  }
+
+  return (
+    <div
+      className="rounded-full flex items-center justify-center font-bold flex-shrink-0 text-white"
+      style={{ width: dim, height: dim, background: color, fontSize: size * 0.28 }}
+    >
+      {initials}
     </div>
   )
 }
@@ -160,101 +261,147 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam }: {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       {season.entries.map((entry) => {
         const team = TEAMS.find(t => t.id === entry.teamId)
-        if (!team) return null
-        const teamSeason = team.seasons?.find((s) => s.year === year) ?? null
+        const teamSeason = team?.seasons?.find((s) => s.year === year) ?? null
         const isActive = activeTeam === entry.teamId
+        const logo = teamLogo(entry.teamId)
+        const displayName = getTeamDisplayName(entry.teamId, year)
 
         return (
-          <div key={entry.teamId}>
-            <div
-              className={cn('f1-card p-5 cursor-pointer transition-all', isActive && 'border-opacity-100')}
-              style={{ borderLeftWidth: isActive ? 4 : 1, borderLeftColor: entry.color }}
-              onClick={() => setActiveTeam(isActive ? null : entry.teamId)}
-            >
-              <div className="flex items-start gap-4">
+          <div
+            key={entry.teamId}
+            className="f1-card overflow-hidden"
+            style={{ borderTop: `3px solid ${entry.color}` }}
+          >
+            {/* ── CABECERA: logo + nombre + metadatos ── */}
+            <div className="px-5 pt-4 pb-3" style={{ background: `${entry.color}10` }}>
+              <div className="flex items-center gap-3 mb-1">
                 {/* Position */}
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold flex-shrink-0"
-                  style={{ background: `${entry.color}15`, color: entry.color }}
+                <span
+                  className="text-xs font-bold px-1.5 py-0.5 rounded flex-shrink-0"
+                  style={{ background: `${entry.color}25`, color: entry.color }}
                 >
-                  {entry.position}
-                </div>
-
-                {/* Team info */}
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <h3 className="text-base font-semibold text-[#0A0A0F]">{team.name}</h3>
-                    {teamSeason && (
-                      <span className="text-xs text-[#9CA3AF] bg-[#F5F5F7] px-2 py-0.5 rounded border border-[#E8E8EE]">
-                        {teamSeason.chassis}
-                      </span>
-                    )}
+                  P{entry.position}
+                </span>
+                {/* Logo */}
+                {logo && (
+                  <div className="h-8 w-14 flex-shrink-0 flex items-center">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={logo} alt={displayName} className="max-h-full max-w-full object-contain" />
                   </div>
-                  <p className="text-xs text-[#9CA3AF]">
-                    {teamSeason?.engine ?? entry.engine} · {teamSeason?.principal ?? '—'}
-                  </p>
-
-                  {/* Drivers */}
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {entry.driverIds.map((did) => {
-                      const d = DRIVERS.find(dr => dr.id === did)
-                      const ds = d?.seasons?.find((s) => s.year === year)
-                      return (
-                        <span
-                          key={did}
-                          className="flex items-center gap-1.5 text-xs bg-[#F5F5F7] border border-[#E8E8EE] px-2 py-1 rounded"
-                        >
-                          <span style={{ color: entry.color }} className="font-bold">
-                            #{ds?.number ?? d?.number ?? '–'}
-                          </span>
-                          <span className="text-[#0A0A0F]">{d?.name ?? did}</span>
-                          {d && <span>{d.flag}</span>}
-                          {ds && (
-                            <span className="text-[#9CA3AF] ml-1">{ds.points} pts</span>
-                          )}
-                        </span>
-                      )
-                    })}
-                  </div>
-                </div>
-
-                {/* Stats */}
-                <div className="text-right flex-shrink-0 hidden sm:block">
-                  <div className="text-2xl font-bold" style={{ color: entry.color }}>
-                    {entry.points}
-                  </div>
-                  <div className="text-xs text-[#9CA3AF]">puntos</div>
-                  <div className="text-sm text-[#6B6B80] mt-1">{entry.wins} victorias</div>
+                )}
+                {/* Name */}
+                <h3 className="text-xl font-bold text-[#0A0A0F] leading-tight flex-1 min-w-0 truncate">{displayName}</h3>
+                {/* Points */}
+                <div className="text-right flex-shrink-0">
+                  <div className="text-2xl font-bold leading-none" style={{ color: entry.color }}>{entry.points}</div>
+                  <div className="text-[10px] text-[#9CA3AF] mt-0.5">{entry.wins} victorias</div>
                 </div>
               </div>
-
-              {/* Car illustration */}
-              <div className="mt-4 px-4">
-                <F1CarSVG
-                  teamId={entry.teamId}
-                  primaryColor={entry.color}
-                  year={year}
-                  className="max-h-[100px]"
-                />
+              {/* Chassis / engine / directors */}
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-0.5 mt-1">
+                {teamSeason?.chassis && (
+                  <span className="text-xs font-medium text-[#6B6B80] bg-white/60 px-2 py-0.5 rounded border border-[#E8E8EE]">
+                    {teamSeason.chassis}
+                  </span>
+                )}
+                <span className="text-xs text-[#9CA3AF]">{teamSeason?.engine ?? entry.engine}</span>
+                {teamSeason?.principal && (
+                  <span className="text-xs text-[#9CA3AF]">Dir: {teamSeason.principal}</span>
+                )}
+                {teamSeason?.technicalDirector && (
+                  <span className="text-xs text-[#9CA3AF]">Téc: {teamSeason.technicalDirector}</span>
+                )}
               </div>
+            </div>
 
-              {/* Sponsors row */}
-              {isActive && teamSeason?.sponsors && (
-                <div className="mt-4 pt-4 border-t border-[#E8E8EE]">
-                  <p className="text-xs text-[#9CA3AF] uppercase tracking-widest mb-2">Patrocinadores</p>
-                  <div className="flex flex-wrap gap-2">
+            {/* ── PILOTOS ── */}
+            <div className="px-5 py-4 border-b border-[#F0F0F3]">
+              <div className="flex gap-5 flex-wrap">
+                {entry.driverIds.map((did) => {
+                  const d = DRIVERS.find(dr => dr.id === did)
+                  const ds = d?.seasons?.find((s) => s.year === year)
+                  const parts = (d?.name ?? did).split(' ')
+                  const initials = parts.length >= 2
+                    ? `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase()
+                    : (d?.name ?? did).slice(0, 2).toUpperCase()
+                  const driverNum = ds?.number ?? d?.number
+                  const driverPts = ds?.points ?? null
+                  const driverPos = ds?.position ?? null
+
+                  return (
+                    <div key={did} className="flex items-start gap-3 flex-1 min-w-[140px]">
+                      {/* Avatar */}
+                      <DriverAvatar
+                        staticPhoto={d?.photo}
+                        driverName={d?.name ?? did}
+                        initials={initials}
+                        color={entry.color}
+                        size={56}
+                      />
+                      {/* Info */}
+                      <div className="min-w-0">
+                        {/* Big number */}
+                        <div className="text-2xl font-black leading-none mb-1" style={{ color: entry.color }}>
+                          {driverNum !== undefined ? `#${driverNum}` : '–'}
+                        </div>
+                        {/* Name */}
+                        <div className="text-sm font-semibold text-[#0A0A0F] leading-tight">{d?.name ?? did}</div>
+                        {/* Flag + nationality */}
+                        <div className="flex items-center gap-1 mt-0.5">
+                          {d && <FlagIcon nationality={d.nationality} size={12} />}
+                          <span className="text-xs text-[#9CA3AF]">{d?.nationality ?? ''}</span>
+                        </div>
+                        {/* Points + position */}
+                        {(driverPts !== null || driverPos !== null) && (
+                          <div className="flex items-center gap-2 mt-1">
+                            {driverPts !== null && (
+                              <span className="text-xs font-bold" style={{ color: entry.color }}>{driverPts} pts</span>
+                            )}
+                            {driverPos !== null && driverPos > 0 && (
+                              <span className="text-xs text-[#9CA3AF]">P{driverPos}</span>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+
+            {/* ── COCHE ── */}
+            <div className="px-5 py-3">
+              <F1CarSVG
+                teamId={entry.teamId}
+                primaryColor={entry.color}
+                year={year}
+                className="max-h-[72px]"
+              />
+            </div>
+
+            {/* ── PATROCINADORES (toggle) ── */}
+            {teamSeason?.sponsors && teamSeason.sponsors.length > 0 && (
+              <div className="px-5 pb-4 border-t border-[#F0F0F3] pt-3">
+                <button
+                  onClick={() => setActiveTeam(isActive ? null : entry.teamId)}
+                  className="text-xs text-[#9CA3AF] hover:text-[#6B6B80] flex items-center gap-1 transition-colors"
+                >
+                  {isActive ? '▲ Ocultar' : `▼ ${teamSeason.sponsors.length} patrocinadores`}
+                </button>
+                {isActive && (
+                  <div className="flex flex-wrap gap-1.5 mt-2">
                     {teamSeason.sponsors.map((s) => (
                       <span key={s} className="text-xs bg-[#F5F5F7] border border-[#E8E8EE] px-2 py-1 rounded text-[#6B6B80]">
                         {s}
                       </span>
                     ))}
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
+            )}
           </div>
         )
       })}
@@ -262,8 +409,19 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam }: {
   )
 }
 
-function ResultsTab({ raceResults }: { raceResults: RaceResults[] }) {
+function ResultsTab({ raceResults, year }: { raceResults: RaceResults[]; year: number }) {
   if (raceResults.length === 0) {
+    if (year === 2026) {
+      return (
+        <div className="f1-card p-8 text-center">
+          <Flag size={40} className="text-[#E8001D] mx-auto mb-4" />
+          <h3 className="text-lg font-semibold text-[#0A0A0F] mb-2">Temporada en curso</h3>
+          <p className="text-[#6B6B80] text-sm max-w-md mx-auto">
+            La temporada 2026 está en curso — los resultados se irán añadiendo conforme se disputen las carreras.
+          </p>
+        </div>
+      )
+    }
     return (
       <div className="f1-card p-8 text-center">
         <Flag size={40} className="text-[#E8001D] mx-auto mb-4" />
@@ -286,7 +444,7 @@ function ResultsTab({ raceResults }: { raceResults: RaceResults[] }) {
               </span>
               <div className="min-w-0">
                 <p className="text-sm font-semibold text-[#0A0A0F] truncate">{race.raceName}</p>
-                <p className="text-xs text-[#9CA3AF]">{race.circuitName} · {race.country} · {race.date}</p>
+                <p className="text-xs text-[#9CA3AF] flex items-center gap-1">{race.circuitName} · <FlagIcon country={race.country} size={12} /> {race.country} · {race.date}</p>
               </div>
             </div>
             {race.results[0] && (
@@ -323,12 +481,18 @@ function ResultsTab({ raceResults }: { raceResults: RaceResults[] }) {
                     <td className="px-4 py-2">
                       <div className="flex items-center gap-2">
                         <span className="text-xs font-bold" style={{ color: teamColor(r.constructorId) }}>#{r.driverCode ?? ''}</span>
+                        <FlagIcon nationality={r.nationality} size={14} />
                         <span className="text-[#0A0A0F] font-medium">{r.driverName}</span>
                       </div>
                     </td>
                     <td className="px-4 py-2 hidden sm:table-cell">
                       <span className="text-[#6B6B80] text-xs flex items-center gap-1.5">
-                        <span className="w-2 h-2 rounded-full" style={{ background: teamColor(r.constructorId) }} />
+                        {teamLogo(r.constructorId) ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={teamLogo(r.constructorId)} alt="" className="w-6 h-6 object-contain" />
+                        ) : (
+                          <span className="w-2 h-2 rounded-full" style={{ background: teamColor(r.constructorId) }} />
+                        )}
                         {r.constructorName}
                       </span>
                     </td>
@@ -347,10 +511,23 @@ function ResultsTab({ raceResults }: { raceResults: RaceResults[] }) {
   )
 }
 
-function StandingsTab({ driverStandings, constructorStandings }: {
+function StandingsTab({ driverStandings, constructorStandings, year }: {
   driverStandings: DriverStandingEntry[]
   constructorStandings: ConstructorStandingEntry[]
+  year: number
 }) {
+  if (driverStandings.length === 0 && year === 2026) {
+    return (
+      <div className="f1-card p-8 text-center">
+        <BarChart2 size={40} className="text-[#E8001D] mx-auto mb-4" />
+        <h3 className="text-lg font-semibold text-[#0A0A0F] mb-2">Temporada en curso</h3>
+        <p className="text-[#6B6B80] text-sm max-w-md mx-auto">
+          La temporada 2026 está en curso — los resultados se irán añadiendo conforme se disputen las carreras.
+        </p>
+      </div>
+    )
+  }
+
   const maxDriverPts = Math.max(...driverStandings.map(d => d.points), 1)
   const maxConstructorPts = Math.max(...constructorStandings.map(c => c.points), 1)
 
@@ -388,12 +565,18 @@ function StandingsTab({ driverStandings, constructorStandings }: {
                     <td className="px-4 py-3">
                       <div className="flex items-center gap-2">
                         {d.driverCode && <span className="text-xs font-bold" style={{ color }}>{d.driverCode}</span>}
+                        <FlagIcon nationality={d.nationality} size={14} />
                         <span className="text-[#0A0A0F] font-medium">{d.driverName}</span>
                       </div>
                     </td>
                     <td className="px-4 py-3 hidden sm:table-cell">
                       <span className="text-[#6B6B80] text-xs flex items-center gap-1.5">
-                        <span className="w-2 h-2 rounded-full" style={{ background: color }} />
+                        {teamLogo(d.constructorIds[0] ?? '') ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={teamLogo(d.constructorIds[0] ?? '')} alt="" className="w-6 h-6 object-contain" />
+                        ) : (
+                          <span className="w-2 h-2 rounded-full" style={{ background: color }} />
+                        )}
                         {d.constructorNames.join(' / ')}
                       </span>
                     </td>
@@ -448,7 +631,12 @@ function StandingsTab({ driverStandings, constructorStandings }: {
                       </td>
                       <td className="px-4 py-3">
                         <div className="flex items-center gap-2">
-                          <div className="w-3 h-full min-h-[12px] rounded-sm" style={{ background: color }} />
+                          {teamLogo(c.constructorId) ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img src={teamLogo(c.constructorId)} alt="" className="w-6 h-6 object-contain" />
+                          ) : (
+                            <div className="w-3 h-full min-h-[12px] rounded-sm" style={{ background: color }} />
+                          )}
                           <span className="text-[#0A0A0F] font-medium">{c.constructorName}</span>
                         </div>
                       </td>

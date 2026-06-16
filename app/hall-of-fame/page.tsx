@@ -4,6 +4,8 @@ import { Trophy, Flag, Zap, Medal, Timer, Hash, Users } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { DRIVERS } from '@/data/drivers'
 import { TEAMS } from '@/data/teams'
+import { IndexedBadge } from '@/components/ui/IndexedBadge'
+import { FlagIcon } from '@/components/ui/FlagIcon'
 
 type RankingKey = 'championships' | 'wins' | 'poles' | 'podiums' | 'fastestLaps' | 'racesEntered' | 'points'
 
@@ -41,9 +43,12 @@ export default function HallOfFamePage() {
     <div className="min-h-screen max-w-[1400px] mx-auto px-4 py-8">
       <div className="mb-8">
         <p className="section-eyebrow mb-1">Rankings históricos</p>
-        <h1 className="text-4xl font-bold text-[#0A0A0F] mb-1">
-          Hall of <span className="text-[#F5C518]">Fame</span>
-        </h1>
+        <div className="flex flex-wrap items-center gap-3 mb-1">
+          <h1 className="text-4xl font-bold text-[#0A0A0F]">
+            Hall of <span className="text-[#F5C518]">Fame</span>
+          </h1>
+          <IndexedBadge type="pilotos" />
+        </div>
         <p className="text-[#6B6B80]">Los grandes récords de la historia de la Fórmula 1</p>
       </div>
 
@@ -129,7 +134,7 @@ export default function HallOfFamePage() {
                         <td className="px-4 py-3 w-10">
                           <PositionBadge pos={i + 1} />
                         </td>
-                        <td className="px-2 py-3 w-8 text-lg">{driver.flag}</td>
+                        <td className="px-2 py-3 w-8"><FlagIcon nationality={driver.nationality} size={18} /></td>
                         <td className="px-2 py-3">
                           <span className="font-medium text-[#0A0A0F]">{driver.name}</span>
                           {driver.active && <span className="ml-2 w-1.5 h-1.5 rounded-full bg-green-400 inline-block" />}
@@ -191,7 +196,7 @@ export default function HallOfFamePage() {
                     return (
                       <tr key={team.id} className="border-b border-[#F0F0F3] hover:bg-[#FAFAFA] transition-colors">
                         <td className="px-4 py-3 w-10"><PositionBadge pos={i + 1} /></td>
-                        <td className="px-2 py-3 w-8 text-lg">{team.flag}</td>
+                        <td className="px-2 py-3 w-8"><FlagIcon nationality={team.nationality} size={18} /></td>
                         <td className="px-2 py-3">
                           <div className="flex items-center gap-2">
                             <div className="w-2.5 h-2.5 rounded-full" style={{ background: team.color }} />
@@ -250,7 +255,7 @@ function TopCard({ driver, position, rankKey }: { driver: any; position: number;
         {position}
       </div>
       <p className="text-sm font-bold text-[#0A0A0F] mb-1 truncate">{driver.name}</p>
-      <p className="text-xs text-[#9CA3AF] mb-2">{driver.flag} {driver.nationality}</p>
+      <p className="text-xs text-[#9CA3AF] mb-2 flex items-center justify-center gap-1"><FlagIcon nationality={driver.nationality} size={16} /> {driver.nationality}</p>
       <div className="text-2xl font-bold" style={{ color: rankInfo.color }}>
         {val?.toLocaleString()}
       </div>

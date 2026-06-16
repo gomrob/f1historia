@@ -110,7 +110,7 @@ function NoImagePlaceholder() {
 
 function CircuitCard({ circuit, onClick }: { circuit: Circuit; onClick: () => void }) {
   const wikiImage = useWikiImage(circuit.fullName)
-  const image = circuit.trackImageUrl ?? circuit.photo ?? wikiImage
+  const image = circuit.photoUrl ?? circuit.photo ?? wikiImage ?? circuit.trackImageUrl
 
   return (
     <div
@@ -164,7 +164,7 @@ function CircuitCard({ circuit, onClick }: { circuit: Circuit; onClick: () => vo
 
 function CircuitDetail({ circuit, onClose }: { circuit: Circuit; onClose: () => void }) {
   const wikiImage = useWikiImage(circuit.fullName)
-  const image = circuit.trackImageUrl ?? circuit.photo ?? wikiImage
+  const image = circuit.photoUrl ?? circuit.photo ?? wikiImage ?? circuit.trackImageUrl
 
   return (
     <div className="animate-fade-in">

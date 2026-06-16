@@ -71,6 +71,7 @@ export interface TeamSeason {
   sponsors: string[]
   liveryColors: string[]
   carModel3d?: string
+  carImageUrl?: string
   races?: number
 }
 
@@ -95,6 +96,7 @@ export interface Circuit {
   lapRecord?: { time: string; driver: string; year: number }
   svgPath?: string
   photo?: string
+  photoUrl?: string
   logoUrl?: string
   trackImageUrl?: string
   active: boolean

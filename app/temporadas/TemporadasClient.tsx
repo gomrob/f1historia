@@ -57,7 +57,8 @@ function getTeamDisplayName(teamId: string, year: number): string {
 const TEAM_LOGO_FALLBACKS: Record<string, string> = {
   astonmartin: 'https://commons.wikimedia.org/wiki/Special:FilePath/Aston_Martin_F1_Team_logo_2024.jpg',
   haas: 'https://commons.wikimedia.org/wiki/Special:FilePath/TGR_Haas_F1_Team_Logo_(2026).svg',
-  sauber: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sauber_F1_Team_logo.svg',
+  sauber: 'https://commons.wikimedia.org/wiki/Special:FilePath/Audi_F1_Team_logo.svg',
+  racingbulls: 'https://commons.wikimedia.org/wiki/Special:FilePath/Racing_Bulls_F1_Team_logo.svg',
   cadillac: 'https://commons.wikimedia.org/wiki/Special:FilePath/Cadillac_Wordmark.svg',
 }
 
@@ -389,6 +390,7 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam }: {
                 teamId={entry.teamId}
                 primaryColor={entry.color}
                 year={year}
+                carImageUrl={teamSeason?.carImageUrl}
                 className="max-h-[72px]"
               />
             </div>

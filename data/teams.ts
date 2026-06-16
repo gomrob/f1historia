@@ -7,7 +7,7 @@ export const TEAMS: Team[] = [{
     nationality: 'Italian',
     flag: '🇮🇹',
     color: '#E8002D',
-    logoUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_Team_Icon_-_Ferrari(2009).svg',
+    logoUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Scuderia_Ferrari_Logo.svg',
     founded: 1950,
     bio: 'La escudería más histórica y legendaria de la Fórmula 1. Ferrari ha participado en todas las temporadas desde el inicio del Campeonato del Mundo en 1950. Con 16 títulos de constructores y 15 de pilotos, la Scuderia Ferrari representa el alma y la pasión del automovilismo italiano.',
     championships: 16,
@@ -456,6 +456,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['leclerc', 'sainz'], points: 554, position: 2, wins: 4,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ferrari_F1-75_2022.jpg',
         races: 22
       },
       {
@@ -471,6 +472,7 @@ export const TEAMS: Team[] = [{
         drivers: ['charles_leclerc', 'carlos_sainz'], points: 652, position: 3, wins: 5,
         color: '#E8002D', sponsors: ['HP', 'Santander', 'Shell', 'Ray-Ban', 'Lenovo'],
         liveryColors: ['#E8002D', '#FFFFFF', '#FFD700'],
+        carImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ferrari_SF-24_2024_F1_car.jpg',
         races: 24
       },
       {
@@ -479,6 +481,7 @@ export const TEAMS: Team[] = [{
         drivers: ['charles_leclerc', 'carlos_sainz'], points: 406, position: 3, wins: 1,
         color: '#E8002D', sponsors: ['Santander', 'Shell', 'Ray-Ban'],
         liveryColors: ['#E8002D', '#FFFFFF'],
+        carImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ferrari_SF-23_2023.jpg',
         races: 22
       },
       {
@@ -885,6 +888,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['norris', 'piastri'], points: 302, position: 4, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/McLaren_MCL60_2023.jpg',
         races: 22
       },
       {
@@ -900,6 +904,7 @@ export const TEAMS: Team[] = [{
         drivers: ['lando_norris', 'oscar_piastri'], points: 666, position: 1, wins: 6,
         color: '#FF8000', sponsors: ['OKX', 'Google', 'Unilever', 'Dell'],
         liveryColors: ['#FF8000', '#000000'],
+        carImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/McLaren_MCL38_2024.jpg',
         races: 24
       },
       {
@@ -1018,6 +1023,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hamilton', 'russell'], points: 409, position: 2, wins: 0,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes_AMG_W14_2023.jpg',
         races: 22
       },
       {
@@ -1033,6 +1039,7 @@ export const TEAMS: Team[] = [{
         drivers: ['lewis_hamilton', 'george_russell'], points: 468, position: 4, wins: 4,
         color: '#27F4D2', sponsors: ['Petronas', 'INEOS', 'Tommy Hilfiger', 'Qualcomm'],
         liveryColors: ['#00D2BE', '#000000', '#FFFFFF'],
+        carImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes_AMG_W15_2024.jpg',
         races: 24
       },
       {
@@ -1201,6 +1208,7 @@ export const TEAMS: Team[] = [{
         drivers: ['max_verstappen', 'sergio_perez'], points: 860, position: 2, wins: 11,
         color: '#3671C6', sponsors: ['Oracle', 'Red Bull', 'ExxonMobil', 'TAG Heuer'],
         liveryColors: ['#001B47', '#3671C6', '#FFD700'],
+        carImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Red_Bull_Racing_RB20_2024.jpg',
         races: 24
       },
       {
@@ -1209,6 +1217,7 @@ export const TEAMS: Team[] = [{
         drivers: ['max_verstappen', 'sergio_perez'], points: 860, position: 1, wins: 21,
         color: '#3671C6', sponsors: ['Oracle', 'Red Bull', 'ExxonMobil'],
         liveryColors: ['#001B47', '#3671C6', '#FFD700'],
+        carImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Red_Bull_Racing_RB19_2023.jpg',
         races: 22
       },
     ]
@@ -1558,6 +1567,7 @@ export const TEAMS: Team[] = [{
         drivers: ['carlos_sainz', 'alexander_albon'], points: 42, position: 9, wins: 1,
         color: '#64C4FF', sponsors: ['Duracell', 'Sartorius', 'Kraken'],
         liveryColors: ['#003EFF', '#FFFFFF', '#64C4FF'],
+        carImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Williams_FW47_2025.jpg',
         races: 24
       },
       {

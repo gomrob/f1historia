@@ -1,4 +1,5 @@
 'use client'
+import { useState } from 'react'
 import { cn } from '@/lib/utils'
 
 interface F1CarSVGProps {
@@ -7,9 +8,24 @@ interface F1CarSVGProps {
   secondaryColor?: string
   className?: string
   year?: number
+  carImageUrl?: string
 }
 
-export function F1CarSVG({ teamId, primaryColor, secondaryColor = '#FFFFFF', className, year = 2024 }: F1CarSVGProps) {
+export function F1CarSVG({ teamId, primaryColor, secondaryColor = '#FFFFFF', className, year = 2024, carImageUrl }: F1CarSVGProps) {
+  const [imgError, setImgError] = useState(false)
+
+  if (carImageUrl && !imgError) {
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={carImageUrl}
+        alt={`${teamId} ${year}`}
+        className={cn('w-full object-contain', className)}
+        onError={() => setImgError(true)}
+      />
+    )
+  }
+
   const pc = primaryColor
   const sc = secondaryColor
 

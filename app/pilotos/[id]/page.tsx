@@ -29,7 +29,12 @@ export default function PilotoDetailPage({ params }: { params: { id: string } })
         <div className="lg:col-span-2 space-y-4">
           <div className="f1-card p-6" style={{ borderTopWidth: 3, borderTopColor: '#27F4D2' }}>
             <div className="flex items-start gap-4 mb-4">
-              <DriverPhoto name={driver.name} className="w-24 h-24 rounded-xl object-cover flex-shrink-0" />
+              {driver.photo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={driver.photo} alt={driver.name} className="w-24 h-24 rounded-xl object-cover flex-shrink-0" />
+              ) : (
+                <DriverPhoto name={driver.name} className="w-24 h-24 rounded-xl object-cover flex-shrink-0" />
+              )}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">
                   <h2 className="text-2xl font-bold text-[#0A0A0F]">{driver.name}</h2>

@@ -20,7 +20,7 @@ export const CIRCUITS: Circuit[] = [
     corners: 11,
     drsZones: 2,
     lapRecord: { time: '1:21.046', driver: 'Rubens Barrichello', year: 2004 },
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Autodromo_Nazionale_Monza_DSC_0449.jpg/1280px-Autodromo_Nazionale_Monza_DSC_0449.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/da/Autodromo_Nazionale_Monza%2C_April_22%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Autodromo_Nazionale_Monza_(version_2).svg',
     active: true,
     races: [
@@ -50,7 +50,7 @@ export const CIRCUITS: Circuit[] = [
     corners: 19,
     drsZones: 1,
     lapRecord: { time: '1:12.909', driver: 'Lewis Hamilton', year: 2021 },
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Monte_carlo_formula1_2007.jpg/1280px-Monte_carlo_formula1_2007.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Circuit_de_Monaco%2C_April_1%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Circuit_de_Monaco_(version_2).svg',
     active: true,
     races: [
@@ -78,7 +78,7 @@ export const CIRCUITS: Circuit[] = [
     corners: 18,
     drsZones: 2,
     lapRecord: { time: '1:27.097', driver: 'Max Verstappen', year: 2020 },
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Silverstone_2019.jpg/1280px-Silverstone_2019.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/da/Silverstone_Circuit%2C_July_2%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Silverstone_(version_2).svg',
     active: true,
     races: [
@@ -105,7 +105,7 @@ export const CIRCUITS: Circuit[] = [
     corners: 19,
     drsZones: 2,
     lapRecord: { time: '1:46.286', driver: 'Valtteri Bottas', year: 2018 },
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Spa-Francorchamps_Aerial.jpg/1280px-Spa-Francorchamps_Aerial.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/c0/Circuit_de_Spa-Francorchamps%2C_April_22%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Circuit_de_Spa-Francorchamps_(version_2).svg',
     logoUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Circuit_de_Spa_Francorchamps.svg',
     active: true,
@@ -133,7 +133,7 @@ export const CIRCUITS: Circuit[] = [
     corners: 18,
     drsZones: 1,
     lapRecord: { time: '1:30.983', driver: 'Lewis Hamilton', year: 2019 },
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Suzuka_Circuit_Aerial_photo.jpg/1280px-Suzuka_Circuit_Aerial_photo.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Suzuka_International_Racing_Course%2C_July_10%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Suzuka_Circuit_(version_2).svg',
     active: true,
     races: [
@@ -160,7 +160,7 @@ export const CIRCUITS: Circuit[] = [
     corners: 15,
     drsZones: 2,
     lapRecord: { time: '1:10.540', driver: 'Valtteri Bottas', year: 2018 },
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/AereoAutodromo.jpg/1280px-AereoAutodromo.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Vista_a%C3%A9rea_del_Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace_01.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Autódromo_José_Carlos_Pace_(version_2).svg',
     active: true,
     races: [
@@ -211,7 +211,7 @@ export const CIRCUITS: Circuit[] = [
     corners: 15,
     drsZones: 3,
     lapRecord: { time: '1:31.447', driver: 'Pedro de la Rosa', year: 2005 },
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Bahrain_International_Circuit_from_above.jpg/1280px-Bahrain_International_Circuit_from_above.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Bahrain_International_Circuit%2C_November_2%2C_2017_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Remix_of_F1_circuits_2014-2018_-_Bahrain_International_Circuit_(version_2).svg',
     active: false,
     races: [
@@ -238,7 +238,7 @@ export const CIRCUITS: Circuit[] = [
     corners: 16,
     drsZones: 2,
     lapRecord: { time: '1:26.103', driver: 'Max Verstappen', year: 2021 },
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Yas_Marina_Circuit_from_above.jpg/1280px-Yas_Marina_Circuit_from_above.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/ce/Yas_Marina_Circuit%2C_October_12%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Yas_Marina_Circuit_(version_2).svg',
     active: true,
     races: [
@@ -266,7 +266,7 @@ export const CIRCUITS: Circuit[] = [
     corners: 22,
     drsZones: 1,
     lapRecord: { time: '1:15.484', driver: 'Max Verstappen', year: 2022 },
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Imola_Racetrack.jpg/1280px-Imola_Racetrack.jpg',
+    photoUrl: '',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Imola_2009.svg',
     active: false,
     races: [
@@ -356,7 +356,7 @@ export const CIRCUITS: Circuit[] = [
     corners: 14,
     drsZones: 2,
     logoUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Logo_Circuit_Park_Zandvoort.svg',
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Zandvoort_circuit_from_the_air.jpg/1280px-Zandvoort_circuit_from_the_air.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/22/Circuit_Park_Zandvoort_aerial_photo.jpg',
     active: true,
     races: []
   },
@@ -693,7 +693,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'counter-clockwise',
     corners: 27,
     drsZones: 3,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Jeddah_Corniche_Circuit_aerial_view.jpg/1280px-Jeddah_Corniche_Circuit_aerial_view.jpg',
+    photoUrl: '',
     active: false,
     races: []
   },
@@ -715,7 +715,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'counter-clockwise',
     corners: 19,
     drsZones: 3,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Hard_Rock_Stadium_%28aerial%29.jpg/1280px-Hard_Rock_Stadium_%28aerial%29.jpg',
+    photoUrl: '',
     active: true,
     races: []
   },
@@ -759,7 +759,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'counter-clockwise',
     corners: 16,
     drsZones: 1,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Lusail_International_Circuit.jpg/1280px-Lusail_International_Circuit.jpg',
+    photoUrl: '',
     active: true,
     races: []
   },
@@ -823,7 +823,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'clockwise',
     corners: 14,
     drsZones: 4,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Albert_Park_Circuit_from_the_air.jpg/1280px-Albert_Park_Circuit_from_the_air.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/67/Melbourne_Grand_Prix_Circuit%2C_March_22%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Melbourne_Grand_Prix_Circuit_(version_2).svg',
     active: true,
     races: []
@@ -846,7 +846,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'counter-clockwise',
     corners: 20,
     drsZones: 2,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/COTA_Aerial_View.jpg/1280px-COTA_Aerial_View.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Circuit_of_the_Americas%2C_April_22%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Circuit_of_the_Americas_(version_2).svg',
     logoUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Circuit_of_the_Americas_logo.svg',
     active: true,
@@ -912,7 +912,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'counter-clockwise',
     corners: 20,
     drsZones: 2,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Baku_City_Circuit_aerial.jpg/1280px-Baku_City_Circuit_aerial.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Baku_City_Circuit%2C_April_9%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Baku_City_Circuit_(version_2).svg',
     active: true,
     races: []
@@ -977,7 +977,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'clockwise',
     corners: 14,
     drsZones: 2,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Circuit_de_Barcelona-Catalunya.jpg/1280px-Circuit_de_Barcelona-Catalunya.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/4/42/Circuit_de_Barcelona-Catalunya%2C_April_19%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Circuit_de_Barcelona-Catalunya_(version_2).svg',
     active: true,
     races: []
@@ -1147,7 +1147,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'clockwise',
     corners: 14,
     drsZones: 1,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Hungaroring_from_the_air.jpg/1280px-Hungaroring_from_the_air.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/81/Hungaroring%2C_April_28%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Hungaroring_(version_2).svg',
     active: true,
     races: []
@@ -1296,7 +1296,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'clockwise',
     corners: 19,
     drsZones: 1,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Singapore_GP_from_above.jpg/1280px-Singapore_GP_from_above.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Marina_Bay_Street_Circuit%2C_May_8%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Marina_Bay_Street_Circuit_(version_2).svg',
     active: true,
     races: []
@@ -1508,7 +1508,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'clockwise',
     corners: 10,
     drsZones: 3,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Red_Bull_Ring_aerial.jpg/1280px-Red_Bull_Ring_aerial.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Red_Bull_Ring%2C_April_18%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Red_Bull_Ring.svg',
     active: true,
     races: []
@@ -1573,7 +1573,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'counter-clockwise',
     corners: 17,
     drsZones: 2,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Autodromo_Hermanos_Rodriguez_aerial.jpg/1280px-Autodromo_Hermanos_Rodriguez_aerial.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b7/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez%2C_June_4%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Autódromo_Hermanos_Rodríguez_(version_2).svg',
     active: true,
     races: []
@@ -1638,7 +1638,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'clockwise',
     corners: 16,
     drsZones: 2,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Shanghai_International_Circuit.jpg/1280px-Shanghai_International_Circuit.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/0/07/Shanghai_International_Circuit%2C_April_7%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Shanghai_International_Circuit_(version_2).svg',
     active: true,
     races: []
@@ -1682,7 +1682,7 @@ export const CIRCUITS: Circuit[] = [
     direction: 'counter-clockwise',
     corners: 14,
     drsZones: 3,
-    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Circuit_Gilles_Villeneuve_aerial.jpg/1280px-Circuit_Gilles_Villeneuve_aerial.jpg',
+    photoUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Circuit_Gilles-Villeneuve%2C_May_29%2C_2018_SkySat.jpg',
     trackImageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/F1_circuits_2014-2018_-_Circuit_Gilles_Villeneuve_(version_2).svg',
     active: true,
     races: []

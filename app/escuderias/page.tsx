@@ -312,6 +312,7 @@ function TeamDetail({ team, onClose }: { team: Team; onClose: () => void }) {
                   teamId={team.id}
                   primaryColor={currentSeason.color ?? team.color}
                   year={currentSeason.year}
+                  carImageUrl={currentSeason.carImageUrl}
                   className="mb-4"
                 />
 

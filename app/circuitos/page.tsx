@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { Search, MapPin, Calendar, Timer, RotateCcw, RotateCw, Ruler, ChevronDown, Flag } from 'lucide-react'
+import { Search, MapPin, Calendar, Timer, RotateCcw, RotateCw, Ruler, ChevronDown, Flag, Camera } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { FlagIcon } from '@/components/ui/FlagIcon'
 import { CIRCUITS, searchCircuits } from '@/data/circuits'
@@ -74,43 +74,21 @@ export default function CircuitosPage() {
   )
 }
 
-/** Fetches a representative image for a circuit from Wikipedia's REST summary API. Returns null if unavailable. */
-function useWikiImage(title: string): string | null | undefined {
-  const [url, setUrl] = useState<string | null | undefined>(undefined)
-
-  useEffect(() => {
-    let cancelled = false
-    setUrl(undefined)
-    fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`)
-      .then(res => (res.ok ? res.json() : null))
-      .then(data => {
-        if (cancelled) return
-        setUrl(data?.thumbnail?.source ?? data?.originalimage?.source ?? null)
-      })
-      .catch(() => {
-        if (!cancelled) setUrl(null)
-      })
-    return () => { cancelled = true }
-  }, [title])
-
-  return url
-}
-
-/** Placeholder shown when no usable image exists for a circuit. */
+/** Placeholder shown when no circuit photo is available. */
 function NoImagePlaceholder() {
   return (
     <div
-      className="w-full h-full flex items-center justify-center rounded-lg"
+      className="w-full h-full flex flex-col items-center justify-center gap-2 rounded-lg"
       style={{ backgroundColor: '#F0F0F4' }}
     >
-      <span className="text-sm text-[#9CA3AF]">Imagen no disponible</span>
+      <Camera size={24} className="text-[#C8C8D4]" />
+      <span className="text-xs text-[#C8C8D4]">Sin foto</span>
     </div>
   )
 }
 
 function CircuitCard({ circuit, onClick }: { circuit: Circuit; onClick: () => void }) {
-  const wikiImage = useWikiImage(circuit.fullName)
-  const image = circuit.photoUrl ?? circuit.photo ?? wikiImage ?? circuit.trackImageUrl
+  const image = circuit.photoUrl ?? null
 
   return (
     <div
@@ -163,8 +141,7 @@ function CircuitCard({ circuit, onClick }: { circuit: Circuit; onClick: () => vo
 }
 
 function CircuitDetail({ circuit, onClose }: { circuit: Circuit; onClose: () => void }) {
-  const wikiImage = useWikiImage(circuit.fullName)
-  const image = circuit.photoUrl ?? circuit.photo ?? wikiImage ?? circuit.trackImageUrl
+  const trackImage = circuit.trackImageUrl ?? null
 
   return (
     <div className="animate-fade-in">
@@ -194,9 +171,9 @@ function CircuitDetail({ circuit, onClose }: { circuit: Circuit; onClose: () => 
             </div>
 
             <div className="rounded-lg overflow-hidden mb-4 flex items-center justify-center bg-[#F0F0F4]" style={{ maxHeight: '400px', minHeight: '180px' }}>
-              {image ? (
+              {trackImage ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={image} alt={`Trazado de ${circuit.name}`} className="max-w-full max-h-[400px] object-contain" />
+                <img src={trackImage} alt={`Trazado de ${circuit.name}`} className="max-w-full max-h-[400px] object-contain" />
               ) : (
                 <NoImagePlaceholder />
               )}

@@ -125,12 +125,6 @@ function CircuitCard({ circuit, onClick }: { circuit: Circuit; onClick: () => vo
         ) : (
           <NoImagePlaceholder />
         )}
-        {circuit.logoUrl && (
-          <div className="absolute top-2 right-2 w-8 h-8 bg-white/90 rounded-md p-1 flex items-center justify-center shadow-sm">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={circuit.logoUrl} alt={`Logo ${circuit.name}`} className="max-w-full max-h-full object-contain" />
-          </div>
-        )}
         <div className="absolute bottom-2 left-2">
           {!circuit.active ? (
             <span className="text-[10px] text-[#9CA3AF] bg-white/90 px-2 py-0.5 rounded border border-[#E8E8EE]">Histórico</span>
@@ -186,16 +180,9 @@ function CircuitDetail({ circuit, onClose }: { circuit: Circuit; onClose: () => 
         <div className="lg:col-span-2 space-y-4">
           <div className="f1-card p-6" style={{ borderTopWidth: 3, borderTopColor: '#378ADD' }}>
             <div className="flex items-start gap-3 mb-4">
-              {circuit.logoUrl ? (
-                <div className="w-12 h-12 flex items-center justify-center bg-[#F5F5F7] rounded-lg p-1.5 shrink-0">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={circuit.logoUrl} alt={`Logo ${circuit.name}`} className="max-w-full max-h-full object-contain" />
-                </div>
-              ) : (
-                <div className="w-12 h-12 flex items-center justify-center bg-[#F5F5F7] rounded-lg shrink-0">
-                  <Flag size={22} className="text-[#378ADD]" />
-                </div>
-              )}
+              <div className="w-12 h-12 flex items-center justify-center bg-[#F5F5F7] rounded-lg shrink-0">
+                <Flag size={22} className="text-[#378ADD]" />
+              </div>
               <div>
                 <h2 className="text-2xl font-bold text-[#0A0A0F]">{circuit.name}</h2>
                 <p className="text-[#6B6B80] flex items-center gap-1.5">
@@ -245,6 +232,16 @@ function CircuitDetail({ circuit, onClose }: { circuit: Circuit; onClose: () => 
 
         {/* Race history */}
         <div className="f1-card p-5">
+          {circuit.logoUrl && (
+            <div className="flex items-center justify-center mb-4 p-3 bg-[#F5F5F7] rounded-lg border border-[#E8E8EE]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={circuit.logoUrl}
+                alt={`Logo ${circuit.name}`}
+                style={{ maxWidth: 120, maxHeight: 56, objectFit: 'contain', display: 'block' }}
+              />
+            </div>
+          )}
           <p className="section-eyebrow mb-4">Historial de ganadores</p>
           <CircuitWinners circuitId={circuit.id} />
         </div>

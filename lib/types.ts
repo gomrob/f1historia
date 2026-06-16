@@ -11,6 +11,7 @@ export interface Driver {
   placeOfBirth: string
   bio: string
   photo?: string
+  helmetUrl?: string
   number?: number
   championships: number
   wins: number

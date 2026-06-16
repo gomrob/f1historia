@@ -83,12 +83,18 @@ function TeamCard({ team, onClick }: { team: Team; onClick: () => void }) {
       style={{ border: `2px solid ${team.color}`, boxShadow: `0 4px 20px ${team.color}20` }}
     >
       <div className="flex items-center justify-center h-32" style={{ background: `${team.color}15` }}>
-        {team.logoUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={team.logoUrl} alt={team.name} className="max-h-20 max-w-[70%] object-contain" />
-        ) : (
-          <Wrench size={48} style={{ color: team.color }} />
-        )}
+        <div className="flex items-center justify-center" style={{ width: 150, height: 80 }}>
+          {team.logoUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={team.logoUrl}
+              alt={team.name}
+              style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block' }}
+            />
+          ) : (
+            <Wrench size={48} style={{ color: team.color }} />
+          )}
+        </div>
       </div>
 
       <div className="p-5">
@@ -163,12 +169,18 @@ function TeamDetail({ team, onClose }: { team: Team; onClose: () => void }) {
       {/* Header */}
       <div className="f1-card mb-4 overflow-hidden" style={{ border: `2px solid ${team.color}`, boxShadow: `0 4px 20px ${team.color}20` }}>
         <div className="flex items-center justify-center h-40" style={{ background: `${team.color}15` }}>
-          {team.logoUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={team.logoUrl} alt={team.name} className="max-h-28 max-w-[60%] object-contain" />
-          ) : (
-            <Wrench size={64} style={{ color: team.color }} />
-          )}
+          <div className="flex items-center justify-center" style={{ width: 180, height: 100 }}>
+            {team.logoUrl ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={team.logoUrl}
+                alt={team.name}
+                style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain', display: 'block' }}
+              />
+            ) : (
+              <Wrench size={64} style={{ color: team.color }} />
+            )}
+          </div>
         </div>
 
         <div className="p-6">

@@ -342,7 +342,7 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam }: {
                         size={56}
                       />
                       {/* Info */}
-                      <div className="min-w-0">
+                      <div className="min-w-0 flex-1">
                         {/* Big number */}
                         <div className="text-2xl font-black leading-none mb-1" style={{ color: entry.color }}>
                           {driverNum !== undefined ? `#${driverNum}` : '–'}
@@ -366,6 +366,17 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam }: {
                           </div>
                         )}
                       </div>
+                      {/* Helmet image (if available) */}
+                      {d?.helmetUrl && (
+                        <div className="flex-shrink-0 flex items-center justify-center" style={{ width: 56, height: 56 }}>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={d.helmetUrl}
+                            alt={`Casco ${d.name}`}
+                            style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+                          />
+                        </div>
+                      )}
                     </div>
                   )
                 })}
@@ -528,22 +539,19 @@ function StandingsTab({ driverStandings, constructorStandings, year }: {
     )
   }
 
-  const maxDriverPts = Math.max(...driverStandings.map(d => d.points), 1)
-  const maxConstructorPts = Math.max(...constructorStandings.map(c => c.points), 1)
-
   return (
-    <div className="space-y-6">
-      {/* Drivers */}
-      <div>
-        <p className="section-eyebrow mb-4">Campeonato de pilotos</p>
+    <div className="flex flex-col lg:flex-row gap-4 items-start">
+      {/* ── PILOTOS ── */}
+      <div className="flex-1 min-w-0">
+        <p className="section-eyebrow mb-3">Pilotos</p>
         <div className="f1-card overflow-hidden">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-[#E8E8EE]">
-                <th className="text-left px-4 py-3 text-xs text-[#9CA3AF] font-normal uppercase tracking-widest w-12">Pos</th>
-                <th className="text-left px-4 py-3 text-xs text-[#9CA3AF] font-normal uppercase tracking-widest">Piloto</th>
-                <th className="text-left px-4 py-3 text-xs text-[#9CA3AF] font-normal uppercase tracking-widest hidden sm:table-cell">Equipo</th>
-                <th className="text-right px-4 py-3 text-xs text-[#9CA3AF] font-normal uppercase tracking-widest">Puntos</th>
+                <th className="text-left px-3 py-2 text-[10px] text-[#9CA3AF] font-normal uppercase tracking-widest w-9">Pos</th>
+                <th className="text-left px-2 py-2 text-[10px] text-[#9CA3AF] font-normal uppercase tracking-widest">Piloto</th>
+                <th className="text-left px-2 py-2 text-[10px] text-[#9CA3AF] font-normal uppercase tracking-widest hidden sm:table-cell lg:hidden xl:table-cell">Equipo</th>
+                <th className="text-right px-3 py-2 text-[10px] text-[#9CA3AF] font-normal uppercase tracking-widest w-14">Pts</th>
               </tr>
             </thead>
             <tbody>
@@ -551,9 +559,9 @@ function StandingsTab({ driverStandings, constructorStandings, year }: {
                 const color = teamColor(d.constructorIds[0] ?? '')
                 return (
                   <tr key={d.driverId} className="border-b border-[#F0F0F3] hover:bg-[#FAFAFA] transition-colors">
-                    <td className="px-4 py-3">
+                    <td className="px-3 py-2">
                       <span className={cn(
-                        'w-6 h-6 rounded flex items-center justify-center text-xs font-bold',
+                        'w-5 h-5 rounded flex items-center justify-center text-[10px] font-bold',
                         i === 0 ? 'bg-yellow-100 text-yellow-700' :
                         i === 1 ? 'bg-slate-200 text-slate-600' :
                         i === 2 ? 'bg-orange-100 text-orange-700' :
@@ -562,35 +570,24 @@ function StandingsTab({ driverStandings, constructorStandings, year }: {
                         {d.position}
                       </span>
                     </td>
-                    <td className="px-4 py-3">
-                      <div className="flex items-center gap-2">
-                        {d.driverCode && <span className="text-xs font-bold" style={{ color }}>{d.driverCode}</span>}
-                        <FlagIcon nationality={d.nationality} size={14} />
-                        <span className="text-[#0A0A0F] font-medium">{d.driverName}</span>
+                    <td className="px-2 py-2">
+                      <div className="flex items-center gap-1.5">
+                        <FlagIcon nationality={d.nationality} size={13} />
+                        <span className="text-[#0A0A0F] font-medium text-xs leading-tight">{d.driverName}</span>
                       </div>
                     </td>
-                    <td className="px-4 py-3 hidden sm:table-cell">
-                      <span className="text-[#6B6B80] text-xs flex items-center gap-1.5">
+                    <td className="px-2 py-2 hidden sm:table-cell lg:hidden xl:table-cell">
+                      <div className="flex items-center gap-1">
                         {teamLogo(d.constructorIds[0] ?? '') ? (
                           // eslint-disable-next-line @next/next/no-img-element
-                          <img src={teamLogo(d.constructorIds[0] ?? '')} alt="" className="w-6 h-6 object-contain" />
+                          <img src={teamLogo(d.constructorIds[0] ?? '')} alt="" className="w-5 h-5 object-contain" />
                         ) : (
-                          <span className="w-2 h-2 rounded-full" style={{ background: color }} />
+                          <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: color }} />
                         )}
-                        {d.constructorNames.join(' / ')}
-                      </span>
-                    </td>
-                    <td className="px-4 py-3 text-right">
-                      <div className="flex items-center justify-end gap-3">
-                        <div className="hidden sm:block w-24 h-1 rounded-full bg-[#E8E8EE]">
-                          <div
-                            className="h-full rounded-full"
-                            style={{ width: `${Math.round((d.points / maxDriverPts) * 100)}%`, background: color }}
-                          />
-                        </div>
-                        <span className="font-bold text-[#0A0A0F] w-10 text-right">{d.points}</span>
+                        <span className="text-[#6B6B80] text-xs truncate max-w-[90px]">{d.constructorNames[0]}</span>
                       </div>
                     </td>
+                    <td className="px-3 py-2 text-right font-bold text-[#0A0A0F] text-xs">{d.points}</td>
                   </tr>
                 )
               })}
@@ -599,18 +596,17 @@ function StandingsTab({ driverStandings, constructorStandings, year }: {
         </div>
       </div>
 
-      {/* Constructors */}
+      {/* ── CONSTRUCTORES ── */}
       {constructorStandings.length > 0 && (
-        <div>
-          <p className="section-eyebrow mb-4">Campeonato de constructores</p>
+        <div className="flex-1 min-w-0">
+          <p className="section-eyebrow mb-3">Constructores</p>
           <div className="f1-card overflow-hidden">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-[#E8E8EE]">
-                  <th className="text-left px-4 py-3 text-xs text-[#9CA3AF] font-normal uppercase tracking-widest w-12">Pos</th>
-                  <th className="text-left px-4 py-3 text-xs text-[#9CA3AF] font-normal uppercase tracking-widest">Escudería</th>
-                  <th className="text-left px-4 py-3 text-xs text-[#9CA3AF] font-normal uppercase tracking-widest hidden sm:table-cell">Victorias</th>
-                  <th className="text-right px-4 py-3 text-xs text-[#9CA3AF] font-normal uppercase tracking-widest">Puntos</th>
+                  <th className="text-left px-3 py-2 text-[10px] text-[#9CA3AF] font-normal uppercase tracking-widest w-9">Pos</th>
+                  <th className="text-left px-2 py-2 text-[10px] text-[#9CA3AF] font-normal uppercase tracking-widest">Escudería</th>
+                  <th className="text-right px-3 py-2 text-[10px] text-[#9CA3AF] font-normal uppercase tracking-widest w-14">Pts</th>
                 </tr>
               </thead>
               <tbody>
@@ -618,9 +614,9 @@ function StandingsTab({ driverStandings, constructorStandings, year }: {
                   const color = teamColor(c.constructorId)
                   return (
                     <tr key={c.constructorId} className="border-b border-[#F0F0F3] hover:bg-[#FAFAFA] transition-colors">
-                      <td className="px-4 py-3">
+                      <td className="px-3 py-2">
                         <span className={cn(
-                          'w-6 h-6 rounded flex items-center justify-center text-xs font-bold',
+                          'w-5 h-5 rounded flex items-center justify-center text-[10px] font-bold',
                           c.position === 1 ? 'bg-yellow-100 text-yellow-700' :
                           c.position === 2 ? 'bg-slate-200 text-slate-600' :
                           c.position === 3 ? 'bg-orange-100 text-orange-700' :
@@ -629,29 +625,18 @@ function StandingsTab({ driverStandings, constructorStandings, year }: {
                           {c.position}
                         </span>
                       </td>
-                      <td className="px-4 py-3">
-                        <div className="flex items-center gap-2">
+                      <td className="px-2 py-2">
+                        <div className="flex items-center gap-1.5">
                           {teamLogo(c.constructorId) ? (
                             // eslint-disable-next-line @next/next/no-img-element
-                            <img src={teamLogo(c.constructorId)} alt="" className="w-6 h-6 object-contain" />
+                            <img src={teamLogo(c.constructorId)} alt="" className="w-5 h-5 object-contain flex-shrink-0" />
                           ) : (
-                            <div className="w-3 h-full min-h-[12px] rounded-sm" style={{ background: color }} />
+                            <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: color }} />
                           )}
-                          <span className="text-[#0A0A0F] font-medium">{c.constructorName}</span>
+                          <span className="text-[#0A0A0F] font-medium text-xs">{c.constructorName}</span>
                         </div>
                       </td>
-                      <td className="px-4 py-3 hidden sm:table-cell text-[#6B6B80]">{c.wins}</td>
-                      <td className="px-4 py-3 text-right">
-                        <div className="flex items-center justify-end gap-3">
-                          <div className="hidden sm:block w-24 h-1 rounded-full bg-[#E8E8EE]">
-                            <div
-                              className="h-full rounded-full"
-                              style={{ width: `${Math.round((c.points / maxConstructorPts) * 100)}%`, background: color }}
-                            />
-                          </div>
-                          <span className="font-bold text-[#0A0A0F] w-10 text-right">{c.points}</span>
-                        </div>
-                      </td>
+                      <td className="px-3 py-2 text-right font-bold text-[#0A0A0F] text-xs">{c.points}</td>
                     </tr>
                   )
                 })}

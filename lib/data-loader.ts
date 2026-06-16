@@ -277,6 +277,22 @@ export function getCircuitGPCount(circuitId: string): number {
   return circuitGPCountCache.get(circuitId) ?? 0
 }
 
+export interface ChampionshipPodiums {
+  p1: number
+  p2: number
+  p3: number
+}
+
+/** Count how many times a driver finished P1, P2, P3 in the drivers' championship. */
+export function getDriverChampionshipPodiums(driverId: string): ChampionshipPodiums {
+  const history = getDriverSeasonHistory(driverId)
+  return {
+    p1: history.filter(s => s.position === 1).length,
+    p2: history.filter(s => s.position === 2).length,
+    p3: history.filter(s => s.position === 3).length,
+  }
+}
+
 /** ISO timestamp of the last data update, read from data/json/metadata.json. */
 export function getLastUpdated(): string | null {
   const data = readJson<{ lastUpdated: string }>('metadata.json')

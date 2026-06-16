@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { Trophy, Zap, Medal, Timer, Flag } from 'lucide-react'
 import { DRIVERS } from '@/data/drivers'
-import { getDriverSeasonHistory } from '@/lib/data-loader'
+import { getDriverSeasonHistory, getDriverChampionshipPodiums } from '@/lib/data-loader'
 import { DriverPhoto } from '@/components/ui/DriverPhoto'
 import { FlagIcon } from '@/components/ui/FlagIcon'
 
@@ -11,6 +11,9 @@ export default function PilotoDetailPage({ params }: { params: { id: string } })
   if (!driver) notFound()
 
   const seasons = getDriverSeasonHistory(driver.id)
+  const podiums = getDriverChampionshipPodiums(driver.id)
+  // P1 from podiums may be 0 if Ergast ID doesn't match internal ID; fall back to driver.championships
+  const p1 = podiums.p1 > 0 ? podiums.p1 : driver.championships
 
   return (
     <div className="min-h-screen max-w-[1400px] mx-auto px-4 py-8">
@@ -50,8 +53,14 @@ export default function PilotoDetailPage({ params }: { params: { id: string } })
               </p>
             )}
 
+            {/* Podium medals: P1/P2/P3 finishes in the championship */}
+            <div className="flex items-start gap-4 mb-4">
+              <PodiumBadge count={p1} label="Campeonatos" tier="gold" />
+              <PodiumBadge count={podiums.p2} label="Subcampeonatos" tier="silver" />
+              <PodiumBadge count={podiums.p3} label="Terceros puestos" tier="bronze" />
+            </div>
+
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-              <StatBox label="Campeonatos" value={driver.championships} Icon={Trophy} color="#F5C518" />
               <StatBox label="Victorias" value={driver.wins} Icon={Trophy} color="#F5C518" />
               <StatBox label="Poles" value={driver.poles} Icon={Zap} color="#378ADD" />
               <StatBox label="Podiums" value={driver.podiums} Icon={Medal} color="#C0C0C0" />
@@ -110,6 +119,29 @@ function InfoItem({ label, value }: { label: string; value: string }) {
     <div className="flex justify-between items-center bg-[#F5F5F7] rounded px-3 py-2 text-sm">
       <span className="text-[#9CA3AF]">{label}</span>
       <span className="text-[#0A0A0F] font-medium">{value}</span>
+    </div>
+  )
+}
+
+const TIER_STYLES = {
+  gold:   { bg: '#F5C518', text: '#1A1A1A' },
+  silver: { bg: '#C0C0C8', text: '#1A1A1A' },
+  bronze: { bg: '#A86E4C', text: '#FFFFFF' },
+  none:   { bg: '#E8E8EE', text: '#9CA3AF' },
+}
+
+function PodiumBadge({ count, label, tier }: { count: number; label: string; tier: 'gold' | 'silver' | 'bronze' }) {
+  const style = count > 0 ? TIER_STYLES[tier] : TIER_STYLES.none
+  return (
+    <div className="flex flex-col items-center gap-1">
+      <div
+        className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-bold"
+        style={{ background: style.bg, color: style.text }}
+      >
+        <Medal size={14} />
+        <span>{count}</span>
+      </div>
+      <span className="text-[10px] text-[#9CA3AF] text-center leading-tight max-w-[72px]">{label}</span>
     </div>
   )
 }

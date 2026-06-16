@@ -1,20 +1,54 @@
 'use client'
 import { useState, useRef, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
+import { Trophy, MapPin, User, Wrench, Star, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
-interface Section {
-  href: string
-  label: string
-  description: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  Icon: React.ComponentType<any>
-  color: string
-  stat: string
-}
+const SECTIONS = [
+  {
+    href: '/temporadas',
+    label: 'Temporadas',
+    description: 'Cada campeonato desde 1950. Equipos, pilotos, resultados y clasificaciones.',
+    Icon: Trophy,
+    color: '#E8001D',
+    stat: '75 temporadas',
+  },
+  {
+    href: '/circuitos',
+    label: 'Circuitos',
+    description: 'Todos los trazados que han acogido Grandes Premios a lo largo de la historia.',
+    Icon: MapPin,
+    color: '#378ADD',
+    stat: '77 circuitos',
+  },
+  {
+    href: '/pilotos',
+    label: 'Pilotos',
+    description: 'Perfiles completos, estadísticas y trayectorias de todos los pilotos históricos.',
+    Icon: User,
+    color: '#27F4D2',
+    stat: '800+ pilotos',
+  },
+  {
+    href: '/escuderias',
+    label: 'Escuderías',
+    description: 'Historia, evolución técnica, coches y patrocinadores de cada equipo.',
+    Icon: Wrench,
+    color: '#FF8000',
+    stat: '210+ escuderías',
+  },
+  {
+    href: '/hall-of-fame',
+    label: 'Hall of Fame',
+    description: 'Los rankings históricos: campeones, victorias, poles y récords de la F1.',
+    Icon: Star,
+    color: '#F5C518',
+    stat: 'Todos los récords',
+  },
+]
 
-export function HomeCarousel({ sections }: { sections: Section[] }) {
+export function HomeCarousel() {
+  const sections = SECTIONS
   const trackRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
   const [showLeft, setShowLeft] = useState(false)

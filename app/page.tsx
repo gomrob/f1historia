@@ -131,7 +131,7 @@ export default function HomePage() {
           <p className="section-eyebrow mb-1">Explora la historia</p>
           <h2 className="text-2xl font-bold text-[#0A0A0F]">Todo sobre la Fórmula 1</h2>
         </div>
-        <HomeCarousel sections={SECTIONS} />
+        <HomeCarousel />
       </section>
 
       {/* ── QUICK ACCESS LINKS ── */}

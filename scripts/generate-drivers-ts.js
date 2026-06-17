@@ -68,3 +68,5 @@ const updated = src.replace(marker, `\n${newEntries}\n]\n\nexport function getDr
 
 fs.writeFileSync(FILE, updated)
 console.log(`Added ${newDrivers.length} new drivers (existing: ${existingIds.size}, total now: ${existingIds.size + newDrivers.length}).`)
+
+require('./update-metadata').touchMetadata()

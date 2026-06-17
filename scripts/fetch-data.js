@@ -234,6 +234,8 @@ async function main() {
   if (stats.failed > 0) {
     console.log(`Detalles de errores guardados en ${path.relative(ROOT, ERROR_LOG)}`)
   }
+
+  require('./update-metadata').touchMetadata()
 }
 
 main().catch(err => {

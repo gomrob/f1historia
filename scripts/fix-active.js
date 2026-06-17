@@ -12,3 +12,5 @@ for (const id of ['bahrain', 'imola', 'jeddah']) {
 
 fs.writeFileSync(FILE, src)
 console.log('done')
+
+require('./update-metadata').touchMetadata()

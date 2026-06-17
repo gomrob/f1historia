@@ -111,3 +111,5 @@ src = src.replace(marker, `\n${newEntries}\n]\n\nexport function getCircuit`)
 
 fs.writeFileSync(FILE, src)
 console.log(`Added ${NEW_CIRCUITS.length} new circuits, renamed ${Object.keys(RENAMES).length} ids.`)
+
+require('./update-metadata').touchMetadata()

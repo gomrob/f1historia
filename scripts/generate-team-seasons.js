@@ -181,3 +181,5 @@ const newBlocks = teamBlocks.map(block => {
 
 fs.writeFileSync(FILE, before + newBlocks.join(',\n  ') + after)
 console.log(`Added ${totalNewSeasons} new season entries, enriched ${totalEnriched} existing entries with race counts.`)
+
+require('./update-metadata').touchMetadata()

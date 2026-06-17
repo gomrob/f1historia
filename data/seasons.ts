@@ -9,14 +9,14 @@ export const SEASONS: Season[] = [
     entries: [
       { teamId: 'mclaren',     driverIds: ['lando_norris', 'oscar_piastri'],      chassis: 'Por confirmar', engine: 'Mercedes',  points: 0, position: 1,  wins: 0, color: '#FF8000' },
       { teamId: 'ferrari',     driverIds: ['lewis_hamilton', 'charles_leclerc'],  chassis: 'Por confirmar', engine: 'Ferrari',   points: 0, position: 2,  wins: 0, color: '#E8002D' },
-      { teamId: 'redbull',     driverIds: ['max_verstappen', 'tsunoda'],          chassis: 'Por confirmar', engine: 'Ford',      points: 0, position: 3,  wins: 0, color: '#3671C6' },
+      { teamId: 'redbull',     driverIds: ['max_verstappen', 'hadjar'],           chassis: 'Por confirmar', engine: 'Ford',      points: 0, position: 3,  wins: 0, color: '#3671C6' },
       { teamId: 'mercedes',    driverIds: ['george_russell', 'antonelli'],        chassis: 'Por confirmar', engine: 'Mercedes',  points: 0, position: 4,  wins: 0, color: '#27F4D2' },
       { teamId: 'astonmartin', driverIds: ['fernando_alonso', 'lance_stroll'],    chassis: 'Por confirmar', engine: 'Honda',     points: 0, position: 5,  wins: 0, color: '#358C75' },
       { teamId: 'alpine',      driverIds: ['pierre_gasly', 'franco_colapinto'],   chassis: 'Por confirmar', engine: 'Mercedes',  points: 0, position: 6,  wins: 0, color: '#FF87BC' },
       { teamId: 'williams',    driverIds: ['carlos_sainz', 'alexander_albon'],    chassis: 'Por confirmar', engine: 'Mercedes',  points: 0, position: 7,  wins: 0, color: '#64C4FF' },
       { teamId: 'haas',        driverIds: ['esteban_ocon', 'bearman'],            chassis: 'Por confirmar', engine: 'Ferrari',   points: 0, position: 8,  wins: 0, color: '#B6BABD' },
       { teamId: 'sauber',      driverIds: ['nico_hulkenberg', 'bortoleto'],       chassis: 'Por confirmar', engine: 'Audi',      points: 0, position: 9,  wins: 0, color: '#52E252' },
-      { teamId: 'racingbulls', driverIds: ['hadjar', 'lawson'],                   chassis: 'Por confirmar', engine: 'Ford',      points: 0, position: 10, wins: 0, color: '#6692FF' },
+      { teamId: 'racingbulls', driverIds: ['lawson', 'lindblad'],                  chassis: 'Por confirmar', engine: 'Ford',      points: 0, position: 10, wins: 0, color: '#6692FF' },
       { teamId: 'cadillac',    driverIds: ['sergio_perez', 'bottas'],             chassis: 'Por confirmar', engine: 'Ferrari',   points: 0, position: 11, wins: 0, color: '#9C8A5E' },
     ],
     races: []

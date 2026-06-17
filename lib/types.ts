@@ -99,6 +99,7 @@ export interface Circuit {
   photoUrl?: string
   logoUrl?: string
   trackImageUrl?: string
+  onboardLapYoutubeId?: string
   active: boolean
   races: CircuitRace[]
 }

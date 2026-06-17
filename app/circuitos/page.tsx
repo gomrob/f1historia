@@ -192,6 +192,21 @@ function CircuitDetail({ circuit, onClose }: { circuit: Circuit; onClose: () => 
               <InfoItem label="Dirección" value={circuit.direction === 'clockwise' ? 'Horario' : 'Antihorario'} />
             </div>
 
+            {circuit.onboardLapYoutubeId && (
+              <div className="mb-4">
+                <p className="text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-2">Vuelta onboard</p>
+                <div className="rounded-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                  <iframe
+                    src={`https://www.youtube.com/embed/${circuit.onboardLapYoutubeId}`}
+                    title={`Onboard lap ${circuit.name}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full border-0"
+                  />
+                </div>
+              </div>
+            )}
+
             <GPCountStat circuitId={circuit.id} />
 
             {circuit.lapRecord && (

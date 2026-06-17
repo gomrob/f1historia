@@ -7,7 +7,7 @@ export const TEAMS: Team[] = [{
     nationality: 'Italian',
     flag: '🇮🇹',
     color: '#E8002D',
-    logoUrl: '',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b8/Ferrari_F430_EngineLogo_Scudetto_rosso_noBG.png',
     founded: 1950,
     bio: 'La escudería más histórica y legendaria de la Fórmula 1. Ferrari ha participado en todas las temporadas desde el inicio del Campeonato del Mundo en 1950. Con 16 títulos de constructores y 15 de pilotos, la Scuderia Ferrari representa el alma y la pasión del automovilismo italiano.',
     championships: 16,

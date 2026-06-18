@@ -151,9 +151,9 @@ function DriverCard({ driver, podiums, onClick }: { driver: Driver; podiums: Cha
             <p className="text-xs text-[#9CA3AF]">{driver.nationality}</p>
           </div>
         </div>
-        <div className="flex flex-col items-end gap-1">
+        <div className="flex flex-row items-center gap-1 flex-wrap justify-end">
           {p1 > 0 && (
-            <div className="flex items-center gap-1 bg-yellow-900/30 text-yellow-400 px-2 py-0.5 rounded text-xs font-bold">
+            <div className="flex items-center gap-1 px-2 py-0.5 rounded text-xs font-bold" style={{ background: '#F5C518', color: '#1A1A1A' }}>
               <Trophy size={10} />
               {p1}x
             </div>

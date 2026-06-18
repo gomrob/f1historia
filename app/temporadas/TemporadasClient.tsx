@@ -294,16 +294,12 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings }: 
 
                 {/* Top: team color header with logo + name */}
                 <div
-                  className="flex-1 flex flex-col items-center justify-center gap-2 px-3 py-4 text-center"
+                  className="flex-1 flex flex-col items-center justify-center gap-3 px-3 py-5 text-center"
                   style={{ background: entry.color }}
                 >
-                  {/* Position badge */}
-                  <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-black/20 text-white">
-                    P{entry.position}
-                  </span>
                   {/* Logo */}
                   {logo && (
-                    <div className="h-9 w-16 flex items-center justify-center">
+                    <div className="h-10 w-20 flex items-center justify-center">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={logo}
@@ -315,31 +311,26 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings }: 
                   )}
                   {/* Team name */}
                   <h3 className="text-sm font-bold text-white leading-tight">{displayName}</h3>
-                  {/* Points */}
-                  <div>
-                    <div className="text-2xl font-black text-white leading-none">{entry.points}</div>
-                    <div className="text-[10px] text-white/70">pts · {entry.wins} vict.</div>
-                  </div>
                   {/* Chassis / engine */}
                   {(chassis || engine) && (
-                    <div className="text-[10px] text-white/60 mt-0.5 leading-tight">
+                    <div className="text-[10px] text-white/60 leading-tight">
                       {chassis && <span>{chassis} </span>}
                       {engine && <span>({engine})</span>}
                     </div>
                   )}
                 </div>
 
-                {/* Bottom: car image */}
+                {/* Bottom: car image — more space now that points/position removed */}
                 <div
-                  className="flex items-center justify-center px-2 py-3"
-                  style={{ background: `${entry.color}18`, minHeight: 72 }}
+                  className="flex items-center justify-center px-2 py-4"
+                  style={{ background: `${entry.color}18`, minHeight: 88 }}
                 >
                   <F1CarSVG
                     teamId={entry.teamId}
                     primaryColor={entry.color}
                     year={year}
                     carImageUrl={teamSeason?.carImageUrl}
-                    className="max-h-[64px] w-full"
+                    className="max-h-[80px] w-full"
                   />
                 </div>
               </div>

@@ -55,11 +55,11 @@ function getTeamDisplayName(teamId: string, year: number): string {
 
 // Logos for teams not yet present in data/teams.ts (current-era entries)
 const TEAM_LOGO_FALLBACKS: Record<string, string> = {
-  astonmartin: 'https://commons.wikimedia.org/wiki/Special:FilePath/Aston_Martin_F1_Team_logo_2024.jpg',
-  haas: 'https://commons.wikimedia.org/wiki/Special:FilePath/TGR_Haas_F1_Team_Logo_(2026).svg',
+  astonmartin: 'https://upload.wikimedia.org/wikipedia/commons/0/03/Aston_Martin_F1_Team_logo_2024.jpg',
+  haas: 'https://upload.wikimedia.org/wikipedia/commons/1/18/TGR_Haas_F1_Team_Logo_%282026%29.svg',
   sauber: 'https://upload.wikimedia.org/wikipedia/commons/3/30/Audif1.com_logo17.svg',
-  racingbulls: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/Alphatauri_logo.png',
-  cadillac: 'https://commons.wikimedia.org/wiki/Special:FilePath/Cadillac_Wordmark.svg',
+  racingbulls: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/VCARB_F1_logo.svg/250px-VCARB_F1_logo.svg.png',
+  cadillac: 'https://upload.wikimedia.org/wikipedia/commons/f/fc/Cadillac_Wordmark.svg',
 }
 
 function teamLogo(constructorId: string): string | undefined {

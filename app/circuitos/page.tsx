@@ -195,15 +195,27 @@ function CircuitDetail({ circuit, onClose }: { circuit: Circuit; onClose: () => 
             {circuit.onboardLapYoutubeId && (
               <div className="mb-4">
                 <p className="text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-2">Vuelta onboard</p>
-                <div className="rounded-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
-                  <iframe
-                    src={`https://www.youtube.com/embed/${circuit.onboardLapYoutubeId}`}
-                    title={`Onboard lap ${circuit.name}`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full border-0"
+                <a
+                  href={`https://www.youtube.com/watch?v=${circuit.onboardLapYoutubeId}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative rounded-lg overflow-hidden group"
+                  style={{ aspectRatio: '16/9' }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`https://img.youtube.com/vi/${circuit.onboardLapYoutubeId}/maxresdefault.jpg`}
+                    alt={`Onboard lap ${circuit.name}`}
+                    className="w-full h-full object-cover"
                   />
-                </div>
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
+                    <div className="bg-red-600 rounded-full p-4 shadow-lg group-hover:scale-110 transition-transform">
+                      <svg viewBox="0 0 24 24" fill="white" width="28" height="28">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
               </div>
             )}
 

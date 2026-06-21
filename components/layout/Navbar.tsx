@@ -62,7 +62,7 @@ export function Navbar() {
         {/* Right side */}
         <div className="ml-auto flex items-center gap-3">
           <span className="hidden lg:block text-xs text-[#6B6B80] bg-[#F5F5F7] px-2 py-1 rounded border border-[#E8E8EE]">
-            1950 — 2025
+            1950 — 2026
           </span>
 
           <GlobalSearch />

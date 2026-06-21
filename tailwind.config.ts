@@ -28,9 +28,10 @@ const config: Config = {
           alpine:     '#FF87BC',
           astonmartin:'#358C75',
           williams:   '#64C4FF',
-          haas:       '#B6BABD',
-          sauber:     '#52E252',
+          haas:       '#EB0A1E',
+          sauber:     '#F50537',
           racingbulls:'#6692FF',
+          cadillac:   '#9C8A5E',
         },
       },
       fontFamily: {

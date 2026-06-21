@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { ChevronLeft, ChevronRight, Trophy, Flag, Users, BarChart2 } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { cn, getContrastTextColor } from '@/lib/utils'
 import { TEAMS } from '@/data/teams'
 import { DRIVERS } from '@/data/drivers'
 import { F1CarSVG } from '@/components/ui/F1CarSVG'
@@ -88,8 +88,10 @@ export default function TemporadasClient({ years, year, season, driverStandings,
   function prevYear() { if (yearIdx < years.length - 1) goToYear(years[yearIdx + 1]) }
   function nextYear() { if (yearIdx > 0) goToYear(years[yearIdx - 1]) }
 
-  const champion = driverStandings[0]
-  const constructorChampion = constructorStandings[0]
+  const currentYear = new Date().getFullYear()
+  const isCurrentSeason = year >= currentYear
+  const champion = isCurrentSeason ? null : driverStandings[0]
+  const constructorChampion = isCurrentSeason ? null : constructorStandings[0]
   const totalRaces = raceResults.length
 
   return (
@@ -102,27 +104,12 @@ export default function TemporadasClient({ years, year, season, driverStandings,
           <div className="flex flex-wrap items-center gap-3">
             <h1 className="text-4xl font-bold text-[#0A0A0F]">Temporada <span className="text-[#E8001D]">{year}</span></h1>
             <IndexedBadge type="temporadas" />
-            {year === 2026 && (
+            {isCurrentSeason && (
               <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#E8001D] bg-[#E8001D]/10 border border-[#E8001D]/20 px-2.5 py-1 rounded-full">
                 Temporada actual
               </span>
             )}
           </div>
-          {(champion || constructorChampion) && (
-            <p className="text-sm text-[#6B6B80] mt-1">
-              {totalRaces} carreras
-              {champion && (
-                <>
-                  {' '}· Campeón: <span className="text-[#0A0A0F]">{champion.driverName}</span>
-                </>
-              )}
-              {constructorChampion && (
-                <>
-                  {' '}· Constructor: <span className="text-[#0A0A0F]">{constructorChampion.constructorName}</span>
-                </>
-              )}
-            </p>
-          )}
         </div>
 
         <div className="flex items-center gap-3">
@@ -292,38 +279,42 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings }: 
               {/* ── LEFT COLUMN ── */}
               <div className="flex flex-col w-[42%] flex-shrink-0">
 
-                {/* Top: team color header with logo + name */}
+                {/* Top: soft team-color tint, original logo, large team name */}
                 <div
-                  className="flex-1 flex flex-col items-center justify-center gap-3 px-3 py-5 text-center"
-                  style={{ background: entry.color }}
+                  className="flex-1 flex flex-col items-center justify-center gap-2 px-3 py-5 text-center"
+                  style={{ background: `${entry.color}15` }}
                 >
-                  {/* Logo */}
+                  {/* Logo in original colors */}
                   {logo && (
-                    <div className="h-10 w-20 flex items-center justify-center">
+                    <div className="h-10 w-24 flex items-center justify-center">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={logo}
                         alt={displayName}
                         className="max-h-full max-w-full object-contain"
-                        style={{ filter: 'brightness(0) invert(1)' }}
                       />
                     </div>
                   )}
-                  {/* Team name */}
-                  <h3 className="text-sm font-bold text-white leading-tight">{displayName}</h3>
+                  {/* Team name — large and prominent */}
+                  <h3
+                    className="font-bold leading-tight text-center"
+                    style={{ fontSize: '1.25rem', color: entry.color }}
+                  >
+                    {displayName}
+                  </h3>
                   {/* Chassis / engine */}
                   {(chassis || engine) && (
-                    <div className="text-[10px] text-white/60 leading-tight">
+                    <div className="text-[10px] text-[#6B6B80] leading-tight">
                       {chassis && <span>{chassis} </span>}
                       {engine && <span>({engine})</span>}
                     </div>
                   )}
                 </div>
 
-                {/* Bottom: car image — more space now that points/position removed */}
+                {/* Bottom: car image */}
                 <div
                   className="flex items-center justify-center px-2 py-4"
-                  style={{ background: `${entry.color}18`, minHeight: 88 }}
+                  style={{ background: `${entry.color}10`, minHeight: 88 }}
                 >
                   <F1CarSVG
                     teamId={entry.teamId}
@@ -335,8 +326,11 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings }: 
                 </div>
               </div>
 
-              {/* ── RIGHT COLUMN: driver rows ── */}
-              <div className="flex-1 flex flex-col divide-y divide-[#F0F0F3]">
+              {/* ── RIGHT COLUMN: driver rows — team color background, contrast text ── */}
+              <div
+                className="flex-1 flex flex-col divide-y"
+                style={{ background: entry.color, borderColor: `${entry.color}40` }}
+              >
                 {entry.driverIds.map((did) => {
                   const d = DRIVERS.find(dr => dr.id === did)
                   const ds = d?.seasons?.find((s) => s.year === year)
@@ -346,7 +340,6 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings }: 
                     : (d?.name ?? did).slice(0, 2).toUpperCase()
                   const driverNum = ds?.number ?? d?.number
 
-                  // Points: try season history first, then standings JSON (by driver name)
                   const driverPts = ds?.points
                     ?? standingsLookup[d?.name?.toLowerCase() ?? '']?.points
                     ?? null
@@ -354,62 +347,57 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings }: 
                     ?? standingsLookup[d?.name?.toLowerCase() ?? '']?.position
                     ?? null
 
+                  const textColor = getContrastTextColor(entry.color)
+                  const mutedColor = textColor === '#FFFFFF' ? 'rgba(255,255,255,0.65)' : 'rgba(0,0,0,0.5)'
+
                   return (
-                    <div key={did} className="flex items-center gap-2.5 px-3 py-3 flex-1">
-                      {/* Circular photo */}
+                    <div
+                      key={did}
+                      className="flex items-center gap-2.5 px-3 py-3 flex-1"
+                      style={{ borderColor: textColor === '#FFFFFF' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)' }}
+                    >
+                      {/* Circular photo — doubled size */}
                       <DriverAvatar
                         staticPhoto={d?.photo}
                         driverName={d?.name ?? did}
                         initials={initials}
-                        color={entry.color}
-                        size={48}
+                        color={textColor === '#FFFFFF' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.2)'}
+                        size={96}
                       />
 
                       {/* Driver info */}
                       <div className="flex-1 min-w-0">
                         {/* Number */}
                         <div
-                          className="text-xl font-black leading-none"
-                          style={{ color: entry.color }}
+                          className="text-2xl font-black leading-none"
+                          style={{ color: textColor }}
                         >
                           {driverNum !== undefined ? `#${driverNum}` : '–'}
                         </div>
                         {/* Full name */}
-                        <div className="text-xs font-semibold text-[#0A0A0F] leading-tight truncate">
+                        <div
+                          className="text-xs font-semibold leading-tight truncate mt-0.5"
+                          style={{ color: textColor }}
+                        >
                           {d?.name ?? did}
                         </div>
                         {/* Flag + nationality */}
                         <div className="flex items-center gap-1 mt-0.5">
                           {d && <FlagIcon nationality={d.nationality} size={11} />}
-                          <span className="text-[10px] text-[#9CA3AF] truncate">{d?.nationality ?? ''}</span>
+                          <span className="text-[10px] truncate" style={{ color: mutedColor }}>{d?.nationality ?? ''}</span>
                         </div>
                         {/* Points */}
                         {driverPts !== null && (
                           <div className="mt-0.5">
-                            <span className="text-xs font-bold" style={{ color: entry.color }}>
+                            <span className="text-xs font-bold" style={{ color: textColor }}>
                               {driverPts} pts
                             </span>
                             {driverPos !== null && driverPos > 0 && (
-                              <span className="text-[10px] text-[#9CA3AF] ml-1">P{driverPos}</span>
+                              <span className="text-[10px] ml-1" style={{ color: mutedColor }}>P{driverPos}</span>
                             )}
                           </div>
                         )}
                       </div>
-
-                      {/* Helmet thumbnail */}
-                      {d?.helmetUrl && (
-                        <div
-                          className="flex-shrink-0 flex items-center justify-center"
-                          style={{ width: 44, height: 44 }}
-                        >
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
-                            src={d.helmetUrl}
-                            alt={`Casco ${d?.name}`}
-                            style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
-                          />
-                        </div>
-                      )}
                     </div>
                   )
                 })}
@@ -423,14 +411,15 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings }: 
 }
 
 function ResultsTab({ raceResults, year }: { raceResults: RaceResults[]; year: number }) {
+  const isCurrentSeason = year >= new Date().getFullYear()
   if (raceResults.length === 0) {
-    if (year === 2026) {
+    if (isCurrentSeason) {
       return (
         <div className="f1-card p-8 text-center">
           <Flag size={40} className="text-[#E8001D] mx-auto mb-4" />
           <h3 className="text-lg font-semibold text-[#0A0A0F] mb-2">Temporada en curso</h3>
           <p className="text-[#6B6B80] text-sm max-w-md mx-auto">
-            La temporada 2026 está en curso — los resultados se irán añadiendo conforme se disputen las carreras.
+            La temporada {year} está en curso — los resultados se irán añadiendo conforme se disputen las carreras.
           </p>
         </div>
       )
@@ -529,13 +518,14 @@ function StandingsTab({ driverStandings, constructorStandings, year }: {
   constructorStandings: ConstructorStandingEntry[]
   year: number
 }) {
-  if (driverStandings.length === 0 && year === 2026) {
+  const isCurrentSeason = year >= new Date().getFullYear()
+  if (driverStandings.length === 0 && isCurrentSeason) {
     return (
       <div className="f1-card p-8 text-center">
         <BarChart2 size={40} className="text-[#E8001D] mx-auto mb-4" />
         <h3 className="text-lg font-semibold text-[#0A0A0F] mb-2">Temporada en curso</h3>
         <p className="text-[#6B6B80] text-sm max-w-md mx-auto">
-          La temporada 2026 está en curso — los resultados se irán añadiendo conforme se disputen las carreras.
+          La temporada {year} está en curso — los resultados se irán añadiendo conforme se disputen las carreras.
         </p>
       </div>
     )

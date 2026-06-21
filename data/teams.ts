@@ -467,6 +467,14 @@ export const TEAMS: Team[] = [{
         races: 24
       },
       {
+        year: 2026, chassis: 'SF-26', engine: 'Ferrari', engineSupplier: 'Ferrari',
+        tyreSupplier: 'Pirelli', principal: 'Frédéric Vasseur',
+        drivers: ['hamilton', 'leclerc'], points: 0, position: 2, wins: 0,
+        color: '#E8002D', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/2026_Chinese_GP_-_Ferrari_-_Lewis_Hamilton_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Ferrari_-_Lewis_Hamilton_-_Qualifying.jpg',
+        races: 0
+      },
+      {
         year: 2024, chassis: 'SF-24', engine: 'Ferrari 066/12', engineSupplier: 'Ferrari',
         tyreSupplier: 'Pirelli', principal: 'Frédéric Vasseur', technicalDirector: 'Loic Serra',
         drivers: ['charles_leclerc', 'carlos_sainz'], points: 652, position: 3, wins: 5,
@@ -899,6 +907,14 @@ export const TEAMS: Team[] = [{
         races: 24
       },
       {
+        year: 2026, chassis: 'MCL39', engine: 'Mercedes', engineSupplier: 'Mercedes',
+        tyreSupplier: 'Pirelli', principal: 'Andrea Stella',
+        drivers: ['norris', 'piastri'], points: 0, position: 1, wins: 0,
+        color: '#FF8000', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/2026_Chinese_GP_-_McLaren_-_Lando_Norris_-_Qualifying.jpg/330px-2026_Chinese_GP_-_McLaren_-_Lando_Norris_-_Qualifying.jpg',
+        races: 0
+      },
+      {
         year: 2024, chassis: 'MCL38', engine: 'Mercedes M15', engineSupplier: 'Mercedes',
         tyreSupplier: 'Pirelli', principal: 'Andrea Stella', technicalDirector: 'Peter Prodromou',
         drivers: ['lando_norris', 'oscar_piastri'], points: 666, position: 1, wins: 6,
@@ -1032,6 +1048,14 @@ export const TEAMS: Team[] = [{
         drivers: ['russell', 'antonelli'], points: 469, position: 2, wins: 2,
         color: '#27F4D2', sponsors: [], liveryColors: [],
         races: 24
+      },
+      {
+        year: 2026, chassis: 'W16', engine: 'Mercedes', engineSupplier: 'Mercedes',
+        tyreSupplier: 'Pirelli', principal: 'Toto Wolff',
+        drivers: ['russell', 'antonelli'], points: 0, position: 4, wins: 0,
+        color: '#27F4D2', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/2026_Chinese_GP_-_Mercedes_-_George_Russell_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Mercedes_-_George_Russell_-_Qualifying.jpg',
+        races: 0
       },
       {
         year: 2024, chassis: 'W15', engine: 'Mercedes M15', engineSupplier: 'Mercedes',
@@ -1201,6 +1225,14 @@ export const TEAMS: Team[] = [{
         drivers: ['max_verstappen', 'lawson', 'tsunoda'], points: 451, position: 3, wins: 8,
         color: '#3671C6', sponsors: [], liveryColors: [],
         races: 24
+      },
+      {
+        year: 2026, chassis: 'RB21', engine: 'Ford', engineSupplier: 'Ford',
+        tyreSupplier: 'Pirelli', principal: 'Christian Horner',
+        drivers: ['max_verstappen', 'hadjar'], points: 0, position: 3, wins: 0,
+        color: '#3671C6', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/2026_Chinese_GP_-_Red_Bull_-_Max_Verstappen_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Red_Bull_-_Max_Verstappen_-_Qualifying.jpg',
+        races: 0
       },
       {
         year: 2024, chassis: 'RB20', engine: 'Honda RBPTH002', engineSupplier: 'Honda RBPT',
@@ -1569,6 +1601,14 @@ export const TEAMS: Team[] = [{
         liveryColors: ['#003EFF', '#FFFFFF', '#64C4FF'],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/Williams_FW47_%2855012521784%29.jpg',
         races: 24
+      },
+      {
+        year: 2026, chassis: 'FW47', engine: 'Mercedes', engineSupplier: 'Mercedes',
+        tyreSupplier: 'Pirelli', principal: 'James Vowles',
+        drivers: ['carlos_sainz', 'alexander_albon'], points: 0, position: 7, wins: 0,
+        color: '#64C4FF', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/2026_Chinese_GP_-_Williams_-_Alex_Albon_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Williams_-_Alex_Albon_-_Qualifying.jpg',
+        races: 0
       },
       {
         year: 1996, chassis: 'FW18', engine: 'Renault RS8', engineSupplier: 'Renault',
@@ -2016,6 +2056,14 @@ export const TEAMS: Team[] = [{
         drivers: ['gasly', 'doohan', 'colapinto'], points: 22, position: 10, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
         races: 24
+      },
+      {
+        year: 2026, chassis: 'A526', engine: 'Mercedes', engineSupplier: 'Mercedes',
+        tyreSupplier: 'Pirelli', principal: 'Oliver Oakes',
+        drivers: ['gasly', 'colapinto'], points: 0, position: 6, wins: 0,
+        color: '#FF87BC', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/2026_Chinese_GP_-_Alpine_-_Pierre_Gasly_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Alpine_-_Pierre_Gasly_-_Qualifying.jpg',
+        races: 0
       },
       {
         year: 2024, chassis: 'A524', engine: 'Renault E-Tech RE24', engineSupplier: 'Renault',
@@ -4315,7 +4363,16 @@ export const TEAMS: Team[] = [{
     podiums: 4,
     basedIn: 'Silverstone, United Kingdom',
     active: true,
-    seasons: []
+    seasons: [
+      {
+        year: 2026, chassis: 'AMR26', engine: 'Honda', engineSupplier: 'Honda',
+        tyreSupplier: 'Pirelli', principal: 'Andy Cowell',
+        drivers: ['alonso', 'stroll'], points: 0, position: 5, wins: 0,
+        color: '#358C75', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/2026_Chinese_GP_-_Aston_Martin_-_Fernando_Alonso_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Aston_Martin_-_Fernando_Alonso_-_Qualifying.jpg',
+        races: 0
+      },
+    ]
   }, {
     id: 'haas',
     name: 'Haas',
@@ -4332,7 +4389,16 @@ export const TEAMS: Team[] = [{
     podiums: 0,
     basedIn: 'Kannapolis, United States',
     active: true,
-    seasons: []
+    seasons: [
+      {
+        year: 2026, chassis: 'VF-26', engine: 'Ferrari', engineSupplier: 'Ferrari',
+        tyreSupplier: 'Pirelli', principal: 'Ayao Komatsu',
+        drivers: ['ocon', 'bearman'], points: 0, position: 8, wins: 0,
+        color: '#B6BABD', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/2026_Chinese_GP_-_Haas_-_Oliver_Bearman_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Haas_-_Oliver_Bearman_-_Qualifying.jpg',
+        races: 0
+      },
+    ]
   }, {
     id: 'sauber',
     name: 'Audi',
@@ -4349,7 +4415,16 @@ export const TEAMS: Team[] = [{
     podiums: 5,
     basedIn: 'Hinwil, Switzerland',
     active: true,
-    seasons: []
+    seasons: [
+      {
+        year: 2026, chassis: 'AF1-01', engine: 'Audi', engineSupplier: 'Audi',
+        tyreSupplier: 'Pirelli', principal: 'Mattia Binotto',
+        drivers: ['hulkenberg', 'bortoleto'], points: 0, position: 9, wins: 0,
+        color: '#52E252', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/2026_Chinese_GP_-_Audi_-_Nico_Hulkenberg_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Audi_-_Nico_Hulkenberg_-_Qualifying.jpg',
+        races: 0
+      },
+    ]
   }, {
     id: 'racingbulls',
     name: 'Racing Bulls',
@@ -4366,7 +4441,16 @@ export const TEAMS: Team[] = [{
     podiums: 4,
     basedIn: 'Faenza, Italy',
     active: true,
-    seasons: []
+    seasons: [
+      {
+        year: 2026, chassis: 'VCARB 02', engine: 'Ford', engineSupplier: 'Ford',
+        tyreSupplier: 'Pirelli', principal: 'Laurent Mekies',
+        drivers: ['lawson', 'lindblad'], points: 0, position: 10, wins: 0,
+        color: '#6692FF', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/2026_Chinese_GP_-_Racing_Bulls_-_Liam_Lawson_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Racing_Bulls_-_Liam_Lawson_-_Qualifying.jpg',
+        races: 0
+      },
+    ]
   }, {
     id: 'cadillac',
     name: 'Cadillac',
@@ -4383,7 +4467,16 @@ export const TEAMS: Team[] = [{
     podiums: 0,
     basedIn: 'Concord, United States',
     active: true,
-    seasons: []
+    seasons: [
+      {
+        year: 2026, chassis: 'TWO-Eleven', engine: 'Ferrari', engineSupplier: 'Ferrari',
+        tyreSupplier: 'Pirelli', principal: 'Graeme Lowdon',
+        drivers: ['sergio_perez', 'bottas'], points: 0, position: 11, wins: 0,
+        color: '#9C8A5E', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/2026_Chinese_GP_-_Cadillac_-_Valtteri_Bottas_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Cadillac_-_Valtteri_Bottas_-_Qualifying.jpg',
+        races: 0
+      },
+    ]
   }
 ]
 

@@ -1,0 +1,201 @@
+[
+  {
+    "teamId": "williams",
+    "driverIds": [
+      "jones",
+      "reutemann",
+      "keegan"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 120,
+    "position": 1,
+    "wins": 6,
+    "color": "#64C4FF"
+  },
+  {
+    "teamId": "ligier",
+    "driverIds": [
+      "laffite",
+      "pironi"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 66,
+    "position": 2,
+    "wins": 2,
+    "color": "#003366"
+  },
+  {
+    "teamId": "brabham",
+    "driverIds": [
+      "piquet",
+      "rebaque",
+      "zunino"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 55,
+    "position": 3,
+    "wins": 3,
+    "color": "#1B5E20"
+  },
+  {
+    "teamId": "renault",
+    "driverIds": [
+      "arnoux",
+      "jabouille"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 38,
+    "position": 4,
+    "wins": 3,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "team_lotus",
+    "driverIds": [
+      "angelis",
+      "mario_andretti",
+      "mansell"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 14,
+    "position": 5,
+    "wins": 0,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "tyrrell",
+    "driverIds": [
+      "daly",
+      "jarier"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 12,
+    "position": 6,
+    "wins": 0,
+    "color": "#1E3A5F"
+  },
+  {
+    "teamId": "arrows",
+    "driverIds": [
+      "patrese",
+      "mass",
+      "thackwell"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 11,
+    "position": 7,
+    "wins": 0,
+    "color": "#FF8C00"
+  },
+  {
+    "teamId": "fittipaldi",
+    "driverIds": [
+      "keke_rosberg",
+      "emerson_fittipaldi"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 11,
+    "position": 8,
+    "wins": 0,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "mclaren",
+    "driverIds": [
+      "watson",
+      "prost"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 11,
+    "position": 9,
+    "wins": 0,
+    "color": "#FF8000"
+  },
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "gilles_villeneuve",
+      "scheckter"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 8,
+    "position": 10,
+    "wins": 0,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "alfa",
+    "driverIds": [
+      "giacomelli",
+      "depailler",
+      "brambilla",
+      "cesaris"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 4,
+    "position": 11,
+    "wins": 0,
+    "color": "#B22222"
+  },
+  {
+    "teamId": "ats",
+    "driverIds": [
+      "surer",
+      "lammers"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#888888"
+  },
+  {
+    "teamId": "ensign",
+    "driverIds": [
+      "regazzoni",
+      "needell"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#CC3300"
+  },
+  {
+    "teamId": "osella",
+    "driverIds": [
+      "cheever"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#003399"
+  },
+  {
+    "teamId": "shadow",
+    "driverIds": [
+      "lees"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#444444"
+  }
+]

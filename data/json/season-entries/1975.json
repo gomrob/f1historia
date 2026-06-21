@@ -1,0 +1,272 @@
+[
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "lauda",
+      "regazzoni"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 72.5,
+    "position": 1,
+    "wins": 6,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "brabham",
+    "driverIds": [
+      "reutemann",
+      "pace"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 54,
+    "position": 2,
+    "wins": 2,
+    "color": "#1B5E20"
+  },
+  {
+    "teamId": "mclaren",
+    "driverIds": [
+      "emerson_fittipaldi",
+      "mass",
+      "charlton"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 53,
+    "position": 3,
+    "wins": 3,
+    "color": "#FF8000"
+  },
+  {
+    "teamId": "hesketh",
+    "driverIds": [
+      "hunt",
+      "jones",
+      "ertl",
+      "lunger",
+      "palm"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 33,
+    "position": 4,
+    "wins": 1,
+    "color": "#AAAAAA"
+  },
+  {
+    "teamId": "tyrrell",
+    "driverIds": [
+      "scheckter",
+      "depailler",
+      "ian_scheckter",
+      "jabouille",
+      "leclere"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 25,
+    "position": 5,
+    "wins": 1,
+    "color": "#1E3A5F"
+  },
+  {
+    "teamId": "shadow-ford",
+    "driverIds": [
+      "pryce",
+      "jarier"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 9.5,
+    "position": 6,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "team_lotus",
+    "driverIds": [
+      "peterson",
+      "ickx",
+      "tunmer",
+      "crawford",
+      "keizan",
+      "henton"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 9,
+    "position": 7,
+    "wins": 0,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "march",
+    "driverIds": [
+      "brambilla",
+      "lombardi",
+      "stuck"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 7.5,
+    "position": 8,
+    "wins": 1,
+    "color": "#FF6600"
+  },
+  {
+    "teamId": "williams",
+    "driverIds": [
+      "laffite",
+      "brise",
+      "merzario",
+      "magee",
+      "zorzi",
+      "vonlanthen",
+      "ashley"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 6,
+    "position": 9,
+    "wins": 0,
+    "color": "#64C4FF"
+  },
+  {
+    "teamId": "parnelli",
+    "driverIds": [
+      "mario_andretti"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 5,
+    "position": 10,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "hill",
+    "driverIds": [
+      "schuppan"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 3,
+    "position": 11,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "penske",
+    "driverIds": [
+      "donohue"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 2,
+    "position": 12,
+    "wins": 0,
+    "color": "#003399"
+  },
+  {
+    "teamId": "ensign",
+    "driverIds": [
+      "lennep",
+      "amon",
+      "wunderink"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 1,
+    "position": 13,
+    "wins": 0,
+    "color": "#CC3300"
+  },
+  {
+    "teamId": "surtees",
+    "driverIds": [
+      "watson",
+      "morgan"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#CC6600"
+  },
+  {
+    "teamId": "brm",
+    "driverIds": [
+      "evans",
+      "wilds"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#006400"
+  },
+  {
+    "teamId": "fittipaldi",
+    "driverIds": [
+      "wilson_fittipaldi"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "lola",
+    "driverIds": [
+      "stommelen",
+      "hill",
+      "migault"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#888888"
+  },
+  {
+    "teamId": "lyncar",
+    "driverIds": [
+      "nicholson"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "shadow-matra",
+    "driverIds": [],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "maki",
+    "driverIds": [
+      "fushida"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  }
+]

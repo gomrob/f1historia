@@ -1,0 +1,153 @@
+[
+  {
+    "teamId": "matra-ford",
+    "driverIds": [
+      "stewart",
+      "beltoise",
+      "gavin"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 66,
+    "position": 1,
+    "wins": 6,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "brabham-ford",
+    "driverIds": [
+      "ickx",
+      "courage",
+      "jack_brabham",
+      "moser"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 51,
+    "position": 2,
+    "wins": 2,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "lotus-ford",
+    "driverIds": [
+      "rindt",
+      "hill",
+      "siffert",
+      "attwood",
+      "lovely",
+      "miles",
+      "bonnier",
+      "mario_andretti",
+      "love"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 47,
+    "position": 3,
+    "wins": 2,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "mclaren-ford",
+    "driverIds": [
+      "mclaren",
+      "hulme",
+      "bell",
+      "rooyen"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 38,
+    "position": 4,
+    "wins": 1,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "brm",
+    "driverIds": [
+      "surtees",
+      "rodriguez",
+      "oliver",
+      "brack",
+      "eaton"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 7,
+    "position": 5,
+    "wins": 0,
+    "color": "#006400"
+  },
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "amon"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 7,
+    "position": 6,
+    "wins": 0,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "cooper-maserati",
+    "driverIds": [
+      "elford"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "brabham-repco",
+    "driverIds": [
+      "tingle",
+      "klerk"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "brm-ford",
+    "driverIds": [],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "eagle-climax",
+    "driverIds": [
+      "pease"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "brabham-climax",
+    "driverIds": [
+      "cordts"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  }
+]

@@ -1,0 +1,135 @@
+[
+  {
+    "teamId": "mercedes",
+    "driverIds": [
+      "hamilton",
+      "bottas"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 573,
+    "position": 1,
+    "wins": 13,
+    "color": "#27F4D2"
+  },
+  {
+    "teamId": "red_bull",
+    "driverIds": [
+      "max_verstappen",
+      "albon"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 319,
+    "position": 2,
+    "wins": 2,
+    "color": "#3671C6"
+  },
+  {
+    "teamId": "mclaren",
+    "driverIds": [
+      "sainz",
+      "norris"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 202,
+    "position": 3,
+    "wins": 0,
+    "color": "#FF8000"
+  },
+  {
+    "teamId": "racing_point",
+    "driverIds": [
+      "perez",
+      "stroll",
+      "hulkenberg"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 195,
+    "position": 4,
+    "wins": 1,
+    "color": "#F06292"
+  },
+  {
+    "teamId": "renault",
+    "driverIds": [
+      "ricciardo",
+      "ocon"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 181,
+    "position": 5,
+    "wins": 0,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "leclerc",
+      "vettel"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 131,
+    "position": 6,
+    "wins": 0,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "alphatauri",
+    "driverIds": [
+      "gasly",
+      "kvyat"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 107,
+    "position": 7,
+    "wins": 1,
+    "color": "#6692FF"
+  },
+  {
+    "teamId": "alfa",
+    "driverIds": [
+      "raikkonen",
+      "giovinazzi"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 8,
+    "position": 8,
+    "wins": 0,
+    "color": "#B22222"
+  },
+  {
+    "teamId": "haas",
+    "driverIds": [
+      "grosjean",
+      "kevin_magnussen",
+      "pietro_fittipaldi"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 3,
+    "position": 9,
+    "wins": 0,
+    "color": "#EB0A1E"
+  },
+  {
+    "teamId": "williams",
+    "driverIds": [
+      "russell",
+      "latifi",
+      "aitken"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 10,
+    "wins": 0,
+    "color": "#64C4FF"
+  }
+]

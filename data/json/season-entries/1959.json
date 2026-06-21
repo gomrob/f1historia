@@ -1,0 +1,220 @@
+[
+  {
+    "teamId": "cooper-climax",
+    "driverIds": [
+      "jack_brabham",
+      "moss",
+      "trintignant",
+      "mclaren",
+      "gregory",
+      "henry_taylor",
+      "ashdown",
+      "bueb",
+      "fairman",
+      "mike_taylor"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 40,
+    "position": 1,
+    "wins": 5,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "brooks",
+      "phil_hill",
+      "gurney",
+      "gendebien",
+      "allison",
+      "behra"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 32,
+    "position": 2,
+    "wins": 2,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "brm",
+    "driverIds": [
+      "bonnier",
+      "schell",
+      "flockhart"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 18,
+    "position": 3,
+    "wins": 1,
+    "color": "#006400"
+  },
+  {
+    "teamId": "team_lotus",
+    "driverIds": [
+      "ireland",
+      "hill",
+      "stacey",
+      "halford",
+      "piper"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 5,
+    "position": 4,
+    "wins": 0,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "cooper-maserati",
+    "driverIds": [
+      "salvadori",
+      "burgess",
+      "cabral",
+      "davis",
+      "herrmann"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "aston_martin",
+    "driverIds": [
+      "shelby"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#358C75"
+  },
+  {
+    "teamId": "porsche",
+    "driverIds": [
+      "trips",
+      "blanchard",
+      "beaufort"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "maserati",
+    "driverIds": [
+      "scarlatti",
+      "orey",
+      "cabianca",
+      "cade",
+      "fontes"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#003399"
+  },
+  {
+    "teamId": "cooper-borgward",
+    "driverIds": [
+      "bristow",
+      "constantine"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "kurtis_kraft",
+    "driverIds": [
+      "darter",
+      "johnson",
+      "paul_russo",
+      "daywalt",
+      "arnold",
+      "mcwithey",
+      "freeland",
+      "christie",
+      "grim",
+      "weyant",
+      "larson",
+      "amick"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#2166AC"
+  },
+  {
+    "teamId": "cooper-osca",
+    "driverIds": [
+      "tomaso"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "tec-mec",
+    "driverIds": [],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "connaught",
+    "driverIds": [
+      "said"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#2E8B57"
+  },
+  {
+    "teamId": "jbw",
+    "driverIds": [
+      "naylor"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "vanwall",
+    "driverIds": [],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#006400"
+  }
+]

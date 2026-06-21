@@ -1,0 +1,136 @@
+[
+  {
+    "teamId": "mclaren",
+    "driverIds": [
+      "norris",
+      "piastri"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 666,
+    "position": 1,
+    "wins": 6,
+    "color": "#FF8000"
+  },
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "leclerc",
+      "sainz",
+      "bearman"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 652,
+    "position": 2,
+    "wins": 5,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "red_bull",
+    "driverIds": [
+      "max_verstappen",
+      "perez"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 589,
+    "position": 3,
+    "wins": 9,
+    "color": "#3671C6"
+  },
+  {
+    "teamId": "mercedes",
+    "driverIds": [
+      "russell",
+      "hamilton"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 468,
+    "position": 4,
+    "wins": 4,
+    "color": "#27F4D2"
+  },
+  {
+    "teamId": "aston_martin",
+    "driverIds": [
+      "alonso",
+      "stroll"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 94,
+    "position": 5,
+    "wins": 0,
+    "color": "#358C75"
+  },
+  {
+    "teamId": "alpine",
+    "driverIds": [
+      "gasly",
+      "ocon",
+      "doohan"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 65,
+    "position": 6,
+    "wins": 0,
+    "color": "#FF87BC"
+  },
+  {
+    "teamId": "haas",
+    "driverIds": [
+      "hulkenberg",
+      "kevin_magnussen"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 58,
+    "position": 7,
+    "wins": 0,
+    "color": "#EB0A1E"
+  },
+  {
+    "teamId": "rb",
+    "driverIds": [
+      "tsunoda",
+      "ricciardo",
+      "lawson"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 46,
+    "position": 8,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "williams",
+    "driverIds": [
+      "albon",
+      "colapinto",
+      "sargeant"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 17,
+    "position": 9,
+    "wins": 0,
+    "color": "#64C4FF"
+  },
+  {
+    "teamId": "sauber",
+    "driverIds": [
+      "zhou",
+      "bottas"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 4,
+    "position": 10,
+    "wins": 0,
+    "color": "#F50537"
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "teamId": "team_lotus",
+    "driverIds": [
+      "rindt",
+      "emerson_fittipaldi",
+      "hill",
+      "wisell",
+      "miles",
+      "love",
+      "charlton",
+      "lovely"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 59,
+    "position": 1,
+    "wins": 6,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "ickx",
+      "regazzoni",
+      "giunti"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 55,
+    "position": 2,
+    "wins": 4,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "march",
+    "driverIds": [
+      "stewart",
+      "amon",
+      "mario_andretti",
+      "gavin",
+      "cevert",
+      "siffert",
+      "peterson"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 48,
+    "position": 3,
+    "wins": 1,
+    "color": "#FF6600"
+  },
+  {
+    "teamId": "brabham",
+    "driverIds": [
+      "jack_brabham",
+      "stommelen",
+      "bell",
+      "klerk",
+      "hutchison"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 35,
+    "position": 4,
+    "wins": 1,
+    "color": "#1B5E20"
+  },
+  {
+    "teamId": "mclaren-ford",
+    "driverIds": [
+      "hulme",
+      "mclaren",
+      "surtees",
+      "gethin",
+      "gurney",
+      "bonnier"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 35,
+    "position": 5,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "brm",
+    "driverIds": [
+      "rodriguez",
+      "oliver",
+      "eaton"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 23,
+    "position": 6,
+    "wins": 1,
+    "color": "#006400"
+  },
+  {
+    "teamId": "matra",
+    "driverIds": [
+      "beltoise",
+      "pescarolo"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 23,
+    "position": 7,
+    "wins": 0,
+    "color": "#003399"
+  },
+  {
+    "teamId": "surtees",
+    "driverIds": [],
+    "chassis": "",
+    "engine": "",
+    "points": 3,
+    "position": 8,
+    "wins": 0,
+    "color": "#CC6600"
+  },
+  {
+    "teamId": "mclaren-alfa_romeo",
+    "driverIds": [
+      "adamich"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "tomaso",
+    "driverIds": [
+      "courage",
+      "schenken"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "tyrrell",
+    "driverIds": [],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#1E3A5F"
+  },
+  {
+    "teamId": "bellasi",
+    "driverIds": [
+      "moser"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  }
+]

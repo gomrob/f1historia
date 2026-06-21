@@ -1,0 +1,147 @@
+[
+  {
+    "teamId": "mercedes",
+    "driverIds": [
+      "hamilton",
+      "rosberg"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 701,
+    "position": 1,
+    "wins": 16,
+    "color": "#27F4D2"
+  },
+  {
+    "teamId": "red_bull",
+    "driverIds": [
+      "ricciardo",
+      "vettel"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 405,
+    "position": 2,
+    "wins": 3,
+    "color": "#3671C6"
+  },
+  {
+    "teamId": "williams",
+    "driverIds": [
+      "bottas",
+      "massa"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 320,
+    "position": 3,
+    "wins": 0,
+    "color": "#64C4FF"
+  },
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "alonso",
+      "raikkonen"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 216,
+    "position": 4,
+    "wins": 0,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "mclaren",
+    "driverIds": [
+      "button",
+      "kevin_magnussen"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 181,
+    "position": 5,
+    "wins": 0,
+    "color": "#FF8000"
+  },
+  {
+    "teamId": "force_india",
+    "driverIds": [
+      "hulkenberg",
+      "perez"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 155,
+    "position": 6,
+    "wins": 0,
+    "color": "#FF6F00"
+  },
+  {
+    "teamId": "toro_rosso",
+    "driverIds": [
+      "vergne",
+      "kvyat"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 30,
+    "position": 7,
+    "wins": 0,
+    "color": "#CC0000"
+  },
+  {
+    "teamId": "lotus_f1",
+    "driverIds": [
+      "grosjean",
+      "maldonado"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 10,
+    "position": 8,
+    "wins": 0,
+    "color": "#1A1A2E"
+  },
+  {
+    "teamId": "marussia",
+    "driverIds": [
+      "jules_bianchi",
+      "chilton"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 2,
+    "position": 9,
+    "wins": 0,
+    "color": "#C62828"
+  },
+  {
+    "teamId": "sauber",
+    "driverIds": [
+      "sutil",
+      "gutierrez"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 10,
+    "wins": 0,
+    "color": "#F50537"
+  },
+  {
+    "teamId": "caterham",
+    "driverIds": [
+      "ericsson",
+      "kobayashi",
+      "stevens",
+      "lotterer"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 11,
+    "wins": 0,
+    "color": "#2E7D32"
+  }
+]

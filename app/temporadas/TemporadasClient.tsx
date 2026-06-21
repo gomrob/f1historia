@@ -8,7 +8,7 @@ import { DRIVERS } from '@/data/drivers'
 import { F1CarSVG } from '@/components/ui/F1CarSVG'
 import { IndexedBadge } from '@/components/ui/IndexedBadge'
 import { FlagIcon } from '@/components/ui/FlagIcon'
-import { TEAM_COLORS, type Season } from '@/lib/types'
+import { TEAM_COLORS, type Season, type SeasonEntry } from '@/lib/types'
 import type { DriverStandingEntry, ConstructorStandingEntry, RaceResults } from '@/lib/data-loader'
 
 const TABS = [
@@ -73,9 +73,10 @@ interface Props {
   driverStandings: DriverStandingEntry[]
   constructorStandings: ConstructorStandingEntry[]
   raceResults: RaceResults[]
+  seasonEntries: SeasonEntry[]
 }
 
-export default function TemporadasClient({ years, year, season, driverStandings, constructorStandings, raceResults }: Props) {
+export default function TemporadasClient({ years, year, season, driverStandings, constructorStandings, raceResults, seasonEntries }: Props) {
   const router = useRouter()
   const [tab, setTab] = useState('equipos')
   const [activeTeam, setActiveTeam] = useState<string | null>(null)
@@ -176,7 +177,7 @@ export default function TemporadasClient({ years, year, season, driverStandings,
 
       {/* Content */}
       {tab === 'equipos' && (
-        <TeamsTab season={season} year={year} activeTeam={activeTeam} setActiveTeam={setActiveTeam} driverStandings={driverStandings} />
+        <TeamsTab season={season} year={year} activeTeam={activeTeam} setActiveTeam={setActiveTeam} driverStandings={driverStandings} seasonEntries={seasonEntries} />
       )}
       {tab === 'resultados' && <ResultsTab raceResults={raceResults} year={year} />}
       {tab === 'clasificacion' && (
@@ -233,14 +234,20 @@ function DriverAvatar({ staticPhoto, driverName, initials, color, size = 56 }: {
   )
 }
 
-function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings }: {
+function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings, seasonEntries }: {
   season?: Season
   year: number
   activeTeam: string | null
   setActiveTeam: (id: string | null) => void
   driverStandings: DriverStandingEntry[]
+  seasonEntries: SeasonEntry[]
 }) {
-  if (!season || season.entries.length === 0) {
+  // Use manual entries from seasons.ts if present and complete, else use
+  // pre-built entries from data/json/season-entries/{year}.json
+  const entries: SeasonEntry[] =
+    season && season.entries.length > 0 ? season.entries : seasonEntries
+
+  if (entries.length === 0) {
     return (
       <div className="text-center py-20 text-[#9CA3AF]">
         <p className="text-lg">No hay datos de equipos para la temporada {year}</p>
@@ -249,17 +256,16 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings }: 
     )
   }
 
-  // Build driverId → points+position lookup from standings JSON
-  const standingsLookup: Record<string, { points: number; position: number }> = {}
+  // Build driverId → points+position+name+nationality lookup from standings JSON
+  const standingsLookup: Record<string, { points: number; position: number; name: string; nationality: string }> = {}
   for (const s of driverStandings) {
-    standingsLookup[s.driverId] = { points: s.points, position: s.position }
-    // Also index by full name for cross-referencing
-    standingsLookup[s.driverName.toLowerCase()] = { points: s.points, position: s.position }
+    standingsLookup[s.driverId] = { points: s.points, position: s.position, name: s.driverName, nationality: s.nationality }
+    standingsLookup[s.driverName.toLowerCase()] = { points: s.points, position: s.position, name: s.driverName, nationality: s.nationality }
   }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-      {season.entries.map((entry) => {
+      {entries.map((entry) => {
         const team = TEAMS.find(t => t.id === entry.teamId)
         const teamSeason = team?.seasons?.find((s) => s.year === year) ?? null
         const logo = teamLogo(entry.teamId)
@@ -334,17 +340,23 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings }: 
                 {entry.driverIds.map((did) => {
                   const d = DRIVERS.find(dr => dr.id === did)
                   const ds = d?.seasons?.find((s) => s.year === year)
-                  const parts = (d?.name ?? did).split(' ')
+                  // Fallback to driverStandings for name/nationality when not in DRIVERS
+                  const standing = standingsLookup[did]
+                  const driverName = d?.name ?? standing?.name ?? did
+                  const nationality = d?.nationality ?? standing?.nationality ?? ''
+                  const parts = driverName.split(' ')
                   const initials = parts.length >= 2
                     ? `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase()
-                    : (d?.name ?? did).slice(0, 2).toUpperCase()
+                    : driverName.slice(0, 2).toUpperCase()
                   const driverNum = ds?.number ?? d?.number
 
                   const driverPts = ds?.points
-                    ?? standingsLookup[d?.name?.toLowerCase() ?? '']?.points
+                    ?? standingsLookup[did]?.points
+                    ?? standingsLookup[driverName.toLowerCase()]?.points
                     ?? null
                   const driverPos = ds?.position
-                    ?? standingsLookup[d?.name?.toLowerCase() ?? '']?.position
+                    ?? standingsLookup[did]?.position
+                    ?? standingsLookup[driverName.toLowerCase()]?.position
                     ?? null
 
                   const textColor = getContrastTextColor(entry.color)
@@ -359,7 +371,7 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings }: 
                       {/* Circular photo — doubled size */}
                       <DriverAvatar
                         staticPhoto={d?.photo}
-                        driverName={d?.name ?? did}
+                        driverName={driverName}
                         initials={initials}
                         color={textColor === '#FFFFFF' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.2)'}
                         size={96}
@@ -379,12 +391,12 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings }: 
                           className="text-xs font-semibold leading-tight truncate mt-0.5"
                           style={{ color: textColor }}
                         >
-                          {d?.name ?? did}
+                          {driverName}
                         </div>
                         {/* Flag + nationality */}
                         <div className="flex items-center gap-1 mt-0.5">
-                          {d && <FlagIcon nationality={d.nationality} size={11} />}
-                          <span className="text-[10px] truncate" style={{ color: mutedColor }}>{d?.nationality ?? ''}</span>
+                          {nationality && <FlagIcon nationality={nationality} size={11} />}
+                          <span className="text-[10px] truncate" style={{ color: mutedColor }}>{nationality}</span>
                         </div>
                         {/* Points */}
                         {driverPts !== null && (

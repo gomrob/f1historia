@@ -22,6 +22,14 @@ export const SEASONS: Season[] = [
     races: []
   },
   {
+    year: 2025,
+    champion: 'lando_norris',
+    constructorChampion: 'mclaren',
+    totalRaces: 24,
+    entries: [],
+    races: []
+  },
+  {
     year: 2024,
     champion: 'max_verstappen',
     constructorChampion: 'mclaren',

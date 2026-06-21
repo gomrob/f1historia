@@ -1,0 +1,149 @@
+[
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "michael_schumacher",
+      "barrichello"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 179,
+    "position": 1,
+    "wins": 9,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "mclaren",
+    "driverIds": [
+      "coulthard",
+      "hakkinen"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 102,
+    "position": 2,
+    "wins": 4,
+    "color": "#FF8000"
+  },
+  {
+    "teamId": "williams",
+    "driverIds": [
+      "ralf_schumacher",
+      "montoya"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 80,
+    "position": 3,
+    "wins": 4,
+    "color": "#64C4FF"
+  },
+  {
+    "teamId": "sauber",
+    "driverIds": [
+      "heidfeld",
+      "raikkonen"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 21,
+    "position": 4,
+    "wins": 0,
+    "color": "#F50537"
+  },
+  {
+    "teamId": "jordan",
+    "driverIds": [
+      "trulli",
+      "frentzen",
+      "zonta"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 19,
+    "position": 5,
+    "wins": 0,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "bar",
+    "driverIds": [
+      "villeneuve",
+      "panis"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 17,
+    "position": 6,
+    "wins": 0,
+    "color": "#B71C1C"
+  },
+  {
+    "teamId": "benetton",
+    "driverIds": [
+      "fisichella",
+      "button"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 10,
+    "position": 7,
+    "wins": 0,
+    "color": "#00C853"
+  },
+  {
+    "teamId": "jaguar",
+    "driverIds": [
+      "irvine",
+      "rosa",
+      "burti"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 9,
+    "position": 8,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "prost",
+    "driverIds": [
+      "alesi",
+      "enge",
+      "mazzacane"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 4,
+    "position": 9,
+    "wins": 0,
+    "color": "#002FA7"
+  },
+  {
+    "teamId": "arrows",
+    "driverIds": [
+      "verstappen",
+      "bernoldi"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 1,
+    "position": 10,
+    "wins": 0,
+    "color": "#FF8C00"
+  },
+  {
+    "teamId": "minardi",
+    "driverIds": [
+      "marques",
+      "alonso",
+      "yoong"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#000080"
+  }
+]

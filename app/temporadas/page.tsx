@@ -4,6 +4,7 @@ import {
   getDriverStandings,
   getConstructorStandings,
   getRaceResultsByYear,
+  getSeasonEntries,
 } from '@/lib/data-loader'
 import TemporadasClient from './TemporadasClient'
 
@@ -21,6 +22,10 @@ export default function TemporadasPage({
   const raceResults = getRaceResultsByYear(year)
   const season = SEASONS.find(s => s.year === year)
 
+  // Pre-built entries from scripts/fetch-season-entries.js; used as fallback
+  // when season.entries is empty (most historical years).
+  const seasonEntries = getSeasonEntries(year)
+
   return (
     <TemporadasClient
       years={years}
@@ -29,6 +34,7 @@ export default function TemporadasPage({
       driverStandings={driverStandings}
       constructorStandings={constructorStandings}
       raceResults={raceResults}
+      seasonEntries={seasonEntries}
     />
   )
 }

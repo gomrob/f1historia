@@ -1,0 +1,137 @@
+[
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "michael_schumacher",
+      "barrichello"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 262,
+    "position": 1,
+    "wins": 15,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "bar",
+    "driverIds": [
+      "button",
+      "sato"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 119,
+    "position": 2,
+    "wins": 0,
+    "color": "#B71C1C"
+  },
+  {
+    "teamId": "renault",
+    "driverIds": [
+      "alonso",
+      "trulli",
+      "villeneuve"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 105,
+    "position": 3,
+    "wins": 1,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "williams",
+    "driverIds": [
+      "montoya",
+      "ralf_schumacher",
+      "pizzonia",
+      "gene"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 88,
+    "position": 4,
+    "wins": 1,
+    "color": "#64C4FF"
+  },
+  {
+    "teamId": "mclaren",
+    "driverIds": [
+      "raikkonen",
+      "coulthard"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 69,
+    "position": 5,
+    "wins": 1,
+    "color": "#FF8000"
+  },
+  {
+    "teamId": "sauber",
+    "driverIds": [
+      "fisichella",
+      "massa"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 34,
+    "position": 6,
+    "wins": 0,
+    "color": "#F50537"
+  },
+  {
+    "teamId": "jaguar",
+    "driverIds": [
+      "webber",
+      "klien"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 10,
+    "position": 7,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "toyota",
+    "driverIds": [
+      "panis",
+      "matta",
+      "zonta"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 9,
+    "position": 8,
+    "wins": 0,
+    "color": "#E53935"
+  },
+  {
+    "teamId": "jordan",
+    "driverIds": [
+      "heidfeld",
+      "glock",
+      "pantano"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 5,
+    "position": 9,
+    "wins": 0,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "minardi",
+    "driverIds": [
+      "baumgartner",
+      "bruni"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 1,
+    "position": 10,
+    "wins": 0,
+    "color": "#000080"
+  }
+]

@@ -1,0 +1,308 @@
+[
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "ascari",
+      "farina",
+      "hawthorn",
+      "villoresi",
+      "rosier",
+      "swaters",
+      "terra",
+      "maglioli",
+      "hirt",
+      "carini",
+      "adolff"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 96.5,
+    "position": 1,
+    "wins": 7,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "maserati",
+    "driverIds": [
+      "fangio",
+      "gonzalez",
+      "graffenried",
+      "bonetto",
+      "marimon",
+      "galvez",
+      "lang",
+      "musso",
+      "mantovani",
+      "landi"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 63,
+    "position": 2,
+    "wins": 1,
+    "color": "#003399"
+  },
+  {
+    "teamId": "kurtis_kraft",
+    "driverIds": [
+      "vukovich",
+      "cross",
+      "darter",
+      "hanks",
+      "mcgrath",
+      "paul_russo",
+      "agabashian",
+      "daywalt",
+      "johnson",
+      "rathmann",
+      "hartley",
+      "stevenson",
+      "davies",
+      "nalon",
+      "bob_scott",
+      "scarborough",
+      "holland",
+      "dinsmore",
+      "linden",
+      "ward",
+      "faulkner",
+      "mantz",
+      "teague",
+      "thomson",
+      "webb",
+      "holmes",
+      "hoyt",
+      "parsons",
+      "niday"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 24,
+    "position": 3,
+    "wins": 1,
+    "color": "#2166AC"
+  },
+  {
+    "teamId": "gordini",
+    "driverIds": [
+      "trintignant",
+      "behra",
+      "mieres",
+      "schell",
+      "wacker",
+      "manzon",
+      "menditeguy"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 4,
+    "position": 4,
+    "wins": 0,
+    "color": "#003399"
+  },
+  {
+    "teamId": "connaught",
+    "driverIds": [
+      "moss",
+      "bira",
+      "andre_pilette",
+      "claes",
+      "mcalpine",
+      "rolt",
+      "salvadori",
+      "ian_stewart"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 5,
+    "wins": 0,
+    "color": "#2E8B57"
+  },
+  {
+    "teamId": "cooper",
+    "driverIds": [
+      "wharton",
+      "john_barber",
+      "alan_brown",
+      "whitehead",
+      "gerard",
+      "nuckey",
+      "jimmy_stewart",
+      "cruz",
+      "crook"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 6,
+    "wins": 0,
+    "color": "#2E8B57"
+  },
+  {
+    "teamId": "hwm",
+    "driverIds": [
+      "collins",
+      "scherrer",
+      "frere",
+      "cabantous",
+      "macklin",
+      "fairman",
+      "duncan_hamilton",
+      "fitch"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 7,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "stevens",
+    "driverIds": [
+      "mccoy"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 8,
+    "wins": 0,
+    "color": "#4393C3"
+  },
+  {
+    "teamId": "kuzma",
+    "driverIds": [
+      "bettenhausen",
+      "ayulo",
+      "sweikert",
+      "flaherty"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 9,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "veritas",
+    "driverIds": [
+      "herrmann",
+      "helfrich",
+      "seidel",
+      "legat",
+      "karch",
+      "heeks",
+      "bauer",
+      "loof"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 10,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "osca",
+    "driverIds": [
+      "chiron",
+      "bayol"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 11,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "afm",
+    "driverIds": [
+      "hans_stuck",
+      "fitzau",
+      "bechem"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 12,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "schroeder",
+    "driverIds": [
+      "bryan"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 13,
+    "wins": 0,
+    "color": "#4393C3"
+  },
+  {
+    "teamId": "bmw",
+    "driverIds": [
+      "krause",
+      "klodwig"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 14,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "simca",
+    "driverIds": [
+      "birger",
+      "georges_berger"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 15,
+    "wins": 0,
+    "color": "#003399"
+  },
+  {
+    "teamId": "emw",
+    "driverIds": [
+      "barth"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 16,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "turner",
+    "driverIds": [
+      "nazaruk"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 17,
+    "wins": 0,
+    "color": "#4393C3"
+  },
+  {
+    "teamId": "watson",
+    "driverIds": [
+      "freeland"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 18,
+    "wins": 0,
+    "color": "#4393C3"
+  }
+]

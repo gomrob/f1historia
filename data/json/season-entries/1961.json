@@ -1,0 +1,217 @@
+[
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "phil_hill",
+      "trips",
+      "ginther",
+      "baghetti",
+      "ricardo_rodriguez"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 45,
+    "position": 1,
+    "wins": 5,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "lotus-climax",
+    "driverIds": [
+      "moss",
+      "ireland",
+      "clark",
+      "allison",
+      "ryan",
+      "henry_taylor",
+      "parnell",
+      "maggs",
+      "may",
+      "burgess",
+      "trevor_taylor",
+      "marsh",
+      "ashmore",
+      "seidel",
+      "hall",
+      "ruby",
+      "mairesse",
+      "ken_miles",
+      "bordeu",
+      "prinoth"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 35,
+    "position": 2,
+    "wins": 3,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "porsche",
+    "driverIds": [
+      "gurney",
+      "bonnier",
+      "beaufort",
+      "herrmann",
+      "barth"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 22,
+    "position": 3,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "cooper-climax",
+    "driverIds": [
+      "mclaren",
+      "jack_brabham",
+      "surtees",
+      "lewis",
+      "salvadori",
+      "penske",
+      "gregory",
+      "sharp",
+      "pirocchi",
+      "hansgen",
+      "collomb",
+      "duke",
+      "campbell-jones",
+      "thiele",
+      "boffa"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 14,
+    "position": 4,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "brm",
+    "driverIds": [
+      "brooks",
+      "hill"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 7,
+    "position": 5,
+    "wins": 0,
+    "color": "#006400"
+  },
+  {
+    "teamId": "cooper-maserati",
+    "driverIds": [
+      "trintignant",
+      "bandini",
+      "natili"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "gilby",
+    "driverIds": [
+      "greene"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "lotus-maserati",
+    "driverIds": [
+      "starrabba"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "ferguson",
+    "driverIds": [
+      "fairman"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "de_tomaso-alfa_romeo",
+    "driverIds": [
+      "vaccarella",
+      "bussinello"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "de_tomaso-osca",
+    "driverIds": [
+      "scarlatti",
+      "lippi"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "jbw",
+    "driverIds": [
+      "naylor"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "emeryson",
+    "driverIds": [
+      "gendebien",
+      "bianchi"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "mbm",
+    "driverIds": [
+      "monteverdi"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  }
+]

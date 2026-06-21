@@ -1,0 +1,134 @@
+[
+  {
+    "teamId": "vanwall",
+    "driverIds": [
+      "brooks",
+      "lewis-evans"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 48,
+    "position": 1,
+    "wins": 6,
+    "color": "#006400"
+  },
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "hawthorn",
+      "collins",
+      "musso",
+      "trips",
+      "gendebien"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 40,
+    "position": 2,
+    "wins": 2,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "cooper",
+    "driverIds": [
+      "moss",
+      "salvadori",
+      "trintignant",
+      "jack_brabham",
+      "mclaren",
+      "burgess",
+      "marsh",
+      "la_caze",
+      "guelfi",
+      "goethals",
+      "picard",
+      "bridger",
+      "gibson",
+      "naylor",
+      "flockhart"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 31,
+    "position": 3,
+    "wins": 2,
+    "color": "#2E8B57"
+  },
+  {
+    "teamId": "brm",
+    "driverIds": [],
+    "chassis": "",
+    "engine": "",
+    "points": 18,
+    "position": 4,
+    "wins": 0,
+    "color": "#006400"
+  },
+  {
+    "teamId": "maserati",
+    "driverIds": [
+      "schell",
+      "phil_hill",
+      "behra",
+      "fangio",
+      "bonnier",
+      "gregory",
+      "shelby",
+      "menditeguy",
+      "godia",
+      "gerini",
+      "herrmann",
+      "gould",
+      "filippis",
+      "ruttman",
+      "scarlatti",
+      "seidel"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 6,
+    "position": 5,
+    "wins": 0,
+    "color": "#003399"
+  },
+  {
+    "teamId": "team_lotus",
+    "driverIds": [
+      "allison",
+      "hill",
+      "stacey"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 3,
+    "position": 6,
+    "wins": 0,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "porsche",
+    "driverIds": [
+      "barth",
+      "beaufort"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#6B6B80"
+  },
+  {
+    "teamId": "connaught",
+    "driverIds": [
+      "fairman",
+      "bueb"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#2E8B57"
+  }
+]

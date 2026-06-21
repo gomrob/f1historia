@@ -1,0 +1,146 @@
+[
+  {
+    "teamId": "mclaren",
+    "driverIds": [
+      "hakkinen",
+      "coulthard"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 156,
+    "position": 1,
+    "wins": 9,
+    "color": "#FF8000"
+  },
+  {
+    "teamId": "ferrari",
+    "driverIds": [
+      "michael_schumacher",
+      "irvine"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 133,
+    "position": 2,
+    "wins": 6,
+    "color": "#E8002D"
+  },
+  {
+    "teamId": "williams",
+    "driverIds": [
+      "villeneuve",
+      "frentzen"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 38,
+    "position": 3,
+    "wins": 0,
+    "color": "#64C4FF"
+  },
+  {
+    "teamId": "jordan",
+    "driverIds": [
+      "damon_hill",
+      "ralf_schumacher"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 34,
+    "position": 4,
+    "wins": 1,
+    "color": "#FFD700"
+  },
+  {
+    "teamId": "benetton",
+    "driverIds": [
+      "wurz",
+      "fisichella"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 33,
+    "position": 5,
+    "wins": 0,
+    "color": "#00C853"
+  },
+  {
+    "teamId": "sauber",
+    "driverIds": [
+      "alesi",
+      "herbert"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 10,
+    "position": 6,
+    "wins": 0,
+    "color": "#F50537"
+  },
+  {
+    "teamId": "arrows",
+    "driverIds": [
+      "salo",
+      "diniz"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 6,
+    "position": 7,
+    "wins": 0,
+    "color": "#FF8C00"
+  },
+  {
+    "teamId": "stewart",
+    "driverIds": [
+      "barrichello",
+      "magnussen",
+      "verstappen"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 5,
+    "position": 8,
+    "wins": 0,
+    "color": "#003399"
+  },
+  {
+    "teamId": "prost",
+    "driverIds": [
+      "trulli",
+      "panis"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 1,
+    "position": 9,
+    "wins": 0,
+    "color": "#002FA7"
+  },
+  {
+    "teamId": "minardi",
+    "driverIds": [
+      "nakano",
+      "tuero"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#000080"
+  },
+  {
+    "teamId": "tyrrell",
+    "driverIds": [
+      "rosset",
+      "takagi"
+    ],
+    "chassis": "",
+    "engine": "",
+    "points": 0,
+    "position": 99,
+    "wins": 0,
+    "color": "#1E3A5F"
+  }
+]

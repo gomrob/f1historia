@@ -308,6 +308,24 @@ function TeamDetail({ team, onClose }: { team: Team; onClose: () => void }) {
           {currentSeason && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div>
+                {/* Commercial name / logo for this season */}
+                {(currentSeason.commercialName || currentSeason.commercialLogoUrl) && (
+                  <div className="flex items-center gap-3 mb-3 p-2 rounded-lg" style={{ background: `${currentSeason.color ?? team.color}12` }}>
+                    {currentSeason.commercialLogoUrl && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={currentSeason.commercialLogoUrl}
+                        alt={currentSeason.commercialName ?? team.name}
+                        className="h-7 object-contain flex-shrink-0"
+                      />
+                    )}
+                    {currentSeason.commercialName && (
+                      <span className="text-sm font-semibold" style={{ color: currentSeason.color ?? team.color }}>
+                        {currentSeason.commercialName}
+                      </span>
+                    )}
+                  </div>
+                )}
                 <F1CarSVG
                   teamId={team.id}
                   primaryColor={currentSeason.color ?? team.color}

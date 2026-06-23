@@ -22,6 +22,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['musso', 'hawthorn', 'collins', 'trips', 'gendebien', 'phil_hill'], points: 40, position: 2, wins: 2,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 10
       },
       {
@@ -29,6 +30,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['brooks', 'phil_hill', 'behra', 'allison', 'gendebien', 'gurney', 'trips'], points: 32, position: 2, wins: 2,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 7
       },
       {
@@ -36,6 +38,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['allison', 'trips', 'phil_hill', 'gonzalez', 'ginther', 'mairesse'], points: 26, position: 3, wins: 1,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 8
       },
       {
@@ -43,6 +46,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ginther', 'phil_hill', 'trips', 'gendebien', 'baghetti', 'mairesse', 'ricardo_rodriguez'], points: 45, position: 1, wins: 5,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 7
       },
       {
@@ -50,6 +54,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['phil_hill', 'baghetti', 'ricardo_rodriguez', 'bandini', 'mairesse'], points: 18, position: 6, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 6
       },
       {
@@ -57,6 +62,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['surtees', 'mairesse', 'scarfiotti', 'bandini'], points: 26, position: 4, wins: 1,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 10
       },
       {
@@ -64,6 +70,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['bandini', 'surtees', 'scarfiotti', 'rodriguez'], points: 45, position: 1, wins: 3,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 10
       },
       {
@@ -71,6 +78,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['surtees', 'bandini', 'vaccarella', 'rodriguez', 'bondurant', 'scarfiotti'], points: 26, position: 4, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 10
       },
       {
@@ -78,6 +86,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['bandini', 'surtees', 'parkes', 'scarfiotti', 'baghetti'], points: 31, position: 2, wins: 2,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 7
       },
       {
@@ -85,6 +94,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['amon', 'bandini', 'parkes', 'scarfiotti', 'williams'], points: 20, position: 5, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 10
       },
       {
@@ -92,6 +102,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['amon', 'ickx', 'adamich', 'bell'], points: 32, position: 4, wins: 1,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 11
       },
       {
@@ -99,6 +110,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['amon', 'rodriguez'], points: 7, position: 6, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 10
       },
       {
@@ -106,6 +118,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ickx', 'giunti', 'regazzoni'], points: 55, position: 2, wins: 4,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 13
       },
       {
@@ -113,6 +126,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['mario_andretti', 'regazzoni', 'ickx'], points: 33, position: 4, wins: 2,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 11
       },
       {
@@ -120,6 +134,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ickx', 'regazzoni', 'mario_andretti', 'galli', 'merzario'], points: 33, position: 4, wins: 1,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 12
       },
       {
@@ -127,6 +142,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ickx', 'merzario'], points: 12, position: 6, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 13
       },
       {
@@ -134,6 +150,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['lauda', 'regazzoni'], points: 65, position: 2, wins: 3,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 15
       },
       {
@@ -141,6 +158,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['regazzoni', 'lauda'], points: 72.5, position: 1, wins: 6,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 14
       },
       {
@@ -148,6 +166,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['lauda', 'regazzoni', 'reutemann'], points: 79, position: 1, wins: 6,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 15
       },
       {
@@ -155,6 +174,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['reutemann', 'lauda', 'gilles_villeneuve'], points: 84, position: 1, wins: 4,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 17
       },
       {
@@ -162,6 +182,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['reutemann', 'gilles_villeneuve'], points: 58, position: 2, wins: 5,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -169,6 +190,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['gilles_villeneuve', 'scheckter'], points: 113, position: 1, wins: 6,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 15
       },
       {
@@ -176,6 +198,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['scheckter', 'gilles_villeneuve'], points: 8, position: 10, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 14
       },
       {
@@ -183,6 +206,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['pironi', 'gilles_villeneuve'], points: 34, position: 5, wins: 2,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 15
       },
       {
@@ -190,6 +214,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['pironi', 'gilles_villeneuve', 'tambay', 'mario_andretti'], points: 74, position: 1, wins: 3,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -197,6 +222,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['tambay', 'arnoux'], points: 89, position: 1, wins: 4,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 15
       },
       {
@@ -204,6 +230,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['arnoux', 'alboreto'], points: 57.5, position: 2, wins: 1,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -211,6 +238,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alboreto', 'arnoux', 'johansson'], points: 82, position: 2, wins: 2,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -218,6 +246,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alboreto', 'johansson'], points: 37, position: 4, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -225,6 +254,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['berger', 'alboreto'], points: 53, position: 4, wins: 2,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -232,6 +262,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['berger', 'alboreto'], points: 65, position: 2, wins: 1,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -239,6 +270,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['mansell', 'berger'], points: 59, position: 3, wins: 3,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -246,6 +278,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['mansell', 'prost'], points: 110, position: 2, wins: 6,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -253,6 +286,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['prost', 'alesi', 'morbidelli'], points: 55.5, position: 3, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -260,6 +294,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alesi', 'capelli', 'larini'], points: 21, position: 4, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -267,6 +302,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['berger', 'alesi'], points: 28, position: 4, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -274,6 +310,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alesi', 'berger', 'larini'], points: 71, position: 3, wins: 1,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -281,6 +318,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['berger', 'alesi'], points: 73, position: 3, wins: 1,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 17
       },
       {
@@ -288,6 +326,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['irvine', 'michael_schumacher'], points: 70, position: 2, wins: 3,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 16
       },
       {
@@ -295,6 +334,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['michael_schumacher', 'irvine'], points: 102, position: 2, wins: 5,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 17
       },
       {
@@ -302,6 +342,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['irvine', 'michael_schumacher'], points: 133, position: 2, wins: 6,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 16
       },
       {
@@ -309,6 +350,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['irvine', 'michael_schumacher', 'salo'], points: 128, position: 1, wins: 6,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 16
       },
       {
@@ -316,6 +358,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['michael_schumacher', 'barrichello'], points: 179, position: 1, wins: 9,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 17
       },
       {
@@ -323,6 +366,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['michael_schumacher', 'barrichello'], points: 221, position: 1, wins: 15,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 17
       },
       {
@@ -330,6 +374,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['michael_schumacher', 'barrichello'], points: 158, position: 1, wins: 8,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 16
       },
       {
@@ -337,6 +382,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['barrichello', 'michael_schumacher'], points: 100, position: 3, wins: 1,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 19
       },
       {
@@ -344,6 +390,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['michael_schumacher', 'massa'], points: 201, position: 2, wins: 9,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 18
       },
       {
@@ -351,6 +398,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['raikkonen', 'massa'], points: 204, position: 1, wins: 9,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 17
       },
       {
@@ -358,6 +406,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['raikkonen', 'massa'], points: 172, position: 1, wins: 8,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 18
       },
       {
@@ -365,6 +414,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['raikkonen', 'massa', 'badoer', 'fisichella'], points: 70, position: 4, wins: 1,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 17
       },
       {
@@ -372,6 +422,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alonso', 'massa'], points: 396, position: 3, wins: 5,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 19
       },
       {
@@ -379,6 +430,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alonso', 'massa'], points: 375, position: 3, wins: 1,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 19
       },
       {
@@ -386,6 +438,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alonso', 'massa'], points: 400, position: 2, wins: 3,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 20
       },
       {
@@ -393,6 +446,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alonso', 'massa'], points: 354, position: 3, wins: 2,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 19
       },
       {
@@ -400,6 +454,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alonso', 'raikkonen'], points: 216, position: 4, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 19
       },
       {
@@ -407,6 +462,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vettel', 'raikkonen'], points: 428, position: 2, wins: 3,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 19
       },
       {
@@ -414,6 +470,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vettel', 'raikkonen'], points: 398, position: 3, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 21
       },
       {
@@ -421,6 +478,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vettel', 'raikkonen'], points: 522, position: 2, wins: 5,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 20
       },
       {
@@ -428,6 +486,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vettel', 'raikkonen'], points: 571, position: 2, wins: 6,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari',
         races: 21
       },
       {
@@ -435,6 +494,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vettel', 'leclerc'], points: 504, position: 2, wins: 3,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Mission Winnow',
         races: 21
       },
       {
@@ -442,6 +502,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['leclerc', 'vettel'], points: 131, position: 6, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Mission Winnow',
         races: 17
       },
       {
@@ -449,6 +510,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['leclerc', 'sainz'], points: 323.5, position: 3, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari Mission Winnow',
         races: 22
       },
       {
@@ -457,6 +519,7 @@ export const TEAMS: Team[] = [{
         drivers: ['leclerc', 'sainz'], points: 554, position: 2, wins: 4,
         color: '#E8002D', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Ferrari_F1-75_in_Melbourne.jpg',
+        commercialName: 'Scuderia Ferrari',
         races: 22
       },
       {
@@ -464,6 +527,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['leclerc', 'hamilton'], points: 398, position: 4, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Ferrari HP',
         races: 24
       },
       {
@@ -472,6 +536,7 @@ export const TEAMS: Team[] = [{
         drivers: ['hamilton', 'leclerc'], points: 0, position: 2, wins: 0,
         color: '#E8002D', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/2026_Chinese_GP_-_Ferrari_-_Lewis_Hamilton_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Ferrari_-_Lewis_Hamilton_-_Qualifying.jpg',
+        commercialName: 'Scuderia Ferrari HP',
         races: 0
       },
       {
@@ -481,6 +546,7 @@ export const TEAMS: Team[] = [{
         color: '#E8002D', sponsors: ['HP', 'Santander', 'Shell', 'Ray-Ban', 'Lenovo'],
         liveryColors: ['#E8002D', '#FFFFFF', '#FFD700'],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/99/SF-24_at_the_Japanese_GP.jpg',
+        commercialName: 'Scuderia Ferrari HP',
         races: 24
       },
       {
@@ -490,6 +556,7 @@ export const TEAMS: Team[] = [{
         color: '#E8002D', sponsors: ['Santander', 'Shell', 'Ray-Ban'],
         liveryColors: ['#E8002D', '#FFFFFF'],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/FIA_F1_Austria_2023_Race_%281%29_%28The_Ferraris%29.jpg',
+        commercialName: 'Scuderia Ferrari',
         races: 22
       },
       {
@@ -498,6 +565,8 @@ export const TEAMS: Team[] = [{
         drivers: ['michael_schumacher', 'rubens_barrichello'], points: 262, position: 1, wins: 15,
         color: '#DC0000', sponsors: ['Marlboro', 'Shell', 'Vodafone', 'FIAT'],
         liveryColors: ['#DC0000', '#FFFFFF', '#FFD700'],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Michael_Schumacher_Ferrari_2004.jpg/960px-Michael_Schumacher_Ferrari_2004.jpg',
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 18
       },
       {
@@ -506,6 +575,7 @@ export const TEAMS: Team[] = [{
         drivers: ['michael_schumacher', 'rubens_barrichello'], points: 170, position: 1, wins: 10,
         color: '#DC0000', sponsors: ['Marlboro', 'Shell', 'FIAT'],
         liveryColors: ['#DC0000', '#FFFFFF'],
+        commercialName: 'Scuderia Ferrari Marlboro',
         races: 17
       },
     ]
@@ -532,6 +602,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['mclaren', 'hulme'], points: 0, position: NaN, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Bruce McLaren Motor Racing',
         races: 2
       },
       {
@@ -560,6 +631,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hulme', 'hailwood', 'emerson_fittipaldi', 'charlton', 'hobbs', 'mass'], points: 72, position: 1, wins: 4,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Marlboro Team McLaren',
         races: 15
       },
       {
@@ -630,6 +702,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['prost', 'lauda'], points: 143.5, position: 1, wins: 12,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Marlboro McLaren International',
         races: 16
       },
       {
@@ -637,6 +710,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['prost', 'lauda', 'watson'], points: 90, position: 1, wins: 6,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Marlboro McLaren International',
         races: 16
       },
       {
@@ -644,6 +718,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['prost', 'keke_rosberg'], points: 96, position: 2, wins: 4,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Marlboro McLaren International',
         races: 16
       },
       {
@@ -651,6 +726,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['prost', 'johansson'], points: 76, position: 2, wins: 3,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Marlboro McLaren International',
         races: 16
       },
       {
@@ -658,6 +734,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['prost', 'senna'], points: 141, position: 1, wins: 10,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Honda Marlboro McLaren',
         races: 16
       },
       {
@@ -665,6 +742,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['senna', 'berger'], points: 121, position: 1, wins: 6,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Honda Marlboro McLaren',
         races: 16
       },
       {
@@ -672,6 +750,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['senna', 'berger'], points: 139, position: 1, wins: 8,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Honda Marlboro McLaren',
         races: 16
       },
       {
@@ -679,6 +758,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['senna', 'berger'], points: 99, position: 2, wins: 5,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Honda Marlboro McLaren',
         races: 16
       },
       {
@@ -686,6 +766,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['senna', 'andretti', 'hakkinen'], points: 84, position: 2, wins: 5,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Marlboro McLaren Ford',
         races: 16
       },
       {
@@ -693,6 +774,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['brundle', 'hakkinen', 'alliot'], points: 42, position: 4, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Marlboro McLaren Peugeot',
         races: 16
       },
       {
@@ -700,6 +782,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hakkinen', 'blundell', 'mansell', 'magnussen'], points: 30, position: 4, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Marlboro McLaren Mercedes',
         races: 17
       },
       {
@@ -707,6 +790,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hakkinen', 'coulthard'], points: 49, position: 4, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Marlboro McLaren Mercedes',
         races: 16
       },
       {
@@ -714,6 +798,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['coulthard', 'hakkinen'], points: 63, position: 4, wins: 3,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'West McLaren Mercedes',
         races: 17
       },
       {
@@ -721,6 +806,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hakkinen', 'coulthard'], points: 156, position: 1, wins: 9,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'West McLaren Mercedes',
         races: 16
       },
       {
@@ -728,6 +814,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hakkinen', 'coulthard'], points: 124, position: 2, wins: 7,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'West McLaren Mercedes',
         races: 16
       },
       {
@@ -735,6 +822,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hakkinen', 'coulthard'], points: 162, position: 2, wins: 7,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'West McLaren Mercedes',
         races: 17
       },
       {
@@ -742,6 +830,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['coulthard', 'hakkinen'], points: 102, position: 2, wins: 4,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'West McLaren Mercedes',
         races: 17
       },
       {
@@ -749,6 +838,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['raikkonen', 'coulthard'], points: 65, position: 3, wins: 1,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'West McLaren Mercedes',
         races: 17
       },
       {
@@ -756,6 +846,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['coulthard', 'raikkonen'], points: 142, position: 3, wins: 2,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'West McLaren Mercedes',
         races: 16
       },
       {
@@ -763,6 +854,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['coulthard', 'raikkonen'], points: 69, position: 5, wins: 1,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'West McLaren Mercedes',
         races: 18
       },
       {
@@ -770,6 +862,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['montoya', 'raikkonen', 'rosa', 'wurz'], points: 182, position: 2, wins: 10,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Vodafone McLaren Mercedes',
         races: 19
       },
       {
@@ -777,6 +870,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['raikkonen', 'montoya', 'rosa'], points: 110, position: 3, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Vodafone McLaren Mercedes',
         races: 18
       },
       {
@@ -784,6 +878,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alonso', 'hamilton'], points: 0, position: NaN, wins: 8,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Vodafone McLaren Mercedes',
         races: 17
       },
       {
@@ -791,6 +886,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hamilton', 'kovalainen'], points: 151, position: 2, wins: 6,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Vodafone McLaren Mercedes',
         races: 18
       },
       {
@@ -798,6 +894,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['kovalainen', 'hamilton'], points: 71, position: 3, wins: 2,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Vodafone McLaren Mercedes',
         races: 17
       },
       {
@@ -805,6 +902,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hamilton', 'button'], points: 454, position: 2, wins: 5,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Vodafone McLaren Mercedes',
         races: 19
       },
       {
@@ -812,6 +910,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hamilton', 'button'], points: 497, position: 2, wins: 6,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Vodafone McLaren Mercedes',
         races: 19
       },
       {
@@ -819,6 +918,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['button', 'hamilton'], points: 378, position: 3, wins: 7,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Vodafone McLaren Mercedes',
         races: 20
       },
       {
@@ -826,6 +926,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['button', 'perez'], points: 122, position: 5, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'Vodafone McLaren Mercedes',
         races: 19
       },
       {
@@ -833,6 +934,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['kevin_magnussen', 'button'], points: 181, position: 5, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'McLaren Mercedes',
         races: 19
       },
       {
@@ -840,6 +942,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['button', 'kevin_magnussen', 'alonso'], points: 27, position: 9, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'McLaren Honda',
         races: 19
       },
       {
@@ -847,6 +950,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['button', 'alonso', 'vandoorne'], points: 76, position: 6, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'McLaren Honda',
         races: 21
       },
       {
@@ -854,6 +958,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vandoorne', 'alonso', 'button'], points: 30, position: 9, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'McLaren Honda',
         races: 20
       },
       {
@@ -861,6 +966,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alonso', 'vandoorne'], points: 62, position: 7, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'McLaren Renault',
         races: 21
       },
       {
@@ -868,6 +974,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['norris', 'sainz'], points: 145, position: 4, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'McLaren Renault',
         races: 21
       },
       {
@@ -875,6 +982,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['norris', 'sainz'], points: 202, position: 3, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'McLaren Renault',
         races: 17
       },
       {
@@ -882,6 +990,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['norris', 'ricciardo'], points: 275, position: 4, wins: 1,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'McLaren F1 Team',
         races: 22
       },
       {
@@ -889,6 +998,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ricciardo', 'norris'], points: 159, position: 5, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'McLaren F1 Team',
         races: 22
       },
       {
@@ -897,6 +1007,7 @@ export const TEAMS: Team[] = [{
         drivers: ['norris', 'piastri'], points: 302, position: 4, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/12/2023_McLaren_MCL60.jpg',
+        commercialName: 'McLaren Formula 1 Team',
         races: 22
       },
       {
@@ -904,6 +1015,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['norris', 'piastri'], points: 833, position: 1, wins: 14,
         color: '#FF8000', sponsors: [], liveryColors: [],
+        commercialName: 'McLaren Formula 1 Team',
         races: 24
       },
       {
@@ -912,6 +1024,7 @@ export const TEAMS: Team[] = [{
         drivers: ['norris', 'piastri'], points: 0, position: 1, wins: 0,
         color: '#FF8000', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/2026_Chinese_GP_-_McLaren_-_Lando_Norris_-_Qualifying.jpg/330px-2026_Chinese_GP_-_McLaren_-_Lando_Norris_-_Qualifying.jpg',
+        commercialName: 'McLaren Formula 1 Team',
         races: 0
       },
       {
@@ -921,6 +1034,7 @@ export const TEAMS: Team[] = [{
         color: '#FF8000', sponsors: ['OKX', 'Google', 'Unilever', 'Dell'],
         liveryColors: ['#FF8000', '#000000'],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/10/2024_McLaren_MCL38.jpg',
+        commercialName: 'McLaren Formula 1 Team',
         races: 24
       },
       {
@@ -929,6 +1043,7 @@ export const TEAMS: Team[] = [{
         drivers: ['ayrton_senna', 'alain_prost'], points: 199, position: 1, wins: 15,
         color: '#D40000', sponsors: ['Marlboro', 'Shell', 'Honda'],
         liveryColors: ['#FFFFFF', '#D40000'],
+        commercialName: 'Honda Marlboro McLaren',
         races: 16
       },
     ]
@@ -955,6 +1070,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['rosberg', 'michael_schumacher'], points: 214, position: 4, wins: 0,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes GP Petronas F1 Team',
         races: 19
       },
       {
@@ -962,6 +1078,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['rosberg', 'michael_schumacher'], points: 165, position: 4, wins: 0,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes AMG Petronas F1 Team',
         races: 19
       },
       {
@@ -969,6 +1086,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['rosberg', 'michael_schumacher'], points: 142, position: 5, wins: 1,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes AMG Petronas F1 Team',
         races: 20
       },
       {
@@ -976,6 +1094,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hamilton', 'rosberg'], points: 360, position: 2, wins: 3,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes AMG Petronas F1 Team',
         races: 19
       },
       {
@@ -983,6 +1102,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['rosberg', 'hamilton'], points: 701, position: 1, wins: 16,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes AMG Petronas F1 Team',
         races: 19
       },
       {
@@ -990,6 +1110,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hamilton', 'rosberg'], points: 703, position: 1, wins: 16,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes AMG Petronas F1 Team',
         races: 19
       },
       {
@@ -997,6 +1118,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['rosberg', 'hamilton'], points: 765, position: 1, wins: 19,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes AMG Petronas F1 Team',
         races: 21
       },
       {
@@ -1004,6 +1126,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hamilton', 'bottas'], points: 668, position: 1, wins: 12,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes AMG Petronas Motorsport',
         races: 20
       },
       {
@@ -1011,6 +1134,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hamilton', 'bottas'], points: 655, position: 1, wins: 11,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes AMG Petronas Motorsport',
         races: 21
       },
       {
@@ -1018,6 +1142,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['bottas', 'hamilton'], points: 739, position: 1, wins: 15,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes AMG Petronas Motorsport',
         races: 21
       },
       {
@@ -1025,6 +1150,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hamilton', 'bottas'], points: 613.5, position: 1, wins: 9,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes-AMG Petronas Formula One Team',
         races: 22
       },
       {
@@ -1032,6 +1158,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hamilton', 'russell'], points: 515, position: 3, wins: 1,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes-AMG PETRONAS F1 Team',
         races: 22
       },
       {
@@ -1040,6 +1167,7 @@ export const TEAMS: Team[] = [{
         drivers: ['hamilton', 'russell'], points: 409, position: 2, wins: 0,
         color: '#27F4D2', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Mercedes-AMG_F1_W14_E_Performance_%2853440939354%29.jpg',
+        commercialName: 'Mercedes-AMG PETRONAS F1 Team',
         races: 22
       },
       {
@@ -1047,6 +1175,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['russell', 'antonelli'], points: 469, position: 2, wins: 2,
         color: '#27F4D2', sponsors: [], liveryColors: [],
+        commercialName: 'Mercedes-AMG PETRONAS F1 Team',
         races: 24
       },
       {
@@ -1055,6 +1184,7 @@ export const TEAMS: Team[] = [{
         drivers: ['russell', 'antonelli'], points: 0, position: 4, wins: 0,
         color: '#27F4D2', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/2026_Chinese_GP_-_Mercedes_-_George_Russell_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Mercedes_-_George_Russell_-_Qualifying.jpg',
+        commercialName: 'Mercedes-AMG PETRONAS F1 Team',
         races: 0
       },
       {
@@ -1064,6 +1194,7 @@ export const TEAMS: Team[] = [{
         color: '#27F4D2', sponsors: ['Petronas', 'INEOS', 'Tommy Hilfiger', 'Qualcomm'],
         liveryColors: ['#00D2BE', '#000000', '#FFFFFF'],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/1/10/2024_British_Grand_Prix%2C_Russell_%283%29.jpg',
+        commercialName: 'Mercedes-AMG PETRONAS F1 Team',
         races: 24
       },
       {
@@ -1072,6 +1203,7 @@ export const TEAMS: Team[] = [{
         drivers: ['lewis_hamilton', 'valtteri_bottas'], points: 573, position: 1, wins: 13,
         color: '#00D2BE', sponsors: ['Petronas', 'INEOS', 'Tommy Hilfiger'],
         liveryColors: ['#00D2BE', '#000000'],
+        commercialName: 'Mercedes-AMG Petronas Formula One Team',
         races: 17
       },
     ]
@@ -1098,6 +1230,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['coulthard', 'klien', 'liuzzi'], points: 34, position: 7, wins: 0,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Red Bull Racing',
         races: 19
       },
       {
@@ -1105,6 +1238,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['klien', 'coulthard', 'doornbos'], points: 16, position: 7, wins: 0,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Red Bull Racing',
         races: 18
       },
       {
@@ -1112,6 +1246,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['webber', 'coulthard'], points: 24, position: 5, wins: 0,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Red Bull Racing',
         races: 17
       },
       {
@@ -1119,6 +1254,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['coulthard', 'webber'], points: 29, position: 7, wins: 0,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Red Bull Racing',
         races: 18
       },
       {
@@ -1126,6 +1262,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['webber', 'vettel'], points: 153.5, position: 2, wins: 6,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Red Bull Racing',
         races: 17
       },
       {
@@ -1133,6 +1270,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vettel', 'webber'], points: 498, position: 1, wins: 9,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Red Bull Racing',
         races: 19
       },
       {
@@ -1140,6 +1278,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vettel', 'webber'], points: 650, position: 1, wins: 12,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Red Bull Racing',
         races: 19
       },
       {
@@ -1147,6 +1286,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vettel', 'webber'], points: 460, position: 1, wins: 7,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Red Bull Racing',
         races: 20
       },
       {
@@ -1154,6 +1294,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vettel', 'webber'], points: 596, position: 1, wins: 13,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Infiniti Red Bull Racing',
         races: 19
       },
       {
@@ -1161,6 +1302,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vettel', 'ricciardo'], points: 405, position: 2, wins: 3,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Infiniti Red Bull Racing',
         races: 19
       },
       {
@@ -1168,6 +1310,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ricciardo', 'kvyat'], points: 187, position: 4, wins: 0,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Infiniti Red Bull Racing',
         races: 19
       },
       {
@@ -1175,6 +1318,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ricciardo', 'kvyat', 'max_verstappen'], points: 468, position: 2, wins: 2,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Red Bull Racing',
         races: 21
       },
       {
@@ -1182,6 +1326,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['max_verstappen', 'ricciardo'], points: 368, position: 3, wins: 3,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Aston Martin Red Bull Racing',
         races: 20
       },
       {
@@ -1189,6 +1334,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ricciardo', 'max_verstappen'], points: 419, position: 3, wins: 4,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Aston Martin Red Bull Racing',
         races: 21
       },
       {
@@ -1196,6 +1342,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['max_verstappen', 'gasly', 'albon'], points: 417, position: 3, wins: 3,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Aston Martin Red Bull Racing',
         races: 21
       },
       {
@@ -1203,6 +1350,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['albon', 'max_verstappen'], points: 319, position: 2, wins: 2,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Aston Martin Red Bull Racing',
         races: 17
       },
       {
@@ -1210,6 +1358,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['max_verstappen', 'perez'], points: 585.5, position: 2, wins: 11,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Red Bull Racing Honda',
         races: 22
       },
       {
@@ -1217,6 +1366,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['perez', 'max_verstappen'], points: 759, position: 1, wins: 17,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Oracle Red Bull Racing',
         races: 22
       },
       {
@@ -1224,6 +1374,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['max_verstappen', 'lawson', 'tsunoda'], points: 451, position: 3, wins: 8,
         color: '#3671C6', sponsors: [], liveryColors: [],
+        commercialName: 'Oracle Red Bull Racing',
         races: 24
       },
       {
@@ -1232,6 +1383,7 @@ export const TEAMS: Team[] = [{
         drivers: ['max_verstappen', 'hadjar'], points: 0, position: 3, wins: 0,
         color: '#3671C6', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/2026_Chinese_GP_-_Red_Bull_-_Max_Verstappen_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Red_Bull_-_Max_Verstappen_-_Qualifying.jpg',
+        commercialName: 'Oracle Red Bull Racing',
         races: 0
       },
       {
@@ -1241,6 +1393,7 @@ export const TEAMS: Team[] = [{
         color: '#3671C6', sponsors: ['Oracle', 'Red Bull', 'ExxonMobil', 'TAG Heuer'],
         liveryColors: ['#001B47', '#3671C6', '#FFD700'],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b4/2024_Red_Bull_RB20.jpg',
+        commercialName: 'Oracle Red Bull Racing',
         races: 24
       },
       {
@@ -1250,6 +1403,7 @@ export const TEAMS: Team[] = [{
         color: '#3671C6', sponsors: ['Oracle', 'Red Bull', 'ExxonMobil'],
         liveryColors: ['#001B47', '#3671C6', '#FFD700'],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/2023_Red_Bull_RB19.jpg',
+        commercialName: 'Oracle Red Bull Racing',
         races: 22
       },
     ]
@@ -1276,6 +1430,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['jones'], points: 11, position: 9, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Ford',
         races: 16
       },
       {
@@ -1283,6 +1438,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['jones', 'regazzoni'], points: 75, position: 2, wins: 5,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Ford',
         races: 15
       },
       {
@@ -1290,6 +1446,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['jones', 'reutemann', 'keegan'], points: 120, position: 1, wins: 6,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Ford',
         races: 14
       },
       {
@@ -1297,6 +1454,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['jones', 'reutemann'], points: 95, position: 1, wins: 4,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'TAG Williams Ford',
         races: 15
       },
       {
@@ -1304,6 +1462,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['reutemann', 'keke_rosberg', 'mario_andretti', 'daly'], points: 58, position: 4, wins: 1,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Albilad Williams Ford',
         races: 15
       },
       {
@@ -1311,6 +1470,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['laffite', 'keke_rosberg', 'palmer'], points: 38, position: 4, wins: 1,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'TAG Williams Ford',
         races: 15
       },
       {
@@ -1318,6 +1478,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['keke_rosberg', 'laffite'], points: 25.5, position: 6, wins: 1,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Honda',
         races: 16
       },
       {
@@ -1325,6 +1486,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['keke_rosberg', 'mansell'], points: 71, position: 3, wins: 4,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Canon Williams Honda',
         races: 16
       },
       {
@@ -1332,6 +1494,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['piquet', 'mansell'], points: 141, position: 1, wins: 9,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Canon Williams Honda',
         races: 16
       },
       {
@@ -1339,6 +1502,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['piquet', 'mansell', 'patrese'], points: 137, position: 1, wins: 9,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Canon Williams Honda',
         races: 16
       },
       {
@@ -1346,6 +1510,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['mansell', 'patrese', 'brundle', 'schlesser'], points: 20, position: 7, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Canon Williams Judd',
         races: 16
       },
       {
@@ -1353,6 +1518,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['patrese', 'boutsen'], points: 77, position: 2, wins: 2,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Canon Williams Renault',
         races: 16
       },
       {
@@ -1360,6 +1526,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['boutsen', 'patrese'], points: 57, position: 4, wins: 2,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Canon Williams Renault',
         races: 16
       },
       {
@@ -1367,6 +1534,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['patrese', 'mansell'], points: 125, position: 2, wins: 7,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Canon Williams Renault',
         races: 16
       },
       {
@@ -1374,6 +1542,8 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['mansell', 'patrese'], points: 164, position: 1, wins: 10,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/f/f5/Williams_FW14B_1992_Drivers_and_Numbers.jpg',
+        commercialName: 'Canon Williams Renault',
         races: 16
       },
       {
@@ -1381,6 +1551,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['prost', 'damon_hill'], points: 168, position: 1, wins: 10,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Canon Williams Renault',
         races: 16
       },
       {
@@ -1388,6 +1559,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['damon_hill', 'senna', 'coulthard', 'mansell'], points: 118, position: 1, wins: 7,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Rothmans Williams Renault',
         races: 16
       },
       {
@@ -1395,6 +1567,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['coulthard', 'damon_hill'], points: 118, position: 2, wins: 5,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Rothmans Williams Renault',
         races: 17
       },
       {
@@ -1402,6 +1575,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['frentzen', 'villeneuve'], points: 123, position: 1, wins: 8,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Rothmans Williams Renault',
         races: 17
       },
       {
@@ -1409,6 +1583,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['frentzen', 'villeneuve'], points: 38, position: 3, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Winfield Williams',
         races: 16
       },
       {
@@ -1416,6 +1591,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ralf_schumacher', 'zanardi'], points: 35, position: 5, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'BMW WilliamsF1 Team',
         races: 16
       },
       {
@@ -1423,6 +1599,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ralf_schumacher', 'button'], points: 36, position: 3, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'BMW WilliamsF1 Team',
         races: 17
       },
       {
@@ -1430,6 +1607,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['montoya', 'ralf_schumacher'], points: 80, position: 3, wins: 4,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'BMW WilliamsF1 Team',
         races: 17
       },
       {
@@ -1437,6 +1615,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['montoya', 'ralf_schumacher'], points: 92, position: 2, wins: 1,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'BMW WilliamsF1 Team',
         races: 17
       },
       {
@@ -1444,6 +1623,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['montoya', 'ralf_schumacher', 'gene'], points: 144, position: 2, wins: 4,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'BMW WilliamsF1 Team',
         races: 16
       },
       {
@@ -1451,6 +1631,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ralf_schumacher', 'montoya', 'gene', 'pizzonia'], points: 88, position: 4, wins: 1,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'BMW WilliamsF1 Team',
         races: 18
       },
       {
@@ -1458,6 +1639,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['webber', 'heidfeld', 'pizzonia'], points: 66, position: 5, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'BMW WilliamsF1 Team',
         races: 19
       },
       {
@@ -1465,6 +1647,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['webber', 'rosberg'], points: 11, position: 8, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'AT&T Williams',
         races: 18
       },
       {
@@ -1472,6 +1655,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['rosberg', 'wurz', 'nakajima'], points: 33, position: 4, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'AT&T Williams',
         races: 17
       },
       {
@@ -1479,6 +1663,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['rosberg', 'nakajima'], points: 26, position: 8, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'AT&T Williams',
         races: 18
       },
       {
@@ -1486,6 +1671,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['rosberg', 'nakajima'], points: 34.5, position: 7, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'AT&T Williams',
         races: 17
       },
       {
@@ -1493,6 +1679,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['barrichello', 'hulkenberg'], points: 69, position: 6, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'AT&T Williams',
         races: 19
       },
       {
@@ -1500,6 +1687,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['barrichello', 'maldonado'], points: 5, position: 9, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams F1 Team',
         races: 19
       },
       {
@@ -1507,6 +1695,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['maldonado', 'bruno_senna'], points: 76, position: 8, wins: 1,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams F1 Team',
         races: 20
       },
       {
@@ -1514,6 +1703,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['bottas', 'maldonado'], points: 5, position: 9, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams F1 Team',
         races: 19
       },
       {
@@ -1521,6 +1711,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['bottas', 'massa'], points: 320, position: 3, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Martini Racing',
         races: 19
       },
       {
@@ -1528,6 +1719,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['massa', 'bottas'], points: 257, position: 3, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Martini Racing',
         races: 19
       },
       {
@@ -1535,6 +1727,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['massa', 'bottas'], points: 138, position: 5, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Martini Racing',
         races: 21
       },
       {
@@ -1542,6 +1735,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['massa', 'stroll', 'resta'], points: 83, position: 5, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Martini Racing',
         races: 20
       },
       {
@@ -1549,6 +1743,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['stroll', 'sirotkin'], points: 7, position: 10, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Martini Racing',
         races: 21
       },
       {
@@ -1556,6 +1751,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['russell', 'kubica'], points: 1, position: 10, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Racing',
         races: 21
       },
       {
@@ -1563,6 +1759,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['latifi', 'russell', 'aitken'], points: 0, position: 10, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Racing',
         races: 17
       },
       {
@@ -1570,6 +1767,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['russell', 'latifi'], points: 23, position: 8, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Racing',
         races: 22
       },
       {
@@ -1577,6 +1775,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['albon', 'latifi', 'de_vries'], points: 8, position: 10, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Racing',
         races: 22
       },
       {
@@ -1584,6 +1783,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['albon', 'sargeant'], points: 28, position: 7, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Racing',
         races: 22
       },
       {
@@ -1591,6 +1791,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['albon', 'sargeant', 'colapinto'], points: 17, position: 9, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
+        commercialName: 'Williams Racing',
         races: 24
       },
       {
@@ -1600,6 +1801,7 @@ export const TEAMS: Team[] = [{
         color: '#64C4FF', sponsors: ['Duracell', 'Sartorius', 'Kraken'],
         liveryColors: ['#003EFF', '#FFFFFF', '#64C4FF'],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/Williams_FW47_%2855012521784%29.jpg',
+        commercialName: 'Williams Racing',
         races: 24
       },
       {
@@ -1608,6 +1810,7 @@ export const TEAMS: Team[] = [{
         drivers: ['carlos_sainz', 'alexander_albon'], points: 0, position: 7, wins: 0,
         color: '#64C4FF', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/2026_Chinese_GP_-_Williams_-_Alex_Albon_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Williams_-_Alex_Albon_-_Qualifying.jpg',
+        commercialName: 'Williams Racing',
         races: 0
       },
       {
@@ -1616,6 +1819,8 @@ export const TEAMS: Team[] = [{
         drivers: ['damon_hill', 'jacques_villeneuve'], points: 175, position: 1, wins: 12,
         color: '#005AFF', sponsors: ['Rothmans', 'Renault', 'Elf'],
         liveryColors: ['#002D72', '#FFFFFF', '#FFD700'],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/1996_Williams-Renault_FW_cropped.jpg/960px-1996_Williams-Renault_FW_cropped.jpg',
+        commercialName: 'Rothmans Williams Renault',
         races: 16
       },
     ]
@@ -1671,6 +1876,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hansgen'], points: 0, position: NaN, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Team Lotus',
         races: 1
       },
       {
@@ -1678,6 +1884,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['miles', 'hill', 'love', 'charlton', 'rindt', 'emerson_fittipaldi', 'lovely', 'wisell'], points: 59, position: 1, wins: 6,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Gold Leaf Team Lotus',
         races: 13
       },
       {
@@ -1685,6 +1892,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['emerson_fittipaldi', 'walker', 'charlton', 'wisell'], points: 61, position: 1, wins: 5,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'John Player Team Lotus',
         races: 12
       },
       {
@@ -1692,6 +1900,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['emerson_fittipaldi', 'peterson', 'charlton'], points: 91, position: 1, wins: 7,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'John Player Team Lotus',
         races: 15
       },
       {
@@ -1699,6 +1908,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['peterson', 'ickx', 'ian_scheckter', 'driver', 'schenken'], points: 42, position: 4, wins: 3,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'John Player Team Lotus',
         races: 15
       },
       {
@@ -1706,6 +1916,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ickx', 'peterson', 'tunmer', 'keizan', 'henton', 'crawford', 'watson'], points: 9, position: 7, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'John Player Team Lotus',
         races: 14
       },
       {
@@ -1713,6 +1924,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['peterson', 'mario_andretti', 'evans', 'nilsson'], points: 29, position: 4, wins: 1,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'John Player Team Lotus',
         races: 16
       },
       {
@@ -1720,6 +1932,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['mario_andretti', 'nilsson'], points: 62, position: 2, wins: 5,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'John Player Team Lotus',
         races: 17
       },
       {
@@ -1727,6 +1940,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['reutemann', 'mario_andretti', 'rebaque'], points: 39, position: 4, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'John Player Team Lotus',
         races: 15
       },
       {
@@ -1734,6 +1948,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['mario_andretti', 'angelis', 'mansell'], points: 14, position: 5, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Essex Team Lotus',
         races: 14
       },
       {
@@ -1741,6 +1956,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['mansell', 'angelis'], points: 22, position: 7, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Essex Team Lotus',
         races: 15
       },
       {
@@ -1748,6 +1964,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['angelis', 'mansell', 'lees'], points: 30, position: 6, wins: 1,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'John Player Team Lotus',
         races: 15
       },
       {
@@ -1755,6 +1972,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['mansell', 'angelis'], points: 12, position: 8, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'John Player Team Lotus',
         races: 15
       },
       {
@@ -1762,6 +1980,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['angelis', 'mansell'], points: 47, position: 3, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'John Player Special Team Lotus',
         races: 16
       },
       {
@@ -1769,6 +1988,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['angelis', 'senna'], points: 71, position: 4, wins: 3,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'John Player Special Team Lotus',
         races: 16
       },
       {
@@ -1776,6 +1996,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['senna', 'dumfries'], points: 58, position: 3, wins: 2,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'John Player Special Team Lotus',
         races: 16
       },
       {
@@ -1783,6 +2004,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['satoru_nakajima', 'senna'], points: 64, position: 3, wins: 2,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Camel Team Lotus Honda',
         races: 16
       },
       {
@@ -1790,6 +2012,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['piquet', 'satoru_nakajima'], points: 23, position: 4, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Camel Team Lotus Honda',
         races: 16
       },
       {
@@ -1840,6 +2063,7 @@ export const TEAMS: Team[] = [{
         drivers: ['mario_andretti', 'ronnie_peterson'], points: 86, position: 1, wins: 8,
         color: '#1B1B1B', sponsors: ['John Player Special', 'Essex Petroleum'],
         liveryColors: ['#000000', '#FFD700'],
+        commercialName: 'John Player Team Lotus',
         races: 16
       },
     ]
@@ -1901,6 +2125,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['trulli', 'button'], points: 23, position: 4, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Mild Seven Renault F1 Team',
         races: 17
       },
       {
@@ -1908,6 +2133,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['trulli', 'alonso'], points: 88, position: 4, wins: 1,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Mild Seven Renault F1 Team',
         races: 16
       },
       {
@@ -1915,6 +2141,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alonso', 'trulli', 'villeneuve'], points: 105, position: 3, wins: 1,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Mild Seven Renault F1 Team',
         races: 18
       },
       {
@@ -1922,6 +2149,8 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['fisichella', 'alonso'], points: 191, position: 1, wins: 8,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Alonso_%28Renault%29_qualifying_at_USGP_2005.jpg/960px-Alonso_%28Renault%29_qualifying_at_USGP_2005.jpg',
+        commercialName: 'Mild Seven Renault F1 Team',
         races: 19
       },
       {
@@ -1929,6 +2158,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alonso', 'fisichella'], points: 206, position: 1, wins: 8,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'ING Renault F1 Team',
         races: 18
       },
       {
@@ -1936,6 +2166,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['fisichella', 'kovalainen'], points: 51, position: 3, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'ING Renault F1 Team',
         races: 17
       },
       {
@@ -1943,6 +2174,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alonso', 'piquet_jr'], points: 80, position: 4, wins: 2,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'ING Renault F1 Team',
         races: 18
       },
       {
@@ -1950,6 +2182,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alonso', 'piquet_jr', 'grosjean'], points: 26, position: 8, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'ING Renault F1 Team',
         races: 17
       },
       {
@@ -1957,6 +2190,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['kubica', 'petrov'], points: 163, position: 5, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Lotus Renault GP',
         races: 19
       },
       {
@@ -1964,6 +2198,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['petrov', 'heidfeld', 'bruno_senna'], points: 73, position: 5, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Lotus Renault GP',
         races: 19
       },
       {
@@ -1971,6 +2206,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['raikkonen', 'grosjean', 'ambrosio'], points: 303, position: 4, wins: 1,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Lotus F1 Team',
         races: 20
       },
       {
@@ -1978,6 +2214,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['raikkonen', 'grosjean', 'kovalainen'], points: 315, position: 4, wins: 1,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Lotus F1 Team',
         races: 19
       },
       {
@@ -1985,6 +2222,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['grosjean', 'maldonado'], points: 10, position: 8, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Lotus F1 Team',
         races: 19
       },
       {
@@ -1992,6 +2230,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['grosjean', 'maldonado'], points: 78, position: 6, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Lotus F1 Team',
         races: 19
       },
       {
@@ -1999,6 +2238,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['jolyon_palmer', 'kevin_magnussen'], points: 8, position: 9, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Renault Sport Formula One Team',
         races: 21
       },
       {
@@ -2006,6 +2246,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hulkenberg', 'jolyon_palmer', 'sainz'], points: 57, position: 6, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Renault Sport Formula One Team',
         races: 20
       },
       {
@@ -2013,6 +2254,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hulkenberg', 'sainz'], points: 122, position: 4, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Renault Sport Formula One Team',
         races: 21
       },
       {
@@ -2020,6 +2262,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hulkenberg', 'ricciardo'], points: 91, position: 5, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Renault F1 Team',
         races: 21
       },
       {
@@ -2027,6 +2270,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ocon', 'ricciardo'], points: 181, position: 5, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Renault F1 Team',
         races: 17
       },
       {
@@ -2034,6 +2278,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ocon', 'alonso'], points: 155, position: 5, wins: 1,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Alpine F1 Team',
         races: 22
       },
       {
@@ -2041,6 +2286,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ocon', 'alonso'], points: 173, position: 4, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'Alpine F1 Team',
         races: 22
       },
       {
@@ -2048,6 +2294,8 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['gasly', 'ocon'], points: 120, position: 6, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Alpine_A523_at_The_Venetian_Las_Vegas_4.jpg',
+        commercialName: 'BWT Alpine F1 Team',
         races: 22
       },
       {
@@ -2055,6 +2303,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['gasly', 'doohan', 'colapinto'], points: 22, position: 10, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
+        commercialName: 'BWT Alpine F1 Team',
         races: 24
       },
       {
@@ -2063,6 +2312,7 @@ export const TEAMS: Team[] = [{
         drivers: ['gasly', 'colapinto'], points: 0, position: 6, wins: 0,
         color: '#FF87BC', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/2026_Chinese_GP_-_Alpine_-_Pierre_Gasly_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Alpine_-_Pierre_Gasly_-_Qualifying.jpg',
+        commercialName: 'Renault Alpine F1 Team',
         races: 0
       },
       {
@@ -2071,6 +2321,7 @@ export const TEAMS: Team[] = [{
         drivers: ['pierre_gasly', 'esteban_ocon'], points: 65, position: 6, wins: 0,
         color: '#FF87BC', sponsors: ['BWT', 'Rio Tinto', 'Cognizant'],
         liveryColors: ['#0078FF', '#FF87BC', '#FFFFFF'],
+        commercialName: 'BWT Alpine F1 Team',
         races: 24
       },
     ]
@@ -2105,6 +2356,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['klerk'], points: 0, position: NaN, wins: 0,
         color: '#900000', sponsors: [], liveryColors: [],
+        commercialName: 'Team Lotus',
         races: 1
       },
       {
@@ -2248,6 +2500,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hill', 'ginther', 'marsh', 'lewis', 'ashmore', 'johnstone'], points: 42, position: 1, wins: 4,
         color: '#004225', sponsors: [], liveryColors: [],
+        commercialName: 'Owen Racing Organisation',
         races: 9
       },
       {
@@ -2276,6 +2529,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['stewart', 'hill', 'bondurant', 'vic_wilson', 'ireland'], points: 22, position: 4, wins: 1,
         color: '#004225', sponsors: [], liveryColors: [],
+        commercialName: 'Bruce McLaren Motor Racing',
         races: 9
       },
       {
@@ -2290,6 +2544,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['rodriguez', 'spence', 'courage', 'attwood', 'unser'], points: 28, position: 5, wins: 0,
         color: '#004225', sponsors: [], liveryColors: [],
+        commercialName: 'Gold Leaf Team Lotus',
         races: 12
       },
       {
@@ -2436,6 +2691,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['jack_brabham'], points: 6, position: 7, wins: 0,
         color: '#0046AD', sponsors: [], liveryColors: [],
+        commercialName: 'Jack Brabham Racing',
         races: 3
       },
       {
@@ -2443,6 +2699,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['gurney', 'jack_brabham', 'prophet'], points: 28, position: 3, wins: 0,
         color: '#0046AD', sponsors: [], liveryColors: [],
+        commercialName: 'Brabham Racing Organisation',
         races: 10
       },
       {
@@ -2527,6 +2784,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['piquet', 'patrese'], points: 72, position: 3, wins: 4,
         color: '#0046AD', sponsors: [], liveryColors: [],
+        commercialName: 'Parmalat Racing Team',
         races: 15
       },
       {
@@ -2534,6 +2792,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['piquet', 'fabi', 'corrado_fabi', 'manfred_winkelhock'], points: 38, position: 4, wins: 2,
         color: '#0046AD', sponsors: [], liveryColors: [],
+        commercialName: 'Parmalat Racing Team',
         races: 16
       },
       {
@@ -2616,6 +2875,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['stewart', 'cevert', 'revson'], points: 73, position: 1, wins: 7,
         color: '#003478', sponsors: [], liveryColors: [],
+        commercialName: 'Tyrrell Racing Organisation',
         races: 11
       },
       {
@@ -2630,6 +2890,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['cevert', 'stewart', 'keizan', 'amon'], points: 80, position: 2, wins: 5,
         color: '#003478', sponsors: [], liveryColors: [],
+        commercialName: 'Elf Team Tyrrell',
         races: 15
       },
       {
@@ -2651,6 +2912,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['depailler', 'scheckter', 'ian_scheckter', 'pesenti_rossi', 'stuppacher', 'hoshino'], points: 67, position: 3, wins: 1,
         color: '#003478', sponsors: [], liveryColors: [],
+        commercialName: 'Elf Team Tyrrell',
         races: 16
       },
       {
@@ -2830,6 +3092,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['gavin', 'ickx', 'jo_schlesser'], points: 0, position: NaN, wins: 0,
         color: '#003399', sponsors: [], liveryColors: [],
+        commercialName: 'Brabham Racing Organisation',
         races: 2
       },
       {
@@ -3627,6 +3890,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['berger', 'fabi'], points: 19, position: 6, wins: 1,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Benetton BMW',
         races: 16
       },
       {
@@ -3634,6 +3898,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['boutsen', 'fabi'], points: 28, position: 5, wins: 0,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Benetton Ford',
         races: 16
       },
       {
@@ -3641,6 +3906,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['boutsen', 'nannini'], points: 39, position: 3, wins: 0,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Benetton Ford',
         races: 16
       },
       {
@@ -3648,6 +3914,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['herbert', 'nannini', 'pirro'], points: 39, position: 4, wins: 1,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Benetton Ford',
         races: 16
       },
       {
@@ -3655,6 +3922,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['piquet', 'nannini', 'moreno'], points: 71, position: 3, wins: 2,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Camel Benetton Ford',
         races: 16
       },
       {
@@ -3662,6 +3930,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['piquet', 'moreno', 'michael_schumacher'], points: 38.5, position: 4, wins: 1,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Camel Benetton Ford',
         races: 16
       },
       {
@@ -3669,6 +3938,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['michael_schumacher', 'brundle'], points: 91, position: 3, wins: 1,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Camel Benetton Ford',
         races: 16
       },
       {
@@ -3676,6 +3946,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['patrese', 'michael_schumacher'], points: 72, position: 3, wins: 1,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Camel Benetton Ford',
         races: 16
       },
       {
@@ -3683,6 +3954,8 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['michael_schumacher', 'verstappen', 'lehto', 'herbert'], points: 103, position: 2, wins: 8,
         color: '#00A651', sponsors: [], liveryColors: [],
+        carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Michael_Schumacher_1994_Silverstone_4.jpg/960px-Michael_Schumacher_1994_Silverstone_4.jpg',
+        commercialName: 'Mild Seven Benetton Ford',
         races: 16
       },
       {
@@ -3690,6 +3963,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['michael_schumacher', 'herbert'], points: 147, position: 1, wins: 11,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Mild Seven Benetton Renault',
         races: 17
       },
       {
@@ -3697,6 +3971,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['berger', 'alesi'], points: 68, position: 3, wins: 0,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Mild Seven Benetton Renault',
         races: 16
       },
       {
@@ -3704,6 +3979,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['berger', 'alesi', 'wurz'], points: 67, position: 3, wins: 1,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Mild Seven Benetton Renault',
         races: 17
       },
       {
@@ -3711,6 +3987,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['wurz', 'fisichella'], points: 33, position: 5, wins: 0,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Mild Seven Benetton Playlife',
         races: 16
       },
       {
@@ -3718,6 +3995,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['fisichella', 'wurz'], points: 16, position: 6, wins: 0,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Mild Seven Benetton Playlife',
         races: 16
       },
       {
@@ -3725,6 +4003,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['fisichella', 'wurz'], points: 20, position: 4, wins: 0,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Benetton Playlife',
         races: 17
       },
       {
@@ -3732,6 +4011,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['fisichella', 'button'], points: 10, position: 7, wins: 0,
         color: '#00A651', sponsors: [], liveryColors: [],
+        commercialName: 'Mild Seven Benetton Renault',
         races: 17
       },]
   },
@@ -3758,6 +4038,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['gachot', 'cesaris', 'michael_schumacher', 'moreno', 'zanardi'], points: 13, position: 5, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Jordan Ford',
         races: 16
       },
       {
@@ -3765,6 +4046,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['gugelmin', 'modena'], points: 1, position: 11, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Jordan Yamaha',
         races: 16
       },
       {
@@ -3772,6 +4054,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['barrichello', 'capelli', 'boutsen', 'apicella', 'naspetti', 'irvine'], points: 3, position: 11, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Sasol Jordan Hart',
         races: 16
       },
       {
@@ -3779,6 +4062,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['barrichello', 'irvine', 'suzuki', 'cesaris'], points: 28, position: 5, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Sasol Jordan Hart',
         races: 16
       },
       {
@@ -3786,6 +4070,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['barrichello', 'irvine'], points: 21, position: 6, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Total Jordan Peugeot',
         races: 17
       },
       {
@@ -3793,6 +4078,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['barrichello', 'brundle'], points: 22, position: 5, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Total Jordan Peugeot',
         races: 16
       },
       {
@@ -3800,6 +4086,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['fisichella', 'ralf_schumacher'], points: 33, position: 5, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Benson & Hedges Jordan Peugeot',
         races: 17
       },
       {
@@ -3807,6 +4094,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['damon_hill', 'ralf_schumacher'], points: 34, position: 4, wins: 1,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Benson & Hedges Jordan Mugen Honda',
         races: 16
       },
       {
@@ -3814,6 +4102,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['frentzen', 'damon_hill'], points: 61, position: 3, wins: 2,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Benson & Hedges Jordan Mugen Honda',
         races: 16
       },
       {
@@ -3821,6 +4110,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['frentzen', 'trulli'], points: 17, position: 6, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Benson & Hedges Jordan Honda',
         races: 17
       },
       {
@@ -3828,6 +4118,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['frentzen', 'trulli', 'zonta', 'alesi'], points: 19, position: 5, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Benson & Hedges Jordan Honda',
         races: 17
       },
       {
@@ -3835,6 +4126,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['sato', 'fisichella'], points: 9, position: 6, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'DHL Jordan Honda',
         races: 17
       },
       {
@@ -3842,6 +4134,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['fisichella', 'firman', 'baumgartner'], points: 13, position: 9, wins: 1,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Jordan Ford',
         races: 16
       },
       {
@@ -3849,6 +4142,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['pantano', 'heidfeld', 'glock'], points: 5, position: 9, wins: 0,
         color: '#FFD700', sponsors: [], liveryColors: [],
+        commercialName: 'Jordan Ford',
         races: 18
       },
       {
@@ -3882,6 +4176,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['zonta', 'villeneuve', 'salo'], points: 0, position: NaN, wins: 0,
         color: '#FFFFFF', sponsors: [], liveryColors: [],
+        commercialName: 'British American Racing',
         races: 16
       },
       {
@@ -3889,6 +4184,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['villeneuve', 'zonta'], points: 20, position: 5, wins: 0,
         color: '#FFFFFF', sponsors: [], liveryColors: [],
+        commercialName: 'Lucky Strike BAR Honda',
         races: 17
       },
       {
@@ -3896,6 +4192,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['panis', 'villeneuve'], points: 17, position: 6, wins: 0,
         color: '#FFFFFF', sponsors: [], liveryColors: [],
+        commercialName: '555 Lucky Strike BAR Honda',
         races: 17
       },
       {
@@ -3903,6 +4200,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['villeneuve', 'panis'], points: 7, position: 8, wins: 0,
         color: '#FFFFFF', sponsors: [], liveryColors: [],
+        commercialName: '555 Lucky Strike BAR Honda',
         races: 17
       },
       {
@@ -3910,6 +4208,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['villeneuve', 'button', 'sato'], points: 26, position: 5, wins: 0,
         color: '#FFFFFF', sponsors: [], liveryColors: [],
+        commercialName: 'BAR Honda',
         races: 16
       },
       {
@@ -3917,6 +4216,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['button', 'sato'], points: 119, position: 2, wins: 0,
         color: '#FFFFFF', sponsors: [], liveryColors: [],
+        commercialName: 'Lucky Strike BAR Honda',
         races: 18
       },
       {
@@ -3924,6 +4224,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['button', 'sato', 'davidson'], points: 38, position: 6, wins: 0,
         color: '#FFFFFF', sponsors: [], liveryColors: [],
+        commercialName: 'Lucky Strike BAR Honda',
         races: 17
       },]
   },
@@ -3950,6 +4251,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['button', 'barrichello'], points: 172, position: 1, wins: 8,
         color: '#BFD730', sponsors: [], liveryColors: [],
+        commercialName: 'Brawn GP Formula One Team',
         races: 17
       },]
   },
@@ -3976,6 +4278,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['bruno_senna', 'chandhok', 'yamamoto', 'klien'], points: 0, position: 11, wins: 0,
         color: '#9B111E', sponsors: [], liveryColors: [],
+        commercialName: 'HRT Formula 1 Team',
         races: 19
       },
       {
@@ -3983,6 +4286,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['liuzzi', 'karthikeyan', 'ricciardo'], points: 0, position: 11, wins: 0,
         color: '#9B111E', sponsors: [], liveryColors: [],
+        commercialName: 'HRT Formula 1 Team',
         races: 18
       },
       {
@@ -3990,6 +4294,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['karthikeyan', 'rosa'], points: 0, position: 12, wins: 0,
         color: '#9B111E', sponsors: [], liveryColors: [],
+        commercialName: 'HRT Formula 1 Team',
         races: 19
       },]
   },
@@ -4016,6 +4321,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['kovalainen', 'petrov'], points: 0, position: 10, wins: 0,
         color: '#006633', sponsors: [], liveryColors: [],
+        commercialName: 'Caterham F1 Team',
         races: 20
       },
       {
@@ -4023,6 +4329,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['pic', 'garde'], points: 0, position: 11, wins: 0,
         color: '#006633', sponsors: [], liveryColors: [],
+        commercialName: 'Caterham F1 Team',
         races: 19
       },
       {
@@ -4030,6 +4337,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ericsson', 'kobayashi', 'lotterer', 'stevens'], points: 0, position: 11, wins: 0,
         color: '#006633', sponsors: [], liveryColors: [],
+        commercialName: 'Caterham F1 Team',
         races: 17
       },]
   },
@@ -4056,6 +4364,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['glock', 'pic'], points: 0, position: 11, wins: 0,
         color: '#6E0E1E', sponsors: [], liveryColors: [],
+        commercialName: 'Marussia F1 Team',
         races: 20
       },
       {
@@ -4063,6 +4372,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['jules_bianchi', 'chilton'], points: 0, position: 10, wins: 0,
         color: '#6E0E1E', sponsors: [], liveryColors: [],
+        commercialName: 'Marussia F1 Team',
         races: 19
       },
       {
@@ -4070,6 +4380,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['chilton', 'jules_bianchi'], points: 2, position: 9, wins: 0,
         color: '#6E0E1E', sponsors: [], liveryColors: [],
+        commercialName: 'Marussia F1 Team',
         races: 16
       },
       {
@@ -4077,6 +4388,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['wehrlein', 'haryanto', 'ocon'], points: 1, position: 11, wins: 0,
         color: '#6E0E1E', sponsors: [], liveryColors: [],
+        commercialName: 'Manor Racing MRT',
         races: 21
       },]
   },
@@ -4103,6 +4415,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['sutil', 'fisichella'], points: 0, position: 10, wins: 0,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'Force India F1 Team',
         races: 18
       },
       {
@@ -4110,6 +4423,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['sutil', 'fisichella', 'liuzzi'], points: 13, position: 9, wins: 0,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'Force India F1 Team',
         races: 17
       },
       {
@@ -4117,6 +4431,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['liuzzi', 'sutil'], points: 68, position: 7, wins: 0,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'Force India F1 Team',
         races: 19
       },
       {
@@ -4124,6 +4439,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['sutil', 'resta'], points: 69, position: 6, wins: 0,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'Sahara Force India F1 Team',
         races: 19
       },
       {
@@ -4131,6 +4447,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['resta', 'hulkenberg'], points: 109, position: 7, wins: 0,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'Sahara Force India F1 Team',
         races: 20
       },
       {
@@ -4138,6 +4455,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['sutil', 'resta'], points: 77, position: 6, wins: 0,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'Sahara Force India F1 Team',
         races: 19
       },
       {
@@ -4145,6 +4463,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hulkenberg', 'perez'], points: 155, position: 6, wins: 0,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'Sahara Force India F1 Team',
         races: 19
       },
       {
@@ -4152,6 +4471,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hulkenberg', 'perez'], points: 136, position: 5, wins: 0,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'Sahara Force India F1 Team',
         races: 19
       },
       {
@@ -4159,6 +4479,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['hulkenberg', 'perez'], points: 173, position: 4, wins: 0,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'Sahara Force India F1 Team',
         races: 21
       },
       {
@@ -4166,6 +4487,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['perez', 'ocon'], points: 187, position: 4, wins: 0,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'Sahara Force India F1 Team',
         races: 20
       },
       {
@@ -4173,6 +4495,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['perez', 'ocon'], points: 111, position: 5, wins: 0,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'Racing Point Force India F1 Team',
         races: 21
       },
       {
@@ -4180,6 +4503,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['stroll', 'perez'], points: 73, position: 7, wins: 0,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'SportPesa Racing Point F1 Team',
         races: 21
       },
       {
@@ -4187,6 +4511,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['perez', 'stroll', 'hulkenberg'], points: 195, position: 4, wins: 1,
         color: '#F596C8', sponsors: [], liveryColors: [],
+        commercialName: 'BWT Racing Point F1 Team',
         races: 17
       },]
   },
@@ -4212,6 +4537,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['liuzzi', 'speed'], points: 1, position: 9, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 18
       },
       {
@@ -4219,6 +4545,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['liuzzi', 'speed', 'vettel'], points: 8, position: 7, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 17
       },
       {
@@ -4226,6 +4553,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['bourdais', 'vettel'], points: 39, position: 6, wins: 1,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 18
       },
       {
@@ -4233,6 +4561,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['buemi', 'bourdais', 'alguersuari'], points: 8, position: 10, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 17
       },
       {
@@ -4240,6 +4569,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['alguersuari', 'buemi'], points: 13, position: 9, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 19
       },
       {
@@ -4247,6 +4577,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['buemi', 'alguersuari'], points: 41, position: 8, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 19
       },
       {
@@ -4254,6 +4585,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['ricciardo', 'vergne'], points: 26, position: 9, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 20
       },
       {
@@ -4261,6 +4593,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vergne', 'ricciardo'], points: 33, position: 8, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 19
       },
       {
@@ -4268,6 +4601,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['vergne', 'kvyat'], points: 30, position: 7, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 19
       },
       {
@@ -4275,6 +4609,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['sainz', 'max_verstappen'], points: 67, position: 7, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 19
       },
       {
@@ -4282,6 +4617,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['sainz', 'max_verstappen', 'kvyat'], points: 63, position: 7, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 21
       },
       {
@@ -4289,6 +4625,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['sainz', 'kvyat', 'gasly', 'brendon_hartley'], points: 53, position: 7, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 20
       },
       {
@@ -4296,6 +4633,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['brendon_hartley', 'gasly'], points: 33, position: 9, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 21
       },
       {
@@ -4303,6 +4641,7 @@ export const TEAMS: Team[] = [{
         tyreSupplier: '', principal: '',
         drivers: ['kvyat', 'albon', 'gasly'], points: 85, position: 6, wins: 0,
         color: '#00293F', sponsors: [], liveryColors: [],
+        commercialName: 'Scuderia Toro Rosso',
         races: 21
       },
       {
@@ -4370,6 +4709,7 @@ export const TEAMS: Team[] = [{
         drivers: ['alonso', 'stroll'], points: 0, position: 5, wins: 0,
         color: '#358C75', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/2026_Chinese_GP_-_Aston_Martin_-_Fernando_Alonso_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Aston_Martin_-_Fernando_Alonso_-_Qualifying.jpg',
+        commercialName: 'Aston Martin Aramco Formula One Team',
         races: 0
       },
     ]
@@ -4396,6 +4736,7 @@ export const TEAMS: Team[] = [{
         drivers: ['ocon', 'bearman'], points: 0, position: 8, wins: 0,
         color: '#EB0A1E', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/2026_Chinese_GP_-_Haas_-_Oliver_Bearman_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Haas_-_Oliver_Bearman_-_Qualifying.jpg',
+        commercialName: 'Haas F1 Team',
         races: 0
       },
     ]
@@ -4422,6 +4763,7 @@ export const TEAMS: Team[] = [{
         drivers: ['hulkenberg', 'bortoleto'], points: 0, position: 9, wins: 0,
         color: '#F50537', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/2026_Chinese_GP_-_Audi_-_Nico_Hulkenberg_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Audi_-_Nico_Hulkenberg_-_Qualifying.jpg',
+        commercialName: 'Audi F1 Team',
         races: 0
       },
     ]
@@ -4448,6 +4790,7 @@ export const TEAMS: Team[] = [{
         drivers: ['lawson', 'lindblad'], points: 0, position: 10, wins: 0,
         color: '#6692FF', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/2026_Chinese_GP_-_Racing_Bulls_-_Liam_Lawson_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Racing_Bulls_-_Liam_Lawson_-_Qualifying.jpg',
+        commercialName: 'Visa Cash App RB Formula One Team',
         races: 0
       },
     ]
@@ -4474,6 +4817,7 @@ export const TEAMS: Team[] = [{
         drivers: ['sergio_perez', 'bottas'], points: 0, position: 11, wins: 0,
         color: '#9C8A5E', sponsors: [], liveryColors: [],
         carImageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/2026_Chinese_GP_-_Cadillac_-_Valtteri_Bottas_-_Qualifying.jpg/330px-2026_Chinese_GP_-_Cadillac_-_Valtteri_Bottas_-_Qualifying.jpg',
+        commercialName: 'Cadillac Formula One Team',
         races: 0
       },
     ]

@@ -73,6 +73,8 @@ export interface TeamSeason {
   carModel3d?: string
   carImageUrl?: string
   races?: number
+  commercialName?: string
+  commercialLogoUrl?: string
 }
 
 export interface Circuit {

@@ -268,8 +268,8 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings, se
       {entries.map((entry) => {
         const team = TEAMS.find(t => t.id === entry.teamId)
         const teamSeason = team?.seasons?.find((s) => s.year === year) ?? null
-        const logo = teamLogo(entry.teamId)
-        const displayName = getTeamDisplayName(entry.teamId, year)
+        const logo = teamSeason?.commercialLogoUrl ?? teamLogo(entry.teamId)
+        const displayName = teamSeason?.commercialName ?? getTeamDisplayName(entry.teamId, year)
         const chassis = teamSeason?.chassis ?? entry.chassis ?? null
         const engine = teamSeason?.engine ?? entry.engine ?? null
 

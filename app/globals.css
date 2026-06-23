@@ -1,8 +1,9 @@
+/* Google Fonts — must precede all other rules */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   --f1-red: #E8001D;
@@ -31,6 +32,13 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessible focus ring — visible on keyboard nav, hidden on mouse */
+:focus-visible {
+  outline: 2px solid var(--f1-red);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* Custom scrollbar */
@@ -77,16 +85,24 @@ body {
   background: var(--f1-card);
   border: 1px solid var(--f1-border);
   border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 .f1-card:hover {
   border-color: var(--f1-border-hover);
 }
+.f1-card.interactive {
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  will-change: transform;
+}
 .f1-card.interactive:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+.f1-card.interactive:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
 }
 
 /* Stat label */
@@ -121,8 +137,8 @@ body {
 
 /* Loading skeleton */
 @keyframes shimmer {
-  0% { background-position: -1000px 0; }
-  100% { background-position: 1000px 0; }
+  0%   { background-position: -800px 0; }
+  100% { background-position:  800px 0; }
 }
 .skeleton {
   background: linear-gradient(
@@ -131,20 +147,21 @@ body {
     var(--f1-card-hover) 50%,
     var(--f1-card) 75%
   );
-  background-size: 1000px 100%;
-  animation: shimmer 2s infinite;
+  background-size: 800px 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
 }
 
 /* Tab styles */
 .f1-tab {
-  padding: 8px 16px;
+  padding: 10px 16px;
   font-size: 13px;
   font-weight: 500;
   color: var(--f1-text-muted);
   border-bottom: 2px solid transparent;
   cursor: pointer;
-  transition: color 0.2s, border-color 0.2s;
+  transition: color 0.15s, border-color 0.15s;
   white-space: nowrap;
+  background: transparent;
 }
 .f1-tab:hover { color: var(--f1-text); }
 .f1-tab.active {
@@ -187,18 +204,23 @@ body {
   overflow: hidden;
 }
 
-/* Transition page */
-.page-enter {
-  opacity: 0;
-  transform: translateY(8px);
+/* Page transition */
+.animate-fade-in {
+  animation: fadeIn 0.35s ease-out both;
 }
-.page-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+/* Smooth text auto-size for long strings */
+.text-auto {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .f1-number { font-size: 1.5rem; }
 }

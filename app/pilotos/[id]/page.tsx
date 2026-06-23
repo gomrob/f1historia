@@ -31,9 +31,9 @@ export default function PilotoDetailPage({ params }: { params: { id: string } })
             <div className="flex items-start gap-4 mb-4">
               {driver.photo ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={driver.photo} alt={driver.name} className="w-24 h-24 rounded-xl object-cover flex-shrink-0" />
+                <img src={driver.photo} alt={driver.name} className="w-24 h-24 rounded-xl object-cover object-top flex-shrink-0" />
               ) : (
-                <DriverPhoto name={driver.name} className="w-24 h-24 rounded-xl object-cover flex-shrink-0" />
+                <DriverPhoto name={driver.name} className="w-24 h-24 rounded-xl object-cover object-top flex-shrink-0" />
               )}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1">

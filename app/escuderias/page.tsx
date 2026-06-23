@@ -310,20 +310,29 @@ function TeamDetail({ team, onClose }: { team: Team; onClose: () => void }) {
               <div>
                 {/* Commercial name / logo for this season */}
                 {(currentSeason.commercialName || currentSeason.commercialLogoUrl) && (
-                  <div className="flex items-center gap-3 mb-3 p-2 rounded-lg" style={{ background: `${currentSeason.color ?? team.color}12` }}>
+                  <div
+                    className="flex items-center gap-3 mb-4 px-3 py-2.5 rounded-lg border"
+                    style={{
+                      background: `${currentSeason.color ?? team.color}10`,
+                      borderColor: `${currentSeason.color ?? team.color}30`,
+                    }}
+                  >
                     {currentSeason.commercialLogoUrl && (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
                         src={currentSeason.commercialLogoUrl}
                         alt={currentSeason.commercialName ?? team.name}
-                        className="h-7 object-contain flex-shrink-0"
+                        className="h-8 object-contain flex-shrink-0"
                       />
                     )}
-                    {currentSeason.commercialName && (
-                      <span className="text-sm font-semibold" style={{ color: currentSeason.color ?? team.color }}>
-                        {currentSeason.commercialName}
-                      </span>
-                    )}
+                    <div className="min-w-0">
+                      <p className="text-[10px] text-[#9CA3AF] uppercase tracking-widest mb-0.5">Nombre comercial</p>
+                      {currentSeason.commercialName && (
+                        <p className="text-sm font-semibold leading-tight" style={{ color: currentSeason.color ?? team.color }}>
+                          {currentSeason.commercialName}
+                        </p>
+                      )}
+                    </div>
                   </div>
                 )}
                 <F1CarSVG

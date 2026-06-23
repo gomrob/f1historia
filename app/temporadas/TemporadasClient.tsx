@@ -301,10 +301,13 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings, se
                       />
                     </div>
                   )}
-                  {/* Team name — large and prominent */}
+                  {/* Team name — large and prominent; shrinks for long commercial names */}
                   <h3
-                    className="font-bold leading-tight text-center"
-                    style={{ fontSize: '1.25rem', color: entry.color }}
+                    className="font-bold leading-tight text-center break-words"
+                    style={{
+                      fontSize: displayName.length > 28 ? '0.8rem' : displayName.length > 20 ? '1rem' : '1.2rem',
+                      color: entry.color,
+                    }}
                   >
                     {displayName}
                   </h3>
@@ -368,13 +371,12 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings, se
                       className="flex items-center gap-2.5 px-3 py-3 flex-1"
                       style={{ borderColor: textColor === '#FFFFFF' ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)' }}
                     >
-                      {/* Circular photo — doubled size */}
                       <DriverAvatar
                         staticPhoto={d?.photo}
                         driverName={driverName}
                         initials={initials}
                         color={textColor === '#FFFFFF' ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.2)'}
-                        size={96}
+                        size={72}
                       />
 
                       {/* Driver info */}

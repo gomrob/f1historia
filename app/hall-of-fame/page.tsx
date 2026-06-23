@@ -53,7 +53,7 @@ export default function HallOfFamePage() {
       </div>
 
       {/* Top 3 spotlight */}
-      <div className="grid grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
         {sortedDrivers.slice(0, 3).map((driver, i) => (
           <TopCard key={driver.id} driver={driver} position={i + 1} rankKey={ranking} />
         ))}

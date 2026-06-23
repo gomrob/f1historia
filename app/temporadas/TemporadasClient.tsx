@@ -21,6 +21,24 @@ function teamColor(constructorId: string): string {
   return TEAM_COLORS[constructorId.replace(/_/g, '')] ?? '#9CA3AF'
 }
 
+// Maps Ergast constructor IDs → internal teams.ts IDs where they differ
+const ERGAST_TO_INTERNAL: Record<string, string> = {
+  red_bull:     'redbull',
+  renault:      'alpine',
+  lotus_f1:     'alpine',
+  racing_point: 'force_india',
+  alphatauri:   'racingbulls',
+  toro_rosso:   'racingbulls',
+  rb:           'racingbulls',
+  alfa:         'sauber',
+  bmw_sauber:   'sauber',
+  aston_martin: 'astonmartin',
+}
+
+function resolveTeamId(ergastId: string): string {
+  return ERGAST_TO_INTERNAL[ergastId] ?? ergastId
+}
+
 // Display names for teams not yet present in data/teams.ts (current-era entries)
 const TEAM_NAME_FALLBACKS: Record<string, string> = {
   astonmartin: 'Aston Martin',
@@ -266,10 +284,11 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings, se
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       {entries.map((entry) => {
-        const team = TEAMS.find(t => t.id === entry.teamId)
+        const internalId = resolveTeamId(entry.teamId)
+        const team = TEAMS.find(t => t.id === internalId)
         const teamSeason = team?.seasons?.find((s) => s.year === year) ?? null
-        const logo = teamSeason?.commercialLogoUrl ?? teamLogo(entry.teamId)
-        const displayName = teamSeason?.commercialName ?? getTeamDisplayName(entry.teamId, year)
+        const logo = teamSeason?.commercialLogoUrl ?? teamLogo(internalId)
+        const displayName = teamSeason?.commercialName ?? getTeamDisplayName(internalId, year)
         const chassis = teamSeason?.chassis ?? entry.chassis ?? null
         const engine = teamSeason?.engine ?? entry.engine ?? null
 
@@ -326,7 +345,7 @@ function TeamsTab({ season, year, activeTeam, setActiveTeam, driverStandings, se
                   style={{ background: `${entry.color}10`, minHeight: 88 }}
                 >
                   <F1CarSVG
-                    teamId={entry.teamId}
+                    teamId={internalId}
                     primaryColor={entry.color}
                     year={year}
                     carImageUrl={teamSeason?.carImageUrl}
